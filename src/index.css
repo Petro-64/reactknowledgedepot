@@ -1,0 +1,187 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.wrapper{
+  padding: 40px;
+}
+
+.myCustomisedMenu li{
+  position: relative;
+}
+
+.error {
+  margin-left: 30px;
+  color: red;
+  font-weight: bold;;
+}
+
+.dropup .caret, .navbar-fixed-bottom .dropdown .caret {
+  content: "";
+  border-top: 0;
+  border-bottom: 4px dashed;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.qusetionBlock {
+  background-color: #C2CEDF;
+  padding: 15px;
+  border: none;
+}
+
+.answerBlock {
+  background-color: #C2CEDF;
+  padding: 15px;
+  border: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+table.resultsFilter td{
+  width: 20%;
+  vertical-align: top;
+}
+
+.paginationWrapper > div{
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  background-color: lightblue;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.paginationWrapper > div.active{
+  background-color: lightgreen;
+}
+
+.countdownindicator{
+  width: 200px;
+  height: 20px;
+  background-color: #007bff;
+  position: relative;
+  top: -7px;
+  left: 15px;
+}
+
+h1{
+  margin-top: 20px;
+}
+
+button i.fa.fa-home{
+  font-size: 24px;
+}
+
+.languageSelect{
+  margin-right: 30px;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-padding-end: 20px;
+  -moz-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -moz-padding-start: 2px;
+  background-color: #eaeef3; /* Fallback color if gradients are not supported */
+  border: 1px solid #AAA;
+  border-radius: 2px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cursorPointer{
+  cursor: pointer
+}
+
+table.contributionForm tbody > tr:nth-child(1) textarea {
+  background-color: #bdddea ;
+}
+
+table.contributionForm tbody > tr:nth-child(3) textarea, 
+table.contributionForm tbody > tr:nth-child(4) textarea, 
+table.contributionForm tbody > tr:nth-child(5) textarea {
+  background-color: #e9cdcb
+}
+
+table.contributionForm tbody > tr:nth-child(6) textarea {
+  background-color: rgb(195, 238, 195) ;
+}
+
+#app > div > div > .container {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  min-height: 500px;
+}
+
+h2 {
+  margin-bottom: 35px;
+}
+
+.navbar{
+  background-color: #00549a;
+}
+
+footer {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #555;
+}
+
+footer a, footer a:hover {
+  color: white;
+}
+
+footer .navbar li{
+  list-style-type: none;
+}
+
+footer .navbar {
+  background-color: #555;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  form span.error{
+    display: block;
+    margin-left: 0 !important;
+  }
+
+  footer {
+    position: static;
+  }
+
+  footer .footerSeparator{
+    display: none;
+  }
+
+  footer li {
+    padding-right: 20px;
+  }
+
+  .navbar-nav.horizontal{
+    flex-direction: row;
+  }
+}
