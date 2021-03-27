@@ -131,7 +131,7 @@ table.contributionForm tbody > tr:nth-child(6) textarea {
 #app > div > div > .container {
   padding-top: 30px;
   padding-bottom: 60px;
-  min-height: 500px;
+  min-height: 501px;
 }
 
 h2 {
