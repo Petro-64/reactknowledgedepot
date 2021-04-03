@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import TopNavigation from './TopNavigation1';
+import TopNavigation from './TopNavigation';
 import {connect} from 'react-redux';
 import Footer from './Footer';
 

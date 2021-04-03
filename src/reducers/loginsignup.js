@@ -5,8 +5,8 @@ let loginSignUpState={
     loginError: '',
     loginErrorVisibility: 'hidden',
     userName: '',   
-    roleId: 2, //0 by default, 2 for admin
-    JWToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJsb2dpbl90aW1lc3RhbXAiOjE2MTY3OTIzNzB9.K3YCvGbJIqel7sqY9vC0j92H9o+9y2svWmmUmKFH9Ko=',
+    roleId: 0, //0 by default, 2 for admin
+    JWToken: '',
     userId: '',
     signupCaptchaText: '',
     suspensionReason: '',

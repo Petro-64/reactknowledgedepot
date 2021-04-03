@@ -1,5 +1,5 @@
 import React from 'react'
-import TopNavigation from './TopNavigation1';
+import TopNavigation from './TopNavigation';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';
 import { IntlProvider, FormattedMessage } from "react-intl";

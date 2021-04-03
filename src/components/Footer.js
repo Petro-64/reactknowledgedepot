@@ -37,7 +37,7 @@ class TopNavigation extends React.Component {
     render() {
         return (
             <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-                    <footer className="text-center text-lg-start text-white navbar-expand-md">
+                    <footer className="text-center text-md-start text-white navbar-expand-lg">
                     <nav className="navbar">
                         <ul className="navbar-nav mr horizontal" >
                             <li className="nav-item active">

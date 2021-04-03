@@ -1,6 +1,6 @@
 ///
 import React from 'react'
-import TopNavigation from './TopNavigation1';
+import TopNavigation from './TopNavigation';
 import Footer from './Footer';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';

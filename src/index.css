@@ -131,7 +131,7 @@ table.contributionForm tbody > tr:nth-child(6) textarea {
 #app > div > div > .container {
   padding-top: 30px;
   padding-bottom: 60px;
-  min-height: 501px;
+  min-height: 600px;
 }
 
 h2 {
@@ -162,6 +162,20 @@ footer .navbar {
   background-color: #555;
   color: white;
 }
+
+footer .navbar ul{
+  flex-direction: row !important;
+}
+
+footer .navbar ul li{
+  padding-right: 20px !important;
+}
+@media only screen and (max-width: 700px) {
+  footer{
+    position: static
+  }
+}
+
 
 @media only screen and (max-width: 600px) {
   form span.error{
