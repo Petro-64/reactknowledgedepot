@@ -1,9 +1,9 @@
 const messages = {
     en: {
-        questionAddSuccess: "Question has been added successfully, thanks",
+        questionAddSuccess: "Question has been sent to moderation successfully, thanks",
     },
     ru: {
-        questionAddSuccess: "Вопрос успешно добавлен, спасибо",
+        questionAddSuccess: "Вопрос успешно отправлен на модерацию, спасибо",
     }
   };
 

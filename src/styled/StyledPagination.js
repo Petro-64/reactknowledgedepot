@@ -2,6 +2,9 @@ import styled from 'styled-components'
 
 const StyledPagination = styled.div`
 margin: 20px 0;
+ li{
+     width: 28px;
+ }
  > div{
      width: 30px;
      height: 30px;

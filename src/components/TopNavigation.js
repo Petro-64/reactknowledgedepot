@@ -42,7 +42,7 @@ class TopNavigation extends React.Component {
                         left: "0",
                         zIndex: "-10",
                         width: "100%",
-                        opacity: ".1" }}></button>
+                        opacity: ".2" }}></button>
 
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active" style={this.props.roleId === 0 ? {} : {display: 'none'}}>

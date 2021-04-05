@@ -11,7 +11,11 @@ class Pagination extends Component {
               <li className="page-item" style={(paginationNumber === 0) ? {opacity: '.2'} : {}} onClick={() => paginationClick(0)}>
                 <a className="page-link" href="#" disabled>&lt;&lt;</a>
               </li>
-              <li className="page-item" style={(paginationNumber === 0) ? {opacity: '.2'} : {}} onClick={() => paginationClick(paginationNumber-1)}>
+              <li className="page-item" style={(paginationNumber === 0) ? {opacity: '.2'} : {}} onClick={() => {
+                
+                if (paginationNumber > 0) {paginationClick(paginationNumber-1)}
+                
+                }}>
                 <a className="page-link" href="#">&lt;</a>
               </li>
               <li className="page-item" style={(paginationNumber > 2) ? {} : {display: "none"}}>
@@ -24,7 +28,10 @@ class Pagination extends Component {
               <li className="page-item" style={(paginationNumber < (paginationQuantity-3)) ? {} : {display: "none"}}>
                 <a className="page-link" href="#">..</a>
               </li>
-              <li className="page-item" style={(paginationNumber === (paginationQuantity - 1)) ? {opacity: '.2'} : {}} onClick={() => paginationClick(paginationNumber+1)}>
+              <li className="page-item" style={(paginationNumber === (paginationQuantity - 1)) ? {opacity: '.2'} : {}} onClick={() => {
+                if(paginationNumber<(paginationQuantity-1)){paginationClick(paginationNumber+1)}
+
+              }}>
                 <a className="page-link">&gt;</a>
               </li>
               <li className="page-item" style={(paginationNumber === (paginationQuantity - 1)) ? {opacity: '.2'} : {}} onClick={() => paginationClick(paginationQuantity - 1)}>
