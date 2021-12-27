@@ -15,7 +15,7 @@ export default class EditMyContributionRow extends React.Component {
     render(props) {
         const { userName, subjectName, createdAt, status } = this.props.contribution;
         const { language } = this.props;
-        let statusWord = status == 0 ? 'pending' : status == '1' ? 'approved' : 'declined';
+        let statusWord = status == 0 ? messages[language].pending : status == '1' ? messages[language].approved : messages[language].declined;
         let url = '/app/mycontribution/' + this.state.id;
       return  (
         <>

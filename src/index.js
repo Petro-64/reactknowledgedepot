@@ -18,9 +18,12 @@ import PasswordReset from './components/PasswordReset';
 import AdminSettings from './components/AdminSettings';
 import ForgotPassword from './components/ForgotPassword';
 import AccountSettings from './components/AccountSettings';
+import AdminAddQuestions from './components/AdminAddQuestions';
+import AdmineditQuestions from './components/AdmineditQuestions';
 import AdminContribution from './components/AdminContribution';
 import AdminContributionDetails from './components/AdminContributionDetails';
 import UserContributionDetails from './components/UserContributionDetails';
+
 
 import {createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
@@ -30,6 +33,7 @@ import usersReducer from "./reducers/users";
 import resultsReducer from "./reducers/results";
 import settingsReducer from "./reducers/settings";
 import subjectsReducer from "./reducers/subjects";
+import questionsReducer from "./reducers/questions";
 import loginSignUpReducer from "./reducers/loginsignup";
 import AddMyQuestions from './components/AddMyQuestions';
 import contributionsReducer from "./reducers/contribution";
@@ -50,6 +54,7 @@ const rootReducer = combineReducers({
   subjectsReducer,
   settingsReducer,
   contributionsReducer,
+  questionsReducer,
   form: formReducer
 })
 
@@ -71,17 +76,21 @@ class App extends React.Component{
             <NonAuthorizedRoute exact path="/app/login" component={Login}/>
             <NonAuthorizedRoute exact path="/app/signup" component={Signup} />
             <NonAuthorizedRoute exact path="/app/forgotpassword" component={ForgotPassword} />
-            <AuthorizedRouteAdmin exact path="/app/users" component={Users} />
-            <AuthorizedRouteAdmin exact path="/app/adminsettings" component={AdminSettings} />
-            <AuthorizedRouteAdmin exact path="/app/subjects" component={Subjects} />
-            <AuthorizedRouteAdmin exact path="/app/admincontribution" component={AdminContribution} />
-            <AuthorizedRouteAdmin exact path="/app/admincontribution/:id" component={AdminContributionDetails} />
+ 
             <AuthorizedRouteUser exact path="/app/resultsn" component={Resultsn} />
             <AuthorizedRouteUser exact path="/app/test" component={Test} />
             <AuthorizedRouteUser exact path="/app/addmyquestion" component={AddMyQuestions} />
             <AuthorizedRouteUser exact path="/app/myquestionstatus" component={MyQuestionsStatus} />
             <AuthorizedRouteUser exact path="/app/accountsettings" component={AccountSettings} />
             <AuthorizedRouteUser exact path="/app/mycontribution/:id" component={UserContributionDetails} />
+ 
+            <AuthorizedRouteAdmin exact path="/app/users" component={Users} />
+            <AuthorizedRouteAdmin exact path="/app/adminsettings" component={AdminSettings} />
+            <AuthorizedRouteAdmin exact path="/app/subjects" component={Subjects} />
+            <AuthorizedRouteAdmin exact path="/app/admincontribution" component={AdminContribution} />
+            <AuthorizedRouteAdmin exact path="/app/admincontribution/:id" component={AdminContributionDetails} />
+            <AuthorizedRouteAdmin exact path="/app/adminaddquestion" component={AdminAddQuestions} />
+            <AuthorizedRouteAdmin exact path="/app/admineditquestion" component={AdmineditQuestions} />
           </div>
       </Router>
     )

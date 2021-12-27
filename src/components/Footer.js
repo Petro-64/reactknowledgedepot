@@ -45,17 +45,17 @@ class TopNavigation extends React.Component {
                                 <i className="fa fa-home"></i>
                                 </Link>
                             </li>
-                            <li className="nav-item active">
+                            <li className="nav-item active" style={(this.props.roleId !== 4) ? {} : {display: 'none'}}>
                                 <Link className="nav-link" to="/app/test">
                                     <FormattedMessage id="test" />
                                 </Link>
                             </li>
-                            <li className="nav-item active" style={this.props.roleId !== 0 ? {} : {display: 'none'}}>
+                            <li className="nav-item active" style={(this.props.roleId !== 0 && this.props.roleId !== 4) ? {} : {display: 'none'}}>
                                 <Link className="nav-link" to="/app/resultsn">
                                     <FormattedMessage id="testResults" />
                                 </Link>
                             </li>
-                            <li className="nav-item active" style={this.props.roleId !== 0 ? {} : {display: 'none'}}>
+                            <li className="nav-item active" style={(this.props.roleId !== 0 && this.props.roleId !== 4) ? {} : {display: 'none'}}>
                                 <Link className="nav-link" to="/app/accountsettings">
                                     <FormattedMessage id="settings" />
                                 </Link>

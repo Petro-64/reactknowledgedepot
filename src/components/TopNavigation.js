@@ -109,10 +109,16 @@ class TopNavigation extends React.Component {
                                     <FormattedMessage id="subjects" />
                                 </Link>
                                 <Link className="dropdown-item" to="/app/adminsettings">
-                                    Global settings
+                                    <FormattedMessage id="globalSettings" />
                                 </Link>
                                 <Link className="dropdown-item" to="/app/admincontribution">
-                                    Contribution
+                                    <FormattedMessage id="contribution" />
+                                </Link>
+                                <Link className="dropdown-item" to="/app/adminaddquestion">
+                                    <FormattedMessage id="addQuestion" />
+                                </Link>
+                                <Link className="dropdown-item" to="/app/admineditquestion">
+                                    <FormattedMessage id="editQuestion" />
                                 </Link>
                             </div>
                         </li>

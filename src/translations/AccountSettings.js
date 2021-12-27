@@ -10,6 +10,11 @@ const messages = {
       clearValues: "Clear values",
       enterNewPassw: "Enter new password",
       repeatNewPassw: "Repeat new password",
+      required: "Required",
+      mustBe8CharOrMore: "Must be 8 characters or more",
+      mustBe15CharactersOrLess: 'Must be 15 characters or less',
+      passwordsDoNotMatch: 'Passwords do not match',
+
     },
     ru: {
       accountSettings: "Настройки учетной записи",
@@ -22,7 +27,12 @@ const messages = {
       clearValues: "Очистить формy",
       enterNewPassw: "Введите новый пароль",
       repeatNewPassw: "Повторите новый пароль",
+      required: "Oбязательный",
+      mustBe8CharOrMore: "Должно быть 8 или более символов",
+      mustBe15CharactersOrLess: "Должно быть не более 15 символов",
+      passwordsDoNotMatch: 'Пароли не соответствуют',
     }
   };
 
   export default messages;
+

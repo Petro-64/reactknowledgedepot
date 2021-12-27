@@ -8,7 +8,9 @@ const messages = {
     save: "Save",
     hidden: "hidden",
     active1: "active",
-
+    approved: "approved",
+    declined: "declined",
+    pending: "pending"
   },
   ru: {
       subject: "Subject",
@@ -19,6 +21,9 @@ const messages = {
       save: "Сохранить",
       hidden: "скрытый",
       active1: "aктивный",
+      approved: "одобренный",
+      declined: "отклоненный",
+      pending: "в ожидании"
   }
 };
 

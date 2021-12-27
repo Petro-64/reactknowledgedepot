@@ -110,10 +110,10 @@ class Test extends React.Component {
                 </h5>
                 {/* introductory block starts */}
                 <div className="testsIntroduction" style={this.props.currentSubjectId === '' ? {} : {display: 'none'} }>
-                    <p>
+                    <p style={this.props.userName === '' ? {} : { display: 'none' } } >
                       <FormattedMessage id="noRegistrationNeeded" />
                     </p>
-                    <p>
+                    <p style={this.props.userName === '' ? {} : { display: 'none' } } >
                       <FormattedMessage id="ifYouWouldLike" /><Link to="/app/register"><FormattedMessage id="herre" /></Link>
                     </p>
                     <p>

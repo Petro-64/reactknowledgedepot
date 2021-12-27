@@ -39,12 +39,6 @@ class AccountSettings extends React.Component {
   }
 
   render() {
-    const translations = {
-      submit:  this.props.language === 'en' ? messages.en.submit : messages.ru.submit,
-      clearValues: this.props.language === 'en' ? messages.en.clearValues : messages.ru.clearValues,
-      enterNewPassw: this.props.language === 'en' ? messages.en.enterNewPassw : messages.ru.enterNewPassw,
-      repeatNewPassw: this.props.language === 'en' ? messages.en.repeatNewPassw : messages.ru.repeatNewPassw,
-    }
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
@@ -91,13 +85,7 @@ class AccountSettings extends React.Component {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <FormattedMessage id="pleaseKeepInMind" />&nbsp;&nbsp;&nbsp;
-                    <ChangePasswordForm onSubmit={()=>{this.props.changePassword()}}
-                    submitLabel = {translations.submit} 
-                    clearValues = {translations.clearValues} 
-                    enterNewPassw ={translations.enterNewPassw}
-                    repeatNewPassw = {translations.repeatNewPassw}
-                    language = {this.props.language}
-                    />
+                    <ChangePasswordForm onSubmit={()=>{this.props.changePassword()}} language = {this.props.language}   messages = {messages} />
                   </AccordionItemPanel>
               </AccordionItem>
           </Accordion>

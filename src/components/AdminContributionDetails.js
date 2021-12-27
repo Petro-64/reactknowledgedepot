@@ -46,7 +46,7 @@ class AdminContributionDetails extends React.Component {
           <div className="container">
             <h2><FormattedMessage id="editContibution" /></h2>
             <AdminEditContributionForm  onSubmit={()=>{this.props.saveContributionAdmin()}} language={this.props.language}  
-            declineFunction={this.props.declineContributionAdmin} initialValues={this.props.adminContributionItem}  backNavigation={this.backNavigation.bind(this)}  />
+            declineFunction={this.props.declineContributionAdmin} initialValues={this.props.adminContributionItem}  backNavigation={this.backNavigation.bind(this)} showAllButtons={true}  />
           </div>
       </div> 
       <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>

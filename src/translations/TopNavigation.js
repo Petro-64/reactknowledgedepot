@@ -15,6 +15,10 @@ const messages = {
       contibute: "Contribute",
       makeContribution: "Make contribution",
       myContrributionStatus: "My contribution status",
+      globalSettings: "Global settings",
+      contribution: "Contribution",
+      addQuestion: "Add question",
+      editQuestion: "Edit question",
     },
     ru: {
       home: "Домой",
@@ -32,6 +36,10 @@ const messages = {
       contibute: "Мои вопросы",
       makeContribution: "Добавить вопросы",
       myContrributionStatus: "Cтатус моих вопросов",
+      globalSettings: "Глобальные настройки",
+      contribution: "Вклад пользователей",
+      addQuestion: "Добавить вопрос",
+      editQuestion: "Редактировать вопрос",
     }
   };
 

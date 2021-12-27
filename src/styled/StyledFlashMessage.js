@@ -10,6 +10,7 @@ const StyledFlashMessage = styled.div`
   .flashMessageBody {
     position: absolute;
     top: ${props => props.ifVisible === 0 ? `-240px` : `-30px`};
+    right: 50%;
     width: 400px;
     background-color: ${props => props.bGcolorr === `success` ? `#d4edda` : `#f8d7da`};
     text-align: center;

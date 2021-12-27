@@ -6,12 +6,12 @@ const StyledCookieConsent = styled.div`
   position: fixed;
   width: 100%;
   bottom: 30px;
-  left: 5px;
+  left: -8px;
   z-index: 3000;
   .flashMessageBody {
     position: absolute;
-    bottom: ${props => props.ifVisible === 0 ? `-240px` : `-30px`};
-    width: calc(100% - 10px);
+    bottom: ${props => props.ifVisible === 0 ? `-240px` : `-35px`};
+    width: calc(100% + 8px);
     background-color: #d4edda;
     text-align: center;
     padding: 15px;

@@ -36,9 +36,16 @@ const helpers = {
             
             return filteredBySubjects;
         },
+
         PaginatedResults: function(filteredBySubjectsAndSort, resultsFilterPerPage, resultsFilterPaginationNumber){
             return filteredBySubjectsAndSort.filter(function(result, index){ 
                 return (index >= resultsFilterPerPage*resultsFilterPaginationNumber) && (index < resultsFilterPerPage*(resultsFilterPaginationNumber + 1))
+            });
+        },
+
+        SimplePaginatedResults: function(items, itemsPerPage, currentPagination){
+            return items.filter(function(result, index){ 
+                return (index >= itemsPerPage*currentPagination) && (index < itemsPerPage*(currentPagination + 1))
             });
         },
 

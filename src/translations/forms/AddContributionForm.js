@@ -10,6 +10,8 @@ const messages = {
         clearValues: "Clear Values",
         declineQuestion: "Decline question",
         backToContributionPage: "<< Back to previous page",
+        save: "Save",
+        reset: "Reset"
     },
     ru: {
         firstAnswer: "Первый неправильный ответ",
@@ -21,6 +23,8 @@ const messages = {
         approveAndsaveQuestion: "Approve and save question",
         clearValues: "Очистить значения",
         backToContributionPage: "<< Вернуться на предыдущую страницу",
+        save: "Сохранить",
+        reset: "Oчистить"
     }
   };
 

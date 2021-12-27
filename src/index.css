@@ -128,7 +128,7 @@ table.contributionForm tbody > tr:nth-child(6) textarea {
   background-color: rgb(195, 238, 195) ;
 }
 
-#app > div > div > .container {
+#app > div > div > .container, #app > div > div > div > .container {
   padding-top: 30px;
   padding-bottom: 60px;
   min-height: 600px;
@@ -144,7 +144,7 @@ h2 {
 
 footer {
   color: white;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #555;

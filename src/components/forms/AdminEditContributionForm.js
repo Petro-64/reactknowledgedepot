@@ -16,7 +16,7 @@ const validate = values => {
   }
 
 let AdminEditContributionForm = props => {
-  const { handleSubmit, submitting, language, declineFunction, backNavigation } = props;
+  const { handleSubmit, submitting, language, declineFunction, backNavigation, showAllButtons, pristine, reset, valid} = props;
   const translations = {
     firstAnswer:  language === 'en' ? messages.en.firstAnswer : messages.ru.firstAnswer,
     secondAnswer:  language === 'en' ? messages.en.secondAnswer : messages.ru.secondAnswer,
@@ -30,9 +30,9 @@ let AdminEditContributionForm = props => {
       <form onSubmit={handleSubmit}>
           <br/> <br />
         <div>
-          <table style={{width: "100%"}} class="contributionForm">
+          <table style={{width: "100%"}} className="contributionForm">
               <tbody>
-                <tr><td><Field  name="question"   component={SmartTextArea} label={translations.question} value='dsfgsdfgsdfg'/></td></tr>
+                <tr><td><Field  name="question"   component={SmartTextArea} label={translations.question}/></td></tr>
                 <tr><td><br/><br/></td></tr>
                 <tr><td><Field  name="uncorrect0"   component={SmartTextArea} label={translations.firstAnswer} /></td></tr>
                 <tr><td><Field  name="uncorrect1"   component={SmartTextArea} label={translations.secondAnswer} /></td></tr>
@@ -43,9 +43,21 @@ let AdminEditContributionForm = props => {
         </div>
         <br/><br/>
         <div>
-          <button type="button" className="btn btn-primary" disabled={submitting} onClick={backNavigation}><FormattedMessage id="backToContributionPage" /></button>&nbsp;&nbsp;&nbsp;
-          <button type="submit" className="btn btn-primary" disabled={submitting}><FormattedMessage id="approveAndsaveQuestion" /></button>&nbsp;&nbsp;&nbsp;
-          <button type="button" className="btn btn-danger" onClick={declineFunction} disabled={submitting}><FormattedMessage id="declineQuestion" /></button>&nbsp;&nbsp;&nbsp;
+          <>
+          <button type="button" className="btn btn-primary" disabled={submitting} onClick={backNavigation} style={showAllButtons ? {} : {display: 'none'}}>
+              <FormattedMessage id="backToContributionPage" />
+          </button>&nbsp;&nbsp;&nbsp;
+          <button type="submit" className="btn btn-primary" disabled={!valid} style={showAllButtons ? {} : {display: 'none'}}><FormattedMessage id="approveAndsaveQuestion" />
+            </button>&nbsp;&nbsp;&nbsp;
+          <button type="submit" className="btn btn-primary" disabled={submitting || pristine || !valid} style={showAllButtons ? {display: 'none'} : {}}><FormattedMessage id="save" />
+            </button>&nbsp;&nbsp;&nbsp;
+          <button type="submit" className="btn btn-danger"  onClick={reset} disabled={ pristine } style={showAllButtons ? {display: 'none'} : {}}><FormattedMessage id="reset" />
+            </button>&nbsp;&nbsp;&nbsp;
+
+          <button type="button" className="btn btn-danger" onClick={declineFunction} disabled={submitting} style={showAllButtons ? {} : {display: 'none'}}>
+            <FormattedMessage id="declineQuestion" />
+          </button>&nbsp;&nbsp;&nbsp;
+          </>
         </div>
       </form>
     </IntlProvider>

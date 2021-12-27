@@ -95,7 +95,8 @@ export function loadGlobalSettings(lang){
 
 export function setCookieConsentVisibility(visibility){
     const userId = store.getState().loginSignUpReducer.userId;
-    if(visibility == 0 && userId){
+    const roleId = store.getState().loginSignUpReducer.roleId;
+    if(visibility == 0 && userId && roleId !== 4){ /// roleId == 4 is the suspended user 
         const JWT = store.getState().loginSignUpReducer.JWToken;
         const headers = { 'JWToken': JWT };
         return (dispatch) => {

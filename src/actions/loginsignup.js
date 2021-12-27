@@ -176,7 +176,7 @@ export function resendEmailConfirmation(){
             if(responce.data.payload.success === "true"){
                 showFlashMessage(dispatch, translations.emailConfirmationSuccess, 'success');
             } else {
-                alert("Network error, please try again later");
+                alert("Network error, please try again later resendEmailConfirmation");
             };
         })
     }
