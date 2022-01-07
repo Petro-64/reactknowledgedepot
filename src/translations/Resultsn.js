@@ -16,6 +16,8 @@ const messages = {
       resultsDesc: "Testing results desc",
       subjAsc: "Subjects asc",
       subjsDesc: "Subjects desc",
+      noResults: "No results"
+
 
     },
     ru: {
@@ -35,6 +37,7 @@ const messages = {
       resultsDesc: "Результаты убыв.",
       subjAsc: "Предметы возр.",
       subjsDesc: "Предметы убыв.",
+      noResults: "Нет результатов"
     }
   };
 

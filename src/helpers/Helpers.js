@@ -2,13 +2,13 @@ const helpers = {
     UrlSniffer: function(){
         return (window.location.host.includes('localhost') || window.location.host.includes('127.0.0.1')) ? 'http://127.0.0.1:8000/' : 'http://knowledgedepot.ca/';
     },
+
     X_CSRF_TOKEN: function(){
         if(document.getElementsByTagName("meta")[2] !== undefined){
             return document.getElementsByTagName("meta")[2].content;
         }
-        //return 'R1W0UPCe9OGkYIMqdBcR70sJIxbuXXZG8FbUbUNf';// this needed for local development to be able to POST data from  http://localhost:3000/ to 127.0.0.1
-        // first, don't forget to disable CORS in LARAVEL ....\config\cors.php
     },
+
     FilterBySubjectsAndSort: function(initialResults, activeSubjects, sortingOption){
         let filteredBySubjects = initialResults.filter(function (result) { return (activeSubjects.includes(result.subjectName))});
             switch(sortingOption) {
@@ -45,7 +45,7 @@ const helpers = {
 
         SimplePaginatedResults: function(items, itemsPerPage, currentPagination){
             return items.filter(function(result, index){ 
-                return (index >= itemsPerPage*currentPagination) && (index < itemsPerPage*(currentPagination + 1))
+                return (index >= itemsPerPage*(currentPagination - 1)) && (index < itemsPerPage*(currentPagination))
             });
         },
 

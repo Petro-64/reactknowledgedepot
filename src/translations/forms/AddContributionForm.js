@@ -7,11 +7,17 @@ const messages = {
         question: "Your question",
         sendQuestion: "Send question",
         approveAndsaveQuestion: "Approve and save question", 
+        saveQuestionAndReturnToQuestionsList: "Save question and return",
+        saveAndMoveToNextQuestions: "Save question and move to the next",
         clearValues: "Clear Values",
         declineQuestion: "Decline question",
         backToContributionPage: "<< Back to previous page",
         save: "Save",
-        reset: "Reset"
+        reset: "Reset",
+        saveAndGoToTheNextQuestion: "Save and load next Question >>",
+        saveAndGoToThePrevQuestion: "<< Save and load previous Question",
+        deleteAndReturn: "<< Delete this question and return",
+        deleteAndLoadNext: "Delete this question and load next >>",
     },
     ru: {
         firstAnswer: "Первый неправильный ответ",
@@ -21,10 +27,17 @@ const messages = {
         question: "Ваш вопрос",
         sendQuestion: "Отправить вопрос",
         approveAndsaveQuestion: "Approve and save question",
+        saveQuestion: "Save question",
+        saveQuestionAndReturnToQuestionsList: "Save question and return",
+        saveAndMoveToNextQuestions: "Save question and move to the next",
         clearValues: "Очистить значения",
         backToContributionPage: "<< Вернуться на предыдущую страницу",
         save: "Сохранить",
-        reset: "Oчистить"
+        reset: "Oчистить",
+        saveAndGoToTheNextQuestion: "Save and load next Question >>",
+        saveAndGoToThePrevQuestion: "<< Save and load previous Question",
+        deleteAndReturn: "<< Delete this question and return",
+        deleteAndLoadNext: "Delete this question and load next >>",
     }
   };
 

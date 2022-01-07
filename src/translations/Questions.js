@@ -9,6 +9,9 @@ const messages = {
       questHasBeenAddedSucc: "Question/answers has been added successfully, thanks",
       filterResults: "Filter results",
       itemsPerPage: "Items qty.",
+      status: "Status",
+      subject: "Subject",
+      cleareditedList: "Clear edited questions list",
 
     },
     ru: {
@@ -21,7 +24,8 @@ const messages = {
       questHasBeenAddedSucc: "Вопрос/ответы успешно добавлены, спасибо",
       filterResults: "Фильтровать результаты",
       itemsPerPage: "Pез. на страницу",
-
+      status: "Cтaтyc",
+      cleareditedList: "Clear edited questions list",
     }
   };
 

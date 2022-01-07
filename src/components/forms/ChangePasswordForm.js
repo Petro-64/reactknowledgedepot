@@ -11,7 +11,7 @@ const checkPassword = (value, allValues, props ) => {
     return props.messages[props.language].mustBe15CharactersOrLess
   }
 
-  if (allValues.repeatPassword != allValues.password){
+  if (allValues.repeatPassword !== allValues.password){
     return props.messages[props.language].passwordsDoNotMatch
   }
 }

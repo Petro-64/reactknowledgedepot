@@ -12,16 +12,7 @@ class TopNavigation extends React.Component {
     }
 
     componentDidMount(){
-        window.setTimeout(
-            function(){
-                let height = $(window).height();
-                let containerHeight = $(".container").height();
-                console.log("height = ", height);
-                console.log("containerHeight = ", containerHeight);
-            }, 1000
-        )
     }
-
 
     logoutUser (){
         this.props.logoutUser();

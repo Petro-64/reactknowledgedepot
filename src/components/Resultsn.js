@@ -155,10 +155,15 @@ class Resultsn extends React.Component {
                   </AccordionItem>
               </Accordion>
             </StyledAccordeon>
-
-          <Pagination paginationQuantity={this.props.resultsFilterPaginationQuantity} paginationNumber={this.props.resultsFilterPaginationNumber} paginationClick={this.paginationClick}/>
-          <BootstrapTable keyField='id' data={ this.props.resultsFiltered } columns={ columns } />
-          <Pagination paginationQuantity={this.props.resultsFilterPaginationQuantity} paginationNumber={this.props.resultsFilterPaginationNumber} paginationClick={this.paginationClick}/>
+            <div style={(this.props.resultsFiltered.length == 0) ? {display: 'none'} : {}}>
+              <Pagination paginationQuantity={this.props.resultsFilterPaginationQuantity} paginationNumber={this.props.resultsFilterPaginationNumber} 
+                paginationClick={this.paginationClick}/>
+              <BootstrapTable keyField='id' data={ this.props.resultsFiltered } columns={ columns } />
+              <Pagination paginationQuantity={this.props.resultsFilterPaginationQuantity} paginationNumber={this.props.resultsFilterPaginationNumber} paginationClick={this.paginationClick}/>
+            </div>
+            <div style={(this.props.resultsFiltered.length == 0) ? {} : {display: 'none'}}>
+              <br /><br /><br /><center><h4><FormattedMessage id="noResults" /></h4></center>
+            </div>
         </div>
       </div>
       <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>

@@ -18,6 +18,8 @@ import PasswordReset from './components/PasswordReset';
 import AdminSettings from './components/AdminSettings';
 import ForgotPassword from './components/ForgotPassword';
 import AccountSettings from './components/AccountSettings';
+import SpinningOverlay from './components/SpinningOverlay';
+import AdminEditQuestion from './components/AdminEditQuestion';
 import AdminAddQuestions from './components/AdminAddQuestions';
 import AdmineditQuestions from './components/AdmineditQuestions';
 import AdminContribution from './components/AdminContribution';
@@ -67,6 +69,7 @@ class App extends React.Component{
     return(
         <Router>
           <div>
+            <SpinningOverlay />
             <FlashMessage />
             <CookieConsent />
             <Route exact path="/app" component={Home} />
@@ -89,6 +92,7 @@ class App extends React.Component{
             <AuthorizedRouteAdmin exact path="/app/subjects" component={Subjects} />
             <AuthorizedRouteAdmin exact path="/app/admincontribution" component={AdminContribution} />
             <AuthorizedRouteAdmin exact path="/app/admincontribution/:id" component={AdminContributionDetails} />
+            <AuthorizedRouteAdmin exact path="/app/admineditquestions/:id" component={AdminEditQuestion} />
             <AuthorizedRouteAdmin exact path="/app/adminaddquestion" component={AdminAddQuestions} />
             <AuthorizedRouteAdmin exact path="/app/admineditquestion" component={AdmineditQuestions} />
           </div>

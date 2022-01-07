@@ -64,13 +64,20 @@ class Test extends React.Component {
   };
 
   answerClicked = (id) => {
-    this.countdown.current.resetTimer();
-    this.props.processTesting(this.props.testingSessionHash, id, this.props.currentSubjectId);
-    let corrAnswerId = ((this.props.correctAnswerId/2) - 456) / 36;
-    this.setState({
-      currentSubjectId: corrAnswerId,
-    })
-    this.props.setHintsBorderVisibility(1);
+    this.props.setOverlayVisibility(true);
+    setTimeout(
+      () => {
+        this.countdown.current.resetTimer();
+        this.props.processTesting(this.props.testingSessionHash, id, this.props.currentSubjectId);
+        let corrAnswerId = ((this.props.correctAnswerId/2) - 456) / 36;
+        this.setState({
+          currentSubjectId: corrAnswerId,
+        })
+        this.props.setHintsBorderVisibility(1);
+      }, 1500
+
+    )
+
   }
 
   openModal(){
@@ -160,9 +167,8 @@ class Test extends React.Component {
                   {this.props.answers.map((value) => 
                   <div className="answerBlock" style={(this.props.toShowTestingHints === "1" && this.props.toShowTestHintsBorder === 1) ? this.state.currentSubjectId === value.id ? {outline: '2px solid green'} : {outline: '2px solid red'}  : {}} 
                       key={value.id} data-id={value.id} onClick={() => this.answerClicked(value.id)}>{value.name}
-                  </div>)}<br/>
-                  <button type="button" className="btn btn-danger" onClick={this.openModal.bind(this)} >
-                  <FormattedMessage id="clickToStop" />
+                  </div>)}<br/><br/><br/>
+                  <button type="button" className="btn btn-danger" onClick={this.openModal.bind(this)} ><FormattedMessage id="clickToStop" />
                   </button>
                 </div>
                 {/* main test block ends */}
