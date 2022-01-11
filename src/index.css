@@ -41,14 +41,6 @@ body {
   border: none;
 }
 
-.answerBlock {
-  background-color: #C2CEDF;
-  padding: 15px;
-  border: none;
-  margin: 10px 0;
-  cursor: pointer;
-}
-
 table.resultsFilter td{
   width: 20%;
   vertical-align: top;

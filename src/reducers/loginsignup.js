@@ -6,7 +6,7 @@ let loginSignUpState={
     loginErrorVisibility: 'hidden',
     userName: 'Petro',   
     roleId: 2, //0 by default, 2 for admin
-    JWToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJsb2dpbl90aW1lc3RhbXAiOjE2NDE1MDY4MzB9.XD2LiB28dyWa+07MStobxooJRWCpeg8HHLe48SdGvWM=',
+    JWToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJsb2dpbl90aW1lc3RhbXAiOjE2NDE3Njg2MjR9.9syOBwT2Edo9/eBxFu5XJj7tYxIK4Uj/BYp4zKGyNNE=',
     userId: '1',
 
     /*

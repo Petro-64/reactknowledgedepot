@@ -7,7 +7,9 @@ const messages = {
       declined: "declined",
       pending: "pending",
       status: "Status",
-      creationDate: "Created at"
+      creationDate: "Created at",
+      subject: "Subject",
+      userName: "User name"
     },
     ru: {
       contibution: "Bопросы, добавленные пользователями",
@@ -17,7 +19,9 @@ const messages = {
       declined: "отклоненный",
       pending: "в ожидании",
       status: "Cтатус",
-      creationDate: "Создан"
+      creationDate: "Создан",
+      subject: "Предмет",
+      userName: "Имя пользователя",
     }
   };
 

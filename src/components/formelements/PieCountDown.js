@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../../translations/CountDown';
-import StyledCountDown from '../../styled/StyledCountDown';
 
-class Countdown extends Component {
+class PieCountDown extends Component {
     constructor() {
         super();
         this.state = { time: {}, seconds: 60, widthh: "200px", bgcolor: '' };
@@ -50,23 +49,23 @@ class Countdown extends Component {
       countDown() {
         // Remove one second, set state so a re-render happens.
         let seconds = this.state.seconds - 1;
-        const dynamicWidth = this.state.time.s === 0 ? "100" : ((this.state.time.s)/60)*100;
+        const dynamicWidth = this.state.time.s === 0 ? "200" : ((this.state.time.s)/60)*200;
         this.setState({
           time: this.secondsToTime(seconds),
           seconds: seconds,
           widthh: dynamicWidth + "px"
         });
-        if(seconds >=0 && seconds < 10){
+        if(seconds >=0 && seconds < 20){
           this.setState({
             bgcolor: '#dc3545',
           });
-        } else if (seconds >=10 && seconds < 25){
+        } else if (seconds >=20 && seconds < 40){
           this.setState({
             bgcolor: '#ffc107',
           });
-        } else if (seconds >=25 && seconds < 70){
+        } else if (seconds >=40 && seconds < 70){
           this.setState({
-            bgcolor: '#95c186',
+            bgcolor: '#007bff',
           });
         }
         // Check if we're at zero.
@@ -77,25 +76,23 @@ class Countdown extends Component {
       }
 
   render() {
-    const dynamicDegrees = this.state.time.s === 0 ? 100 : ((this.state.time.s)/60)*100;
     return (
-      <StyledCountDown degrees={dynamicDegrees} colorr={this.state.bgcolor}>
-        <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-          <div className="countdown">
-            <table>
-            <tbody>
-                <tr>
-                    <td className="timeLeftSeconds"><p><FormattedMessage id="timeLeft" />: {this.state.time.s} <FormattedMessage id="seconds" /></p></td>
-                    {/*<td><div className = "countdownindicator" style={{width : this.state.widthh, backgroundColor: this.state.bgcolor}}></div></td>*/}
-                    <td><div className="pie no-round"></div></td>
-                </tr>
-            </tbody>
-            </table>
-          </div>
-        </IntlProvider>
-      </StyledCountDown>
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <div className="countdown">
+          <table>
+          <tbody>
+              <tr>
+                  <td><p><FormattedMessage id="timeLeft" />: {this.state.time.s} <FormattedMessage id="seconds" /></p></td>
+                  <td><div className = "countdownindicator" style={{width : this.state.widthh, backgroundColor: this.state.bgcolor}}></div></td>
+                  <td><div>sdfsgdfgsd</div></td>
+              </tr>
+          </tbody>
+          </table>
+          
+        </div>
+      </IntlProvider>
     );
   }
 }
 
-export default Countdown;
+export default PieCountDown;

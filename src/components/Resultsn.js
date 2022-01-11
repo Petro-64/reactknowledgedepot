@@ -36,6 +36,7 @@ class Resultsn extends React.Component {
   }
 
   componentDidMount() {
+    this.props.setOverlayVisibility(true);
     this.props.loadSubjectsUsers();
     this.props.loadResults();
     this.selectedCheckboxes = new Set();
@@ -83,6 +84,7 @@ class Resultsn extends React.Component {
   };
 
   paginationClick = (i) => {
+    console.log("paginationClick function and i = ", i);
     let resultsFiltered = this.filterresults(this.props.results, [...this.selectedCheckboxes], this.props.resultsFilterPerPage, i, this.props.resultsFilterSortingOption);
     this.props.setResultsFiltered(resultsFiltered);
     this.props.setCurrentPaginationAction(i);
@@ -159,7 +161,8 @@ class Resultsn extends React.Component {
               <Pagination paginationQuantity={this.props.resultsFilterPaginationQuantity} paginationNumber={this.props.resultsFilterPaginationNumber} 
                 paginationClick={this.paginationClick}/>
               <BootstrapTable keyField='id' data={ this.props.resultsFiltered } columns={ columns } />
-              <Pagination paginationQuantity={this.props.resultsFilterPaginationQuantity} paginationNumber={this.props.resultsFilterPaginationNumber} paginationClick={this.paginationClick}/>
+              <Pagination paginationQuantity={this.props.resultsFilterPaginationQuantity} paginationNumber={this.props.resultsFilterPaginationNumber} 
+                paginationClick={this.paginationClick}/>
             </div>
             <div style={(this.props.resultsFiltered.length == 0) ? {} : {display: 'none'}}>
               <br /><br /><br /><center><h4><FormattedMessage id="noResults" /></h4></center>

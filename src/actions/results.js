@@ -1,7 +1,7 @@
 import axios from 'axios';
 import helpers from '../helpers/Helpers';
 import { LOAD_RESULTS, CLEAR_SENSITIVE_INFO, SET_RESULTS_FILTERED, SET_RESULTS_FILTER_ACTIVE_SUBJECTS, 
-    SET_RESULTS_FILTER_ITEMS_PAGE, SET_RESULTS_FILTER_NUMBER_OF_PAGINATIONS, SET_RESULTS_FILTER_CURRENT_PAGINATION, SET_RESULTS_FILTER_SORTING_OPTION } from '../types';
+    SET_RESULTS_FILTER_ITEMS_PAGE, SET_RESULTS_FILTER_NUMBER_OF_PAGINATIONS, SET_RESULTS_FILTER_CURRENT_PAGINATION, SET_RESULTS_FILTER_SORTING_OPTION, SET_OVERLAY_VISIBILITY } from '../types';
 import store from '../index.js';
 
 const BaseUrl = helpers.UrlSniffer();
@@ -20,6 +20,7 @@ export function loadResults(){
                 dispatch(setNumberOfPaginationAction(Math.ceil(resultsFilterBySubjectsAndSort.length/itemsPerPage)));
                 dispatch(setResultsFiltered(helpers.PaginatedResults(resultsFilterBySubjectsAndSort, itemsPerPage, store.getState().resultsReducer.resultsFilterPaginationNumber)))
                 dispatch(changeResults(responce.data.payload.results))
+                dispatch(setOverlayVisibilityDispatch(false))
             } else {
                 dispatch(clearSensitiveinfo([]))
             };
@@ -39,6 +40,19 @@ export function setResultsFilterActiveSubjects(subjects){
 export function setNumberOfPaginationAction(number){
     return(dispatch) => {
         dispatch(setNumberOfPagination(number))
+    }
+}
+
+export const setOverlayVisibility = (bool) => {
+    return (dispatch) => {
+        dispatch(setOverlayVisibilityDispatch(bool))
+    };
+}
+
+export function setOverlayVisibilityDispatch(bool){
+    return{
+        type: SET_OVERLAY_VISIBILITY,
+        visibility: bool
     }
 }
 
