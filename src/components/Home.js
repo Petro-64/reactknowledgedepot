@@ -9,7 +9,6 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translations/Home';
 import {withCookies} from 'react-cookie';
-import Carousel from 'react-bootstrap/Carousel'
 
 
 class Home extends React.Component {

@@ -7,7 +7,7 @@ import messages from '../translations/Contribution';
 import { withCookies } from 'react-cookie';
 import Footer from './Footer';
 import AddContributionForm from "./forms/AddContributionForm";
-
+import { formValueSelector } from 'redux-form';
 
 class AddMyQuestions extends React.Component {
 
@@ -44,6 +44,7 @@ class AddMyQuestions extends React.Component {
   }
 
   render() {
+    const { question, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer } = this.props;
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <div>
@@ -58,7 +59,8 @@ class AddMyQuestions extends React.Component {
                 {this.props.subjectsUser.map((value) => (<option key={value.id} value={value.id}>{value.name}</option>)) }
             </select>
             <div style={this.props.contributionSubjectId === '' ? {display: 'none'} : {}} >
-              <AddContributionForm onSubmit={()=>{this.props.sentMyContribution()}} language={this.props.language}/>
+              {/* <AddContributionForm onSubmit={()=>{this.props.sentMyContribution()}} language={this.props.language}/>*/}
+              <AddContributionForm onSubmit={()=>{this.props.sentMyContributionSaga({ question, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, subjectId: this.props.contributionSubjectId })}} language={this.props.language}/>
             </div>
           </div>
         </div>
@@ -73,5 +75,20 @@ const mapStateToProps=(state)=>{
     ...state.loginSignUpReducer, ...state.settingsReducer, ...state.subjectsReducer, ...state.testReducer, ...state.contributionsReducer
   };
 }
+
+const selector = formValueSelector('addContibutionFormRedux');
+
+AddMyQuestions = connect(
+  state => {
+    const question = selector(state, 'question');
+    const firstAnswer = selector(state, 'firstAnswer');
+    const secondAnswer = selector(state, 'secondAnswer');
+    const thirdAnswer = selector(state, 'thirdAnswer');
+    const fourthAnswer = selector(state, 'fourthAnswer');
+    return {
+      question, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer
+    }
+  }
+)(AddMyQuestions) 
 
 export default connect(mapStateToProps, actionCreators)(withCookies(AddMyQuestions));

@@ -17,6 +17,7 @@ const messages = {
         saveAndGoToTheNextQuestion: "Save and load next Question >>",
         saveAndGoToThePrevQuestion: "<< Save and load previous Question",
         deleteAndReturn: "<< Delete this question and return",
+        sendFeedback: "Send feedback",
         deleteAndLoadNext: "Delete this question and load next >>",
     },
     ru: {
@@ -37,8 +38,9 @@ const messages = {
         saveAndGoToTheNextQuestion: "Save and load next Question >>",
         saveAndGoToThePrevQuestion: "<< Save and load previous Question",
         deleteAndReturn: "<< Delete this question and return",
+        sendFeedback: "Отправить отзыв",
         deleteAndLoadNext: "Delete this question and load next >>",
-    }
+     }
   };
 
   export default messages;

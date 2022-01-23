@@ -16,6 +16,7 @@ class SmartTextArea extends Component {
                 
             <div style={{display: "inline-block", width: "100%"}}>
               <textarea {...input} placeholder={label} type={type} rows="4" disabled={disabled} style={{width: "calc(100% - 30px)"}}></textarea>
+              <br />
               <span style={{fontWeight: "bold", color: color}}>&nbsp;&nbsp;{input.value.length}</span>
               {touched &&
                 ((error && <span className="error">{error}</span>) ||

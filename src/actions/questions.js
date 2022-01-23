@@ -10,7 +10,7 @@ import { LOAD_SUBJECTS_ADMIN, CLEAR_SENSITIVE_INFO, SET_RESULTS_FILTER_ACTIVE_SU
     SET_ANSWERS_FOR_QUESTION_ID,
     SET_ADMIN_EDIT_QUESTION_ITEM,
     SET_CURRENT_SUBJECT_NAME_FOR_QUESTION_EDIT, SET_REDIRECT_FLAG_TO_BACK_TO_QUESTIONS_LIST, PUSH_EDITED_QUESTION_ID_TO_ARRAY_TO_BE_ABLE_TO_SEE_RECENTLY_EDITED_QUESTIONS,
-    CLEAR_EDITED_QUESTIONS_LIST, DELETE_QUESTION } from '../types';
+    CLEAR_EDITED_QUESTIONS_LIST } from '../types';
 import store from '../index.js';
 import {reset} from 'redux-form';
 import messages from '../translations/Questions';
@@ -106,8 +106,6 @@ export function toggleQuestionActivity(id){
 
 export function loadAnswers(id){
     const JWT = store.getState().loginSignUpReducer.JWToken;
-    let currentSubjId = store.getState().questionsReducer.currentSubjectId;
-    const currentStatus = store.getState().questionsReducer.currentStatus;
     const headers = { 'JWToken': JWT };
     return (dispatch) => {
         return axios.get(BaseUrl + 'react/answers/' + id, {
@@ -129,7 +127,6 @@ export function loadAnswers(id){
 export function loadQuestionsAndAnswersToEditAdmin(id){
     const JWT = store.getState().loginSignUpReducer.JWToken;
     const headers = { 'JWToken': JWT };
-    const timeout = store.getState().settingsReducer.flashMessagesTimeout;
 
     return (dispatch) => {
         return axios.get(BaseUrl + 'react/getquestionandanswerstoedit/' + id, {

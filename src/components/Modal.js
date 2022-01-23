@@ -8,7 +8,7 @@ class Modal extends React.Component {
         show: false
     };
 
-    showModal = e => {
+    showModal = () => {
         this.setState({
             show: true
         });

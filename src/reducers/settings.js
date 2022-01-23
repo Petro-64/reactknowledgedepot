@@ -6,7 +6,7 @@ let settingsState={
     flashMessagesVisibility: 0,
     flashMessagesMessage: '',
     flashMessagesType: 'success',// 'error',
-    flashMessagesTimeout: 4000,/// how long user will be able to see flash message
+    flashMessagesTimeout: 3000,/// how long user will be able to see flash message
     needEmailConfirmation: 0,
     needToShowRecaptcha: 1,
     cookieConsentVisibility: 0,
@@ -29,6 +29,12 @@ const settingsReducer = (state=settingsState, action)=>{
         }
 
     case SET_FLASH_MESSAGES_MESSAGE:
+        return{
+            ...state,
+            flashMessagesMessage: action.flashMessageMessage
+        }
+
+    case 'SET_FLASH_MESSAGES_MESSAGE_1':
         return{
             ...state,
             flashMessagesMessage: action.flashMessageMessage

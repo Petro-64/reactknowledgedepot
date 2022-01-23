@@ -16,6 +16,7 @@ export const loginUserRedux = () => {
     return (dispatch) => {
         return axios.post(BaseUrl + 'react/login', {email, password})
         .then(response => {
+            //console.log(response.data.data.jwt_token);
             if(response.data.data.success === "true"){
                 dispatch(setRoleId(response.data.data.role_id));
                 dispatch(setUserName(response.data.data.name));

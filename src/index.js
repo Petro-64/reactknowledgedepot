@@ -4,11 +4,13 @@ import ReactDOM from 'react-dom';
 import Home from './components/Home';
 import './index.css';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
+import createSagaMiddleware from 'redux-saga';
+
 
 import Test from './components/Test';
 import Login from './components/Login';
-import Signup from './components/Signup';
 import Users from './components/Users';
+import Signup from './components/Signup';
 import Resultsn from './components/Resultsn';
 import Subjects from './components/Subjects';
 import AboutCookie from './components/AboutCookie'
@@ -16,24 +18,27 @@ import FlashMessage from './components/FlashMessage';
 import CookieConsent from './components/CookieConsent';
 import PasswordReset from './components/PasswordReset';
 import AdminSettings from './components/AdminSettings';
+import FeedbackButton from './components/FeedbackButton';
 import ForgotPassword from './components/ForgotPassword';
 import AccountSettings from './components/AccountSettings';
 import SpinningOverlay from './components/SpinningOverlay';
 import AdminEditQuestion from './components/AdminEditQuestion';
 import AdminAddQuestions from './components/AdminAddQuestions';
-import AdmineditQuestions from './components/AdmineditQuestions';
 import AdminContribution from './components/AdminContribution';
+import AdmineditQuestions from './components/AdmineditQuestions';
 import AdminContributionDetails from './components/AdminContributionDetails';
 import UserContributionDetails from './components/UserContributionDetails';
 
 
 import {createStore, applyMiddleware, combineReducers } from 'redux';
+import rootSaga from './sagas';
 import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
 import testReducer from "./reducers/testing";
 import usersReducer from "./reducers/users";
 import resultsReducer from "./reducers/results";
 import settingsReducer from "./reducers/settings";
+import commentsReducer from './reducers/comments';
 import subjectsReducer from "./reducers/subjects";
 import questionsReducer from "./reducers/questions";
 import loginSignUpReducer from "./reducers/loginsignup";
@@ -46,7 +51,7 @@ import AuthorizedRouteUser from './components/authorization/AuthorizedRouteUser'
 import AuthorizedRouteAdmin from './components/authorization/AuthorizedRouteAdmin';
 import { reducer as formReducer } from 'redux-form';
 
-
+const sagaMiddleware = createSagaMiddleware();
 
 const rootReducer = combineReducers({
   testReducer,
@@ -57,18 +62,19 @@ const rootReducer = combineReducers({
   settingsReducer,
   contributionsReducer,
   questionsReducer,
+  commentsReducer,
   form: formReducer
 })
 
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
-//const store = createStore(rootReducer, applyMiddleware(thunk));
-
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware, thunk)));
+sagaMiddleware.run(rootSaga);
 
 class App extends React.Component{
   render(){
     return(
         <Router>
           <div>
+            <FeedbackButton/>
             <SpinningOverlay />
             <FlashMessage />
             <CookieConsent />
