@@ -15,8 +15,6 @@ class ForgotPassword extends React.Component {
   constructor(props) {
     super(props);
     this.child = React.createRef();
-    const { cookies } = props;
-    const mycookie = cookies.get('needToRedirectToLogin') ? cookies.get('needToRedirectToLogin') : "empty"
     this.state = {
       email: '',
       password: '',

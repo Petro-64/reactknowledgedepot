@@ -43,6 +43,11 @@ class AddMyQuestions extends React.Component {
     this.props.setLanguage(lang);
   }
 
+  navigateToMyContributionStatus = () =>{
+    this.props.history.push('/app/myquestionstatus');
+  }
+
+
   render() {
     const { question, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer } = this.props;
     return (
@@ -59,8 +64,8 @@ class AddMyQuestions extends React.Component {
                 {this.props.subjectsUser.map((value) => (<option key={value.id} value={value.id}>{value.name}</option>)) }
             </select>
             <div style={this.props.contributionSubjectId === '' ? {display: 'none'} : {}} >
-              {/* <AddContributionForm onSubmit={()=>{this.props.sentMyContribution()}} language={this.props.language}/>*/}
-              <AddContributionForm onSubmit={()=>{this.props.sentMyContributionSaga({ question, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, subjectId: this.props.contributionSubjectId })}} language={this.props.language}/>
+              <AddContributionForm onSubmit={()=>{this.props.sentMyContributionSaga({ question, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, subjectId: this.props.contributionSubjectId })}} 
+              navigateFunction = {this.navigateToMyContributionStatus.bind(this)} language={this.props.language}/>
             </div>
           </div>
         </div>

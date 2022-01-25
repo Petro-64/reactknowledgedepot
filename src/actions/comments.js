@@ -1,24 +1,14 @@
-export function postComment(comment){
+export function postComment({comment, route}){
     return (dispatch) => {
-        dispatch(postCommentDispatch(comment))
+        dispatch(postCommentDispatch({comment, route}))
     };
 }
 
-function postCommentDispatch(comment){
+function postCommentDispatch({comment, route}){
     return{
         type: 'POST_COMMENT',
-        comment: comment
+        comment: comment,
+        route: route,
     }
 }
 
-export function sentMyContributionSaga({question, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, subjectId}){
-    return (dispatch) => {
-        dispatch(sentMyContributionSagADispatch({question, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, subjectId}))
-    };
-}
-
-function sentMyContributionSagADispatch({question, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, subjectId}){
-    return{
-        type: 'POST_CONTRIBUTION_SAGA', question, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, subjectId
-    }
-}

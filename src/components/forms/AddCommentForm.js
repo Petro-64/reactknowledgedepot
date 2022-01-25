@@ -1,8 +1,10 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { IntlProvider, FormattedMessage } from "react-intl";
-import messages from '../../translations/forms/AddContributionForm';
+import messages from '../../translations/forms/AddCommentForm';
 import SmartTextArea from '../formelements/SmartTextArea';
+import {connect} from 'react-redux';
+
 
 let validate = values => {
     const errors = {}
@@ -12,6 +14,7 @@ let validate = values => {
 
 let AddCommentForm = props => {
   const { handleSubmit, pristine, reset, submitting, language, valid, cancell } = props;
+
   return (
     <IntlProvider locale={language} messages={messages[language]}>
       <form onSubmit={handleSubmit}>
@@ -22,9 +25,9 @@ let AddCommentForm = props => {
                   <tr><td><Field  name="comment"   component={SmartTextArea} /></td></tr>
                 </tbody>
             </table>
-            <button type="button" className="btn btn-danger" onClick={cancell}>Cancel</button>
-            <button type="submit" className="btn btn-success" onClick={cancell} disabled={pristine || submitting || !valid}><FormattedMessage id="sendFeedback" /></button>
-            <button type="button" className="btn btn-danger" onClick={reset}>reset</button>
+            <button type="button" className="btn btn-danger" onClick={cancell}><FormattedMessage id="cancel" /></button>&nbsp;&nbsp;&nbsp;
+            <button type="submit" className="btn btn-success" onClick={cancell} disabled={pristine || submitting || !valid}><FormattedMessage id="sendFeedback" /></button>&nbsp;&nbsp;&nbsp;
+            <button type="button" className="btn btn-danger" onClick={reset} disabled={pristine || submitting}><FormattedMessage id="reset" /></button>&nbsp;&nbsp;&nbsp;
         </div>
         <br/><br/>
       </form>
@@ -32,9 +35,18 @@ let AddCommentForm = props => {
   );
 };
 
+const mapStateToProps=(state)=>{
+  return {
+      ...state.commentsReducer, ...state.loginSignUpReducer, ...state.settingsReducer
+  };
+}
+
+
 AddCommentForm = reduxForm({
   form: 'addCommentFormRedux', 
   validate
 })(AddCommentForm);
 
-export default AddCommentForm;
+
+export default connect(mapStateToProps)(AddCommentForm);
+

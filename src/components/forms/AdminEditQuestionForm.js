@@ -5,6 +5,7 @@ import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../../translations/forms/AddContributionForm';
 import SmartTextArea from '../formelements/SmartTextArea';
 
+
 const validate = values => {
     const errors = {}
     if (!values.question) { errors.question = 'Required'  } else if (values.question.length > 1000) { errors.question = 'Must be 1000 characters or less'}

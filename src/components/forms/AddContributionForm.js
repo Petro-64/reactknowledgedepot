@@ -17,7 +17,7 @@ const validate = values => {
   }
 
 const AddContributionForm = props => {
-  const { handleSubmit, pristine, reset, submitting, language, backNavigation, valid } = props;
+  const { handleSubmit, pristine, reset, submitting, language, backNavigation, valid, navigateFunction } = props;
   const translations = {
     firstAnswer:  language === 'en' ? messages.en.firstAnswer : messages.ru.firstAnswer,
     secondAnswer:  language === 'en' ? messages.en.secondAnswer : messages.ru.secondAnswer,
@@ -45,6 +45,7 @@ const AddContributionForm = props => {
         </div>
         <br/><br/>
         <div>
+          <button type="submit" className="btn btn-primary" onClick={navigateFunction}><FormattedMessage id="seeMyContributionStatus" /></button>&nbsp;&nbsp;&nbsp;
           <button type="submit" className="btn btn-primary" disabled={pristine || submitting || !valid}><FormattedMessage id="sendQuestion" /></button>&nbsp;&nbsp;&nbsp;
           <button type="button" className="btn btn-danger" disabled={pristine || submitting} onClick={reset}><FormattedMessage id="clearValues" /></button>
         </div>

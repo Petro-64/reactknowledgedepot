@@ -8,6 +8,7 @@ import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translations/Questions';
 import AdminEditQuestionForm from "./forms/AdminEditQuestionForm";
 import Modal from './Modal';
+import { formValueSelector } from 'redux-form';
 
 
 class AdminEditQuestion extends React.Component {
@@ -64,7 +65,21 @@ class AdminEditQuestion extends React.Component {
   }
 
   loadNextQuestion(){
-    this.props.editQuestions(false)
+    let editedValues = {
+      question: this.props.questionFromForm,
+      subjectId: this.props.adminEditQuestionItem.subjectId,
+      questionId: this.props.adminEditQuestionItem.questionId,
+      answerCorrect: this.props.fourthAnswerFromForm,
+      correctId: this.props.adminEditQuestionItem.correctId,
+      uncorrect0: this.props.firstAnswerFromForm,
+      uncorrect1: this.props.secondAnswerFromForm,
+      uncorrect2: this.props.thirdAnswerFromForm,
+      uncorrectId0: this.props.adminEditQuestionItem.uncorrectId0,
+      uncorrectId1: this.props.adminEditQuestionItem.uncorrectId1,
+      uncorrectId2: this.props.adminEditQuestionItem.uncorrectId2,
+      ifNeedToRedirect: false
+    }
+    this.props.editQuestionsSaga({editedValues})
     this.props.loadQuestionsAndAnswersToEditAdmin(this.state.nextQuestionId);
     let questionsFiltered = this.props.questions.filter (question => question.id > this.state.nextQuestionId);//to determine if this is the last question for this subject ordered by id
     if(questionsFiltered.length > 0){
@@ -95,7 +110,21 @@ class AdminEditQuestion extends React.Component {
   }
 
   loadPrevQuestion(){
-    this.props.editQuestions(false)
+    let editedValues = {
+      question: this.props.questionFromForm,
+      subjectId: this.props.adminEditQuestionItem.subjectId,
+      questionId: this.props.adminEditQuestionItem.questionId,
+      answerCorrect: this.props.fourthAnswerFromForm,
+      correctId: this.props.adminEditQuestionItem.correctId,
+      uncorrect0: this.props.firstAnswerFromForm,
+      uncorrect1: this.props.secondAnswerFromForm,
+      uncorrect2: this.props.thirdAnswerFromForm,
+      uncorrectId0: this.props.adminEditQuestionItem.uncorrectId0,
+      uncorrectId1: this.props.adminEditQuestionItem.uncorrectId1,
+      uncorrectId2: this.props.adminEditQuestionItem.uncorrectId2,
+      ifNeedToRedirect: false
+    }
+    this.props.editQuestionsSaga({editedValues})
     this.props.loadQuestionsAndAnswersToEditAdmin(this.state.prevQuestionId);
     let questionsFilteredPrev = this.props.questions.filter(question => question.id < this.state.prevQuestionId).sort(function (a, b){
       if(a.id > b.id) return -1;
@@ -150,6 +179,22 @@ class AdminEditQuestion extends React.Component {
       uncorrectId1: this.props.adminEditQuestionItem.uncorrectId1,
       uncorrectId2: this.props.adminEditQuestionItem.uncorrectId2
     }
+
+    let editedValues = {
+      question: this.props.questionFromForm,
+      subjectId: this.props.adminEditQuestionItem.subjectId,
+      questionId: this.props.adminEditQuestionItem.questionId,
+      answerCorrect: this.props.fourthAnswerFromForm,
+      correctId: this.props.adminEditQuestionItem.correctId,
+      uncorrect0: this.props.firstAnswerFromForm,
+      uncorrect1: this.props.secondAnswerFromForm,
+      uncorrect2: this.props.thirdAnswerFromForm,
+      uncorrectId0: this.props.adminEditQuestionItem.uncorrectId0,
+      uncorrectId1: this.props.adminEditQuestionItem.uncorrectId1,
+      uncorrectId2: this.props.adminEditQuestionItem.uncorrectId2,
+      ifNeedToRedirect: true
+    }
+
     return (
       
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
@@ -159,6 +204,7 @@ class AdminEditQuestion extends React.Component {
           <div className="container">
             <h2><FormattedMessage id="editQuestion" /> # {this.state.currentQuestionId} </h2>
             <h4><FormattedMessage id="subject" />:&nbsp;{this.props.currentSubjectName}</h4>
+            {/* 
             <AdminEditQuestionForm  onSubmit={()=>{this.props.editQuestions(true)}} 
               language={this.props.language} 
               declineFunction={this.props.declineContributionAdmin} 
@@ -170,6 +216,19 @@ class AdminEditQuestion extends React.Component {
               loadPrevQuestion={this.loadPrevQuestion.bind(this)}
               showModal={this.showModal.bind(this)}
             />
+             */}
+              <AdminEditQuestionForm  
+              onSubmit={()=>{this.props.editQuestionsSaga({editedValues})}} 
+              language={this.props.language} 
+              declineFunction={this.props.declineContributionAdmin} 
+              initialValues={initialValues} 
+              backNavigation={this.backNavigation.bind(this)} 
+              nextIsAvailable={this.state.isThisTheLastQuestionForGivenSubject} 
+              prevIsAvailable={this.state.isThisTheFirstQuestionForGivenSubject}
+              loadnextQuestion={this.loadNextQuestion.bind(this)} 
+              loadPrevQuestion={this.loadPrevQuestion.bind(this)} s
+              howModal={this.showModal.bind(this)}
+            />
           </div>
       </div> 
       <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
@@ -177,6 +236,22 @@ class AdminEditQuestion extends React.Component {
     )
   }
 }
+
+const selector = formValueSelector('editContibutionFormAdminRedux');
+
+AdminEditQuestion = connect(
+  state => {
+    const questionFromForm = selector(state, 'question');
+    const firstAnswerFromForm = selector(state, 'uncorrect0');
+    const secondAnswerFromForm = selector(state, 'uncorrect1');
+    const thirdAnswerFromForm = selector(state, 'uncorrect2');
+    const fourthAnswerFromForm = selector(state, 'answerCorrect');
+    return {
+      questionFromForm, firstAnswerFromForm, secondAnswerFromForm, thirdAnswerFromForm, fourthAnswerFromForm
+    }
+  }
+)(AdminEditQuestion) 
+
 
 const mapStateToProps=(state)=>{
   return {

@@ -6,7 +6,8 @@ const messages = {
       myQuestionsStatus: "My added questions' status",
       youCanAddQuestions: "On this page you can share your experience and add questions to our knowledge base. After checking by the moderator, they will be added and available to all users. Please note that maximum length of the answer or question is 1000 characters",
       onceAdded: "Please take into consideration that once added, you can't change or edit your question. To check your question details, just click question status",
-
+      addSuccess: "Your question has been sent to moderation, thanks",
+      addError: "Network error, please try again later",
     },
     ru: {
       contibute: "Мои вопросы",
@@ -15,6 +16,8 @@ const messages = {
       myQuestionsStatus: "Статус добавленных мной вопросов",
       youCanAddQuestions: "Hа этой страничке вы можете поделиться своим опытом и добавить в базу знаний вопросы. После проверки модератором они будут добавлены и доступны всем пользователям. Обратите внимание, что максимальная длина ответа или вопроса составляет 1000 символов.",
       onceAdded: "Учтите, что после добавления вы не можете изменить или отредактировать свой вопрос. Чтобы проверить детали своего вопроса, просто нажмите на статус вопроса.",
+      addSuccess: "Ваш вопрос отправлен на модерацию, спасибо",
+      addError: "Ошибка сети, повторите попытку позже",
     }
   };
 

@@ -145,7 +145,8 @@ export function loadQuestionsAndAnswersToEditAdmin(id){
     }
 }
 
-export function editQuestions(ifNeedToRedirect){
+
+/*export function editQuestions(ifNeedToRedirect){////   now its saga!!!!
     const JWT = store.getState().loginSignUpReducer.JWToken;
     const headers = { 'JWToken': JWT };
     const itemsPerPage = store.getState().questionsReducer.resultsFilterPerPage;
@@ -191,6 +192,20 @@ export function editQuestions(ifNeedToRedirect){
         .catch(error => {
             throw(error);
         });
+    }
+}*/
+
+export function editQuestionsSaga({editedValues}){
+    return (dispatch) => {
+        dispatch(editQuestionsSagaDispatch({editedValues}));
+    }
+}
+
+
+export function editQuestionsSagaDispatch({editedValues}){
+    return{
+        type: 'POST_EDITED_QUESTIONS',
+        editedValues: editedValues
     }
 }
 
