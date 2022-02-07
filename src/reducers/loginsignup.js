@@ -7,10 +7,10 @@ let loginSignUpState={
 
     userName: 'Petro',   
     roleId: 2, //0 by default, 2 for admin
-    JWToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJsb2dpbl90aW1lc3RhbXAiOjE2NDMwNjE5Mjl9.YQoLY1QGF9Q6lL6sQYvOJt/xdTe/k/D3W7m9zzfvWxo=',
+    JWToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJsb2dpbl90aW1lc3RhbXAiOjE2NDQxODkyOTJ9.r3bE1PFQgdHjczMn3s9Sb416rGF1vTGmVHnZTT4AK1k=',
     userId: '1',
-
-      /*
+    /*
+  
 
     userName: '',   
     roleId: 0, //0 by default, 2 for admin

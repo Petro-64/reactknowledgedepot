@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import TopNavigation from './TopNavigation';
+import MaterialUiNavigation from './MaterialUiNavigation';
 import Footer from './Footer';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';
@@ -64,7 +65,8 @@ class Home extends React.Component {
   return (
         <div>
           <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-            <TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
+            {/*<TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>*/}
+            <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
             <div className="container" style={(this.state.needToRedirectToLogin.length > 5) ? {display: 'none'} : {}}>
               <div style={(this.props.roleId === 1 || this.props.roleId === 2 || this.props.roleId === 0) ? {} : {display: 'none'}}>
                 <h2><FormattedMessage id="aboutProject" /></h2>

@@ -21,6 +21,11 @@ import AdminSettings from './components/AdminSettings';
 import FeedbackButton from './components/FeedbackButton';
 import ForgotPassword from './components/ForgotPassword';
 import AccountSettings from './components/AccountSettings';
+
+
+import MaterialUi from './components/MaterialUi';
+
+
 import SpinningOverlay from './components/SpinningOverlay';
 import AdminEditQuestion from './components/AdminEditQuestion';
 import AdminAddQuestions from './components/AdminAddQuestions';
@@ -101,6 +106,7 @@ class App extends React.Component{
             <AuthorizedRouteAdmin exact path="/app/admineditquestions/:id" component={AdminEditQuestion} />
             <AuthorizedRouteAdmin exact path="/app/adminaddquestion" component={AdminAddQuestions} />
             <AuthorizedRouteAdmin exact path="/app/admineditquestion" component={AdmineditQuestions} />
+            <AuthorizedRouteAdmin exact path="/app/materialui" component={MaterialUi} />
           </div>
       </Router>
     )

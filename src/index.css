@@ -192,3 +192,18 @@ footer .navbar ul li{
     flex-direction: row;
   }
 }
+
+a.custom-mui-home-link{
+  color: white;
+  font-size: 18px;
+}
+
+a.custom-mui-home-link:hover{
+  text-decoration: none !important;
+  color: white;
+}
+
+.drawerNavigationLink, .drawerNavigationLink:hover {
+  text-decoration: none !important;
+  color: #444;
+}

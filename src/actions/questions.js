@@ -145,62 +145,11 @@ export function loadQuestionsAndAnswersToEditAdmin(id){
     }
 }
 
-
-/*export function editQuestions(ifNeedToRedirect){////   now its saga!!!!
-    const JWT = store.getState().loginSignUpReducer.JWToken;
-    const headers = { 'JWToken': JWT };
-    const itemsPerPage = store.getState().questionsReducer.resultsFilterPerPage;
-    const currentPagination = store.getState().questionsReducer.currentPagination;
-    let currentSubjId = store.getState().questionsReducer.currentSubjectId;
-    const currentStatus = store.getState().questionsReducer.currentStatus;
-
-    const {question, questionId, answerCorrect, correctId, uncorrect0, uncorrect1, uncorrect2, uncorrectId0, uncorrectId1, uncorrectId2} = store.getState().form.editContibutionFormAdminRedux.values;
-    return (dispatch) => {
-        return axios.post(BaseUrl + 'react/editquestions/', {question, questionId, answerCorrect, correctId, uncorrect0, uncorrect1, uncorrect2, uncorrectId0, uncorrectId1, uncorrectId2}, {
-            headers: headers
-        })
-        .then(responce => {
-            if(responce.data.payload.success === "true"){
-                return axios.get(BaseUrl + 'react/questions/' + currentSubjId + '/' + currentStatus, {
-                    headers: headers
-                })
-                .then(responce => {
-                    if(responce.data.payload.success === "true"){
-                        dispatch(setNumberOfQuestionsToEdit(responce.data.payload.questions.length));
-                        dispatch(pushQuestionIdToIdsArray(parseInt(questionId)));/// to be able to distinguish visually already edited questions (ex. table row bg color?)
-                        dispatch(setQuestionsToEdit(responce.data.payload.questions));
-                        let paginatedQuestions = helpers.SimplePaginatedResults(responce.data.payload.questions, itemsPerPage, currentPagination);
-                        dispatch(setResultsPaginated(paginatedQuestions));
-                        if(ifNeedToRedirect){
-                            dispatch(setRedirectFlagToBackToQuestionsList(2));
-                        }
-                        showFlashMessage(dispatch, "Question has been edited successfully", 'success');
-                    } else {
-                        dispatch(clearSensitiveinfo([]))
-                        showFlashMessage(dispatch, "Question edidion failure", 'error');
-                    };
-                })
-                .catch(error => {
-                    dispatch(clearSensitiveinfo());
-                    showFlashMessage(dispatch, "Question edidion failure", 'error');
-                });
-            } else {
-                dispatch(clearSensitiveinfo());
-                showFlashMessage(dispatch, "Question edidion failure", 'error');
-            };
-        })
-        .catch(error => {
-            throw(error);
-        });
-    }
-}*/
-
 export function editQuestionsSaga({editedValues}){
     return (dispatch) => {
         dispatch(editQuestionsSagaDispatch({editedValues}));
     }
 }
-
 
 export function editQuestionsSagaDispatch({editedValues}){
     return{
