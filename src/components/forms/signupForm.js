@@ -2,7 +2,7 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux'
 import * as actionCreators from '../../actions/index';
-import Captcha from '../Captcha';
+import Captcha from '../formelements/Captcha';
 import SmartField from '../formelements/SmartField';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../../translations/Signupform';

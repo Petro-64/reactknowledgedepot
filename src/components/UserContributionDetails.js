@@ -1,6 +1,5 @@
 import React from 'react'
-import TopNavigation from './TopNavigation';
-import Footer from './Footer';
+import MaterialUiNavigation from './MaterialUiNavigation';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';
 import { IntlProvider, FormattedMessage } from "react-intl";
@@ -41,14 +40,13 @@ class UserContributionDetails extends React.Component {
       <StyledUserContributionItem >
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
           <div>
-            <TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
+            <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
             <div className="container">
               <h2><FormattedMessage id="myConrtibutionDetails" /></h2>
               <h4 style={questionStatus == '0' ? {backgroundColor: '#efe756'} : questionStatus == '1' ? {backgroundColor: '#9dd49b', color: 'white !important'} : {backgroundColor: '#efc9c9', color: 'white !important'}}><FormattedMessage id="status" />: {statusWord}</h4><h4 className="second"><FormattedMessage id="creationDate" />: {createdAt}</h4>
               <UserEditContributionForm  language={this.props.language}  initialValues={this.props.userContributionItem}   backNavigation={this.backNavigation.bind(this)} />
             </div>
         </div> 
-        <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
       </IntlProvider>
      </StyledUserContributionItem>
     )

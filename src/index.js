@@ -8,22 +8,19 @@ import createSagaMiddleware from 'redux-saga';
 
 
 import Test from './components/Test';
-import Login from './components/Login';
+import Loginn from './components/LoginN';
 import Users from './components/Users';
 import Signup from './components/Signup';
 import Resultsn from './components/Resultsn';
 import Subjects from './components/Subjects';
 import AboutCookie from './components/AboutCookie'
-import FlashMessage from './components/FlashMessage';
+import FlashMessage from './components/formelements/FlashMessage';
 import CookieConsent from './components/CookieConsent';
 import PasswordReset from './components/PasswordReset';
 import AdminSettings from './components/AdminSettings';
-import FeedbackButton from './components/FeedbackButton';
+import FeedbackButton from './components/formelements/FeedbackButton';
 import ForgotPassword from './components/ForgotPassword';
 import AccountSettings from './components/AccountSettings';
-
-
-import MaterialUi from './components/MaterialUi';
 
 
 import SpinningOverlay from './components/SpinningOverlay';
@@ -85,14 +82,15 @@ class App extends React.Component{
             <CookieConsent />
             <Route exact path="/app" component={Home} />
             <NonAuthorizedRoute exact path="/app/test" component={Test}/>
-            <NonAuthorizedRoute exact path="/app/aboutcookie" component={AboutCookie}/>
             <NonAuthorizedRoute exact path="/app/resetpassword" component={PasswordReset} />
-            <NonAuthorizedRoute exact path="/app/login" component={Login}/>
+            <NonAuthorizedRoute exact path="/app/login" component={Loginn}/>
             <NonAuthorizedRoute exact path="/app/signup" component={Signup} />
             <NonAuthorizedRoute exact path="/app/forgotpassword" component={ForgotPassword} />
+            <NonAuthorizedRoute exact path="/app/aboutcookie" component={AboutCookie}/>
  
             <AuthorizedRouteUser exact path="/app/resultsn" component={Resultsn} />
             <AuthorizedRouteUser exact path="/app/test" component={Test} />
+            <AuthorizedRouteUser exact path="/app/aboutcookie" component={AboutCookie}/>
             <AuthorizedRouteUser exact path="/app/addmyquestion" component={AddMyQuestions} />
             <AuthorizedRouteUser exact path="/app/myquestionstatus" component={MyQuestionsStatus} />
             <AuthorizedRouteUser exact path="/app/accountsettings" component={AccountSettings} />
@@ -106,7 +104,6 @@ class App extends React.Component{
             <AuthorizedRouteAdmin exact path="/app/admineditquestions/:id" component={AdminEditQuestion} />
             <AuthorizedRouteAdmin exact path="/app/adminaddquestion" component={AdminAddQuestions} />
             <AuthorizedRouteAdmin exact path="/app/admineditquestion" component={AdmineditQuestions} />
-            <AuthorizedRouteAdmin exact path="/app/materialui" component={MaterialUi} />
           </div>
       </Router>
     )

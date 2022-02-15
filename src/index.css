@@ -207,3 +207,46 @@ a.custom-mui-home-link:hover{
   text-decoration: none !important;
   color: #444;
 }
+
+.drawerFooterLink {
+  font-size: 12px;
+  margin-bottom: 0px;
+  text-decoration: none !important;
+  color: #444;
+  padding-left: 14px;
+}
+
+.toggleLanguageButton{
+  cursor: pointer;
+  color:rgb(211, 224, 20);
+  font-weight: bold;
+}
+
+.avatarWrapper{
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  color:rgba(14, 53, 104, 1);
+  border-radius: 17px;
+  font-weight: bold;
+}
+
+.loginFormWrapper {
+  width: 300px;
+
+}
+
+.loginFormWrapper tr {
+  height: 75px;
+  vertical-align: top;
+}
+.visibilityToggleWrapper {
+  position: relative;
+}
+.visibilityToggleWrapper .visibilityToggle {
+  display: block;
+  position: absolute;
+  top: -12px;
+  left: -20px;
+  cursor: pointer;
+}

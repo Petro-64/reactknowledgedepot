@@ -1,6 +1,5 @@
 import React from 'react'
-import TopNavigation from './TopNavigation';
-import Footer from './Footer';
+import MaterialUiNavigation from './MaterialUiNavigation';
 import {connect} from 'react-redux';
 import Checkbox from './formelements/Checkbox';
 import Select from './formelements/Select';
@@ -126,8 +125,7 @@ class Resultsn extends React.Component {
      return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
       <div>
-        <TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
-        <div className="container">
+      <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>        <div className="container">
           <h2><FormattedMessage id="results" /></h2>
           <StyledAccordeon>
                 <Accordion allowMultipleExpanded="true" allowZeroExpanded="true">
@@ -168,7 +166,6 @@ class Resultsn extends React.Component {
             </div>
         </div>
       </div>
-      <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
      </IntlProvider>   
     )
   }

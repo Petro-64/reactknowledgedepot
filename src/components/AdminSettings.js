@@ -1,7 +1,6 @@
 import React from 'react';
 import '../App.css';
-import TopNavigation from './TopNavigation';
-import Footer from './Footer';
+import MaterialUiNavigation from './MaterialUiNavigation';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
@@ -41,7 +40,8 @@ class AdminSettings extends React.Component {
   render() {
     return (
           <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-            <TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
+            <div>
+            <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
             <div className="container">
               <h2>Global Settings</h2>
               <StyledAccordeon>
@@ -79,7 +79,7 @@ class AdminSettings extends React.Component {
               </Accordion>
             </StyledAccordeon><br/><br/>
             </div>
-            <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
+            </div>
           </IntlProvider>
     )
   }

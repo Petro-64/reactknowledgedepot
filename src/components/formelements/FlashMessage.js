@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import * as actionCreators from '../actions/index';
-import StyledFlashMessage from '../styled/StyledFlashMessage'
+import * as actionCreators from '../../actions/index';
+import StyledFlashMessage from '../../styled/StyledFlashMessage'
 
 
 class FlashMessage extends React.Component {

@@ -1,13 +1,12 @@
 import React from 'react'
-import TopNavigation from './TopNavigation';
-import Footer from './Footer';
+import MaterialUiNavigation from './MaterialUiNavigation';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';
 import { Link} from 'react-router-dom';
 import Countdown from './formelements/Countdown';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translations/Test';
-import Modal from './Modal';
+import Modal from './formelements/Modal';
 import StyledTesting from '../styled/StyledTesting';
 
 
@@ -111,7 +110,7 @@ class Test extends React.Component {
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
             <Modal ref={this.modall} toExecute = {this.stopTestingButtonClicked.bind(this)} message={translations.pleaseConfirmTestStop}/>
             <div>
-                <TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
+            <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
                 <div className="container">
                   <h2><FormattedMessage id="tests" /></h2>
                   <h5 style={this.state.currentSubjectName === '' ? {display: 'none'} :  {}}>
@@ -186,7 +185,6 @@ class Test extends React.Component {
 
                 </div>
             </div>  
-            <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
       </IntlProvider>
      </StyledTesting>
     )

@@ -1,6 +1,5 @@
 import React from 'react'
-import TopNavigation from './TopNavigation';
-import Footer from './Footer';
+import MaterialUiNavigation from './MaterialUiNavigation';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';
 import ForgotPasswordForm from "./forms/ForgotPasswordForm";
@@ -43,7 +42,7 @@ class ForgotPassword extends React.Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <div>
-          <TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
+        <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
           <div className="container">
             <h2><FormattedMessage id="forgotpassword" /></h2>
             <ForgotPasswordForm onSubmit={()=>{this.props.sentForgotPasswordForm()}} 
@@ -56,7 +55,6 @@ class ForgotPassword extends React.Component {
 
           </div>
       </div>
-      <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
      </IntlProvider>
     )
   }

@@ -1,18 +1,25 @@
 import React from "react";
-import StyledModal from '../styled/StyledModal'
+import StyledModal from '../../styled/StyledModal'
 
 
 
-class Modal extends React.Component {
+class Prompt extends React.Component {
     state = {
-        show: false
+        show: false,
+        value: ''
     };
 
-    showModal = () => {
+    showModal = e => {
         this.setState({
             show: true
         });
     };
+
+    onChange = e =>{
+        this.setState({
+            value: e.target.value
+        });
+    }
 
     hideModal = e => {
         this.setState({
@@ -43,9 +50,10 @@ class Modal extends React.Component {
                         {this.props.titlle}
                     </div>
                     <div className="modalBody">
+                        <textarea id="w3review" name="w3review" rows="2" cols="30" onChange={this.onChange.bind(this)} placeholder="required"></textarea>
                         <p className="bodyText">{this.props.message}</p>
                         <button type="button" className="btn btn-danger" onClick={this.hideModal.bind(this)}>Cancel</button>
-                        <button type="button" className="btn btn-success" onClick={this.clickYes.bind(this)}>Yes</button>
+                        <button type="button" className="btn btn-success" onClick={this.clickYes.bind(this)} disabled={this.state.value.length == 0}>Yes</button>
                     </div>
                 </div>
             </StyledModal>;
@@ -53,4 +61,4 @@ class Modal extends React.Component {
 }
 
 
-export default Modal;
+export default Prompt;

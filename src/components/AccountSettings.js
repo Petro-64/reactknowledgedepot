@@ -1,9 +1,7 @@
 import React from 'react';
 import '../App.css';
-import TopNavigation from './TopNavigation';
+import MaterialUiNavigation from './MaterialUiNavigation';
 import {connect} from 'react-redux';
-import Footer from './Footer';
-
 import * as actionCreators from '../actions/index';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import { IntlProvider, FormattedMessage } from "react-intl";
@@ -41,10 +39,13 @@ class AccountSettings extends React.Component {
   render() {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-        <TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
+        <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
         <div>
         <div className="container" style={{ minHeight: "600px" }}>
-          <h2><FormattedMessage id="accountSettings" /></h2>
+          <h2><FormattedMessage id="changePassword" /></h2>
+          <FormattedMessage id="pleaseKeepInMind" />&nbsp;&nbsp;&nbsp;
+          <ChangePasswordForm onSubmit={()=>{this.props.changePassword()}} language = {this.props.language}   messages = {messages} />
+          {/*
           <StyledAccordeon>
             <Accordion allowMultipleExpanded="true" allowZeroExpanded="true">
               <AccordionItem>
@@ -61,22 +62,6 @@ class AccountSettings extends React.Component {
                     </select>
                   </AccordionItemPanel>
               </AccordionItem>
-              {/*<AccordionItem>
-                  <AccordionItemHeading>
-                      <AccordionItemButton>
-                      <FormattedMessage id="wantToSeeHints" />?
-                      </AccordionItemButton>
-                  </AccordionItemHeading>
-                  <AccordionItemPanel>
-                    <FormattedMessage id="wantToSeeHints" />&nbsp;&nbsp;&nbsp;
-                    <select onChange={this.toggleShowHintsInternal.bind(this)} value={this.props.toShowTestingHints} className="languageSelect form-select">
-                      <option id="1" value="1">Yes</option>
-                      <option id="0" value="0">No</option>
-                    </select>
-                    <br />
-                    <FormattedMessage id="ifYesHints" />
-                  </AccordionItemPanel>
-              </AccordionItem>*/}
               <AccordionItem>
                   <AccordionItemHeading>
                       <AccordionItemButton>
@@ -90,10 +75,9 @@ class AccountSettings extends React.Component {
               </AccordionItem>
           </Accordion>
         </StyledAccordeon>
-
+*/}
         </div>
         </div>
-        <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
       </IntlProvider>
     )
   }

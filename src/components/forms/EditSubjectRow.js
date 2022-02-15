@@ -1,7 +1,7 @@
 import React from 'react';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../../translations/EditSubjRow';
-import Modal from '../Modal';
+import Modal from '../formelements/Modal';
 
 
 export default class EditSubjectRow extends React.Component {

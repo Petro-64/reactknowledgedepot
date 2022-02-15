@@ -1,9 +1,8 @@
 import React from 'react'
-import TopNavigation from './TopNavigation';
+import MaterialUiNavigation from './MaterialUiNavigation';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';
 import { IntlProvider, FormattedMessage } from "react-intl";
-import Footer from './Footer';
 import messages from '../translations/AdminContribution';
 import EditContributionForm from "./forms/EditContributionForm";
 
@@ -33,13 +32,12 @@ class AdminContribution extends React.Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <div>
-          <TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
+          <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
           <div className="container">
             <h2><FormattedMessage id="contibution" /></h2>
             <EditContributionForm  contributions={ this.props.adminContribution } language={this.props.language} />
           </div>
       </div>
-      <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
      </IntlProvider>
     )
   }

@@ -1,9 +1,8 @@
 import React from 'react'
-import TopNavigation from './TopNavigation';
-import Footer from './Footer';
+import MaterialUiNavigationMini from './MaterialUiNavigationMini';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';
-import SignupForm from "./forms/signupForm";
+import SignupFormN from "./forms/signupFormN";
 import SignupFormNoRecaptcha from "./forms/signupFormNoRecaptcha";
 import helpers from '../helpers/Helpers';
 import { IntlProvider, FormattedMessage } from "react-intl";
@@ -41,11 +40,10 @@ class Signup extends React.Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <div>
-            <TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
-            <div className="container">
-              <h2><FormattedMessage id="register" /></h2>
+        <MaterialUiNavigationMini logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>            <div className="container">
+              <center><h2><FormattedMessage id="register" /></h2></center>
               {this.props.needToShowRecaptcha == 1 && 
-              <SignupForm onSubmit={()=>{this.props.signup()}} 
+              <SignupFormN onSubmit={()=>{this.props.signup()}} 
               errorMessage={this.props.loginError} 
               errorMessageVisibility={this.props.loginErrorVisibility} 
               recaptchaText={this.state.recaptcatext} 
@@ -63,8 +61,8 @@ class Signup extends React.Component {
               />
               }
             </div>
+            
         </div> 
-        <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
      </IntlProvider>  
     )
   }

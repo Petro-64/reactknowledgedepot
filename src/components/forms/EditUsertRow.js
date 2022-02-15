@@ -1,8 +1,8 @@
 import React from 'react';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../../translations/EditSubjRow';
-import Modal from '../Modal';
-import Prompt from '../Prompt';
+import Modal from '../formelements/Modal';
+import Prompt from '../formelements/Prompt';
 
 
 

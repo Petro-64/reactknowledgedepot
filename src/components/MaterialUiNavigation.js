@@ -9,10 +9,9 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-//import Link from '@mui/material/Link';
+import Divider from '@mui/material/Divider';
 import ListItemButton from '@mui/material/ListItemButton';
 import QuizIcon from '@mui/icons-material/Quiz';
 import ExpandLess from '@mui/icons-material/ExpandLess';
@@ -26,8 +25,14 @@ import AddTaskIcon from '@mui/icons-material/AddTask';
 import FactCheckIcon from '@mui/icons-material/FactCheck';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translations/TopNavigation';
+import GroupIcon from '@mui/icons-material/Group';
+import SettingsIcon from '@mui/icons-material/Settings';
+import AddIcon from '@mui/icons-material/Add';
+import EditIcon from '@mui/icons-material/Edit';
+import ToggleLanguageButton from './formelements/ToggleLanguageButton';
+import AvatarMy from './formelements/AvatarMy';
 
- function MaterialUiNavigation(props) {
+function MaterialUiNavigation(props) {
   const [state, setState] = React.useState({top: false, left: false,  bottom: false, right: false, });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -37,7 +42,6 @@ import messages from '../translations/TopNavigation';
 
     setState({ ...state, [anchor]: open });
   };
-  const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -56,6 +60,10 @@ import messages from '../translations/TopNavigation';
     setAnchorElUser(null);
   };
 
+  const toggleLanguage = (e) => {
+    props.toggleLanguage(e.target.value);
+  }
+
   const [selectedIndex, setSelectedIndex] = React.useState("");
   const handleClick = index => {
     if (selectedIndex === index) {
@@ -65,8 +73,10 @@ import messages from '../translations/TopNavigation';
     }
   }
 
-  const handleClickSubmenu2 = () => {
-    //openContributionSubmenu(!setOpenContributionSubmenu);
+  const [age, setAge] = React.useState('');
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
   };
 
   const list = (anchor) => (
@@ -94,7 +104,7 @@ import messages from '../translations/TopNavigation';
           </ListItemButton>
           <Collapse in={2 === selectedIndex} timeout="auto" unmountOnExit>
               <Link to="/app/test" color="#444" variant="p" underline="none" className="drawerNavigationLink">
-                <ListItemButton>
+                <ListItemButton onClick={toggleDrawer('left', false)}>
                   <ListItemIcon>
                     <QuizIcon />
                   </ListItemIcon>
@@ -105,7 +115,7 @@ import messages from '../translations/TopNavigation';
               </Link>
               {(props.roleId === 1 || props.roleId === 2) && (
               <Link to="/app/resultsn" color="#444" variant="p" underline="none" className="drawerNavigationLink">
-                <ListItemButton>
+                <ListItemButton onClick={toggleDrawer('left', false)}>
                   <ListItemIcon>
                     <SummarizeIcon />
                   </ListItemIcon>
@@ -125,7 +135,7 @@ import messages from '../translations/TopNavigation';
           </ListItemButton>
           <Collapse in={1 === selectedIndex} timeout="auto" unmountOnExit>
             <Link to="/app/addmyquestion" color="#444" variant="p" underline="none" className="drawerNavigationLink">
-              <ListItemButton>
+              <ListItemButton onClick={toggleDrawer('left', false)}>
                 <ListItemIcon>
                   <AddTaskIcon />
                 </ListItemIcon>
@@ -135,7 +145,7 @@ import messages from '../translations/TopNavigation';
               </ListItemButton>
             </Link>
             <Link to="/app/myquestionstatus" color="#444" variant="p" underline="none" className="drawerNavigationLink">
-              <ListItemButton>
+              <ListItemButton onClick={toggleDrawer('left', false)}>
                 <ListItemIcon>
                   <FactCheckIcon />
                 </ListItemIcon>
@@ -146,45 +156,82 @@ import messages from '../translations/TopNavigation';
             </Link>
           </Collapse>
           </>
-        )}
-          <ListItemButton onClick={() => { handleClick(3) }}>
-              <ListItemText><FormattedMessage id="admin" /></ListItemText>
-              {3 === selectedIndex ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-          <Collapse in={3 === selectedIndex} timeout="auto" unmountOnExit>
-            <Link to="/app/users" color="#444" variant="p" underline="none" className="drawerNavigationLink">
-              <ListItemButton>
-                <ListItemIcon>
-                  <AddTaskIcon />
-                </ListItemIcon>
-                <ListItemText sx={{ mx: -2 }}>
-                <FormattedMessage id="users" /> 
-                </ListItemText>
-              </ListItemButton>
-            </Link>
-            <Link to="/app/subjects" color="#444" variant="p" underline="none" className="drawerNavigationLink">
-              <ListItemButton>
-                <ListItemIcon>
-                  <FactCheckIcon />
-                </ListItemIcon>
-                <ListItemText sx={{ mx: -2 }}>
-                <FormattedMessage id="subjects" />
-                </ListItemText>
-              </ListItemButton>
-            </Link>
-          </Collapse>
+          )}
+          {( props.roleId === 2) && (
+            <>
+            <Divider />
+            <ListItemButton onClick={() => { handleClick(3) }}>
+                <ListItemText><FormattedMessage id="admin" /></ListItemText>
+                {3 === selectedIndex ? <ExpandLess /> : <ExpandMore />}
+            </ListItemButton>
+            <Collapse in={3 === selectedIndex} timeout="auto" unmountOnExit>
+              <Link to="/app/users" color="#444" variant="p" underline="none" className="drawerNavigationLink">
+                <ListItemButton onClick={toggleDrawer('left', false)}>
+                  <ListItemIcon>
+                    <GroupIcon />
+                  </ListItemIcon>
+                  <ListItemText sx={{ mx: -2 }}>
+                  <FormattedMessage id="users" />   
+                  </ListItemText>
+                </ListItemButton>
+              </Link>
+              <Link to="/app/subjects" color="#444" variant="p" underline="none" className="drawerNavigationLink">
+                <ListItemButton onClick={toggleDrawer('left', false)}>
+                  <ListItemIcon>
+                    <FactCheckIcon />
+                  </ListItemIcon>
+                  <ListItemText sx={{ mx: -2 }}>
+                  <FormattedMessage id="subjects" />
+                  </ListItemText>
+                </ListItemButton>
+              </Link>
+              <Link to="/app/adminsettings" color="#444" variant="p" underline="none" className="drawerNavigationLink">
+                <ListItemButton onClick={toggleDrawer('left', false)}>
+                  <ListItemIcon>
+                    <SettingsIcon />
+                  </ListItemIcon>
+                  <ListItemText sx={{ mx: -2 }}>
+                  <FormattedMessage id="globalSettings" />
+                  </ListItemText>
+                </ListItemButton>
+              </Link>
+
+              <Link to="/app/admincontribution" color="#444" variant="p" underline="none" className="drawerNavigationLink">
+                <ListItemButton onClick={toggleDrawer('left', false)}>
+                  <ListItemIcon>
+                    <AddTaskIcon />
+                  </ListItemIcon>
+                  <ListItemText sx={{ mx: -2 }}>
+                  <FormattedMessage id="contribution" />
+                  </ListItemText>
+                </ListItemButton>
+              </Link>
+
+              <Link to="/app/adminaddquestion" color="#444" variant="p" underline="none" className="drawerNavigationLink">
+                <ListItemButton onClick={toggleDrawer('left', false)}>
+                  <ListItemIcon>
+                    <AddIcon />
+                  </ListItemIcon>
+                  <ListItemText sx={{ mx: -2 }}>
+                  <FormattedMessage id="addQuestion" />
+                  </ListItemText>
+                </ListItemButton>
+              </Link>
+
+              <Link to="/app/admineditquestion" color="#444" variant="p" underline="none" className="drawerNavigationLink">
+                <ListItemButton onClick={toggleDrawer('left', false)}>
+                  <ListItemIcon>
+                    <EditIcon />
+                  </ListItemIcon>
+                  <ListItemText sx={{ mx: -2 }}>
+                  <FormattedMessage id="editQuestion" />
+                  </ListItemText>
+                </ListItemButton>
+              </Link>
+            </Collapse>
+            </>
+          )}
         </List>
-        {/*<Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>*/}
       </Box>
     </IntlProvider>
   );
@@ -193,33 +240,86 @@ import messages from '../translations/TopNavigation';
     <div>
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <AppBar position="static">
-          <Toolbar disableGutters sx={{ mx: 1 }}>
-              <IconButton size="large" aria-label="account of current user" aria-controls="menu-appbar"  aria-haspopup="true" sx={{ mr: 2 }} onClick={toggleDrawer('left', true)} color="inherit">
-                <MenuIcon />
-              </IconButton>
-              <Link to="/app/" color="#fff" variant="h6" underline="none" className="custom-mui-home-link" sx={{ ml: 2 }}>Knowledgedepot</Link>
-            <Box sx={{ flexGrow: 1}}></Box>
-            <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+          <Toolbar disableGutters sx={{ mx: 0 }}>
+            <div style={{ width: '100%' }}>
+              <Box display="flex" flexDirection="row" p={0} m={0}>
+                <Box p={1} >
+                <IconButton size="medium" aria-label="account of current user" aria-controls="menu-appbar"  aria-haspopup="true" sx={{ mr: 1 }} onClick={toggleDrawer('left', true)} color="inherit">
+                  <MenuIcon />
                 </IconButton>
-              </Tooltip>
-              <Menu sx={{ mt: '45px' }} id="menu-appbar" anchorEl={anchorElUser} anchorOrigin={{ vertical: 'top',  horizontal: 'right',}} keepMounted transformOrigin={{vertical: 'top',horizontal: 'right',}}  open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
-              >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
+                </Box>
+                <Box sx={{ pl: 0, pt: 1.75, ml: -1 }} >
+                  <Link to="/app/" color="#fff" variant="h6" underline="none" className="custom-mui-home-link" sx={{ ml: 0 }}>Knowledgedepot</Link>
+                </Box>
+                <div style={{ width: '100%' }}>
+                  <Box display="flex" flexDirection="row-reverse" p={0} m={0}>
+                    <Box p={1}>
+                      <Tooltip title="Open account settings">
+                        <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                          {/*
+                          <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                          */}
+                          <AvatarMy userName={props.userName}/>
+                        </IconButton>
+                      </Tooltip>
+                      <Menu sx={{ mt: '45px' }} id="menu-appbar" anchorEl={anchorElUser} anchorOrigin={{ vertical: 'top',  horizontal: 'right',}} keepMounted transformOrigin={{vertical: 'top',horizontal: 'right',}}  open={Boolean(anchorElUser)}
+                        onClose={handleCloseUserMenu}
+                      >
+                         {(( props.roleId === 1) || ( props.roleId === 2))  && (
+                          <MenuItem key={"logout"} onClick={props.logoutUser}>
+                            <Typography textAlign="center" onClick={handleCloseUserMenu}>
+                              <FormattedMessage id="logout" />
+                            </Typography>
+                          </MenuItem>
+                          )}
+                          {( props.roleId === 0) && (
+                          <>
+                            <Link to="/app/login" color="#444" variant="p" underline="none" className="drawerNavigationLink">
+                              <MenuItem key={"login"}>
+                                  <Typography textAlign="center">
+                                    <FormattedMessage id="login" />
+                                  </Typography>
+                              </MenuItem>
+                            </Link>
+                            <Link to="/app/signup" color="#444" variant="p" underline="none" className="drawerNavigationLink">
+                              <MenuItem key={"register"}>
+                                  <Typography textAlign="center">
+                                    <FormattedMessage id="register" />
+                                  </Typography>
+                              </MenuItem>
+                            </Link>
+                          </>
+                          )}
+                          {(( props.roleId === 1) || ( props.roleId === 2))  && (
+                          <Link to="/app/accountsettings" color="#444" variant="p" underline="none" className="drawerNavigationLink">
+                            <MenuItem key={"Change password"} onClick={handleCloseUserMenu}>
+                                <Typography textAlign="center">
+                                  <FormattedMessage id="changePassword" />
+                                </Typography>
+                            </MenuItem>
+                          </Link>
+                          )}
+                      </Menu>
+                    </Box>
+                    <Tooltip title="Change language">
+                      <Box sx={{ p: 2, mt: 0.25 }}>
+                        <ToggleLanguageButton language={props.language} toggleLanguage={props.toggleLanguage}/>
+                      </Box>
+                    </Tooltip>
+                  </Box>
+                </div>
+              </Box>
+            </div>
           </Toolbar>
       </AppBar>
     </IntlProvider>
-    <Drawer anchor={'left'}  open={state['left']} onClose={toggleDrawer('left', false)}>
+    <Drawer anchor={'left'}  open={state['left']} onClose={toggleDrawer('left', false)} sx={{ mb: 0.25 }}>
         {list('left')}
+        <List style={{ marginTop: `auto` }}>
+          <Link to="/app" color="#444" variant="p" underline="none" className="drawerNavigationLink" onClick={toggleDrawer('left', false)}>
+              <p class="drawerFooterLink">©2020 Copyright: Petro Niemkov</p>
+          </Link>
+        </List>
     </Drawer>
 
     </div>

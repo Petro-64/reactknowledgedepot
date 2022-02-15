@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import helpers from '../helpers/Helpers';
+import helpers from '../../helpers/Helpers';
 
 export default class SubjectsList extends React.Component{
     state = {

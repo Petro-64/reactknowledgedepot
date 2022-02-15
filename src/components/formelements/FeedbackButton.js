@@ -1,10 +1,10 @@
 import React from 'react';
-import StyledFeedbackButton from '../styled/StyledFeedbackButton';
+import StyledFeedbackButton from '../../styled/StyledFeedbackButton';
 import { IntlProvider, FormattedMessage } from "react-intl";
-import AddCommentForm from './forms/AddCommentForm';
-import messages from '../translations/forms/AddCommentForm';
+import AddCommentForm from './../forms/AddCommentForm';
+import messages from '../../translations/forms/AddCommentForm';
 import {connect} from 'react-redux';
-import * as actionCreators from '../actions/index';
+import * as actionCreators from '../../actions/index';
 import { formValueSelector } from 'redux-form';
 
 class FeedbackButton extends React.Component {

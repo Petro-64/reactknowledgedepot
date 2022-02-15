@@ -1,15 +1,14 @@
 import React from 'react'
-import TopNavigation from './TopNavigation';
-import Footer from './Footer';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';
-import LoginForm from "./forms/loginForm";
+import LoginFormN from "./forms/loginFormN";
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translations/Login';
 import { withCookies } from 'react-cookie';
+import MaterialUiNavigationMini from './MaterialUiNavigationMini'
 
 
-class Login extends React.Component {
+class Loginn extends React.Component {
 
   constructor(props) {
     super(props);
@@ -21,6 +20,7 @@ class Login extends React.Component {
       password: '',
       cook: cookies,
       needToRedirectToLogin: mycookie,
+      passwordType: 'password'
     };
   }
 
@@ -41,18 +41,29 @@ class Login extends React.Component {
     this.props.setLanguage(lang);
   }
 
+  toggleVisibility = () =>{
+    this.state.passwordType === 'password' ? this.setState({ passwordType: 'text' }) : this.setState({ passwordType: 'password' });
+  }
+
   render() {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <MaterialUiNavigationMini logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
         <div>
-          <TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
           <div className="container">
-            <h2><FormattedMessage id="login" /></h2>
+            <center><h2><FormattedMessage id="login" /></h2>
             <h3 style={(this.state.needToRedirectToLogin.length > 5) ? {} : {display: 'none'}}><FormattedMessage id="thanksforregistration" /></h3>
-            <LoginForm onSubmit={()=>{this.props.loginUserRedux()}} errorMessage={this.props.loginError} errorMessageVisibility={this.props.loginErrorVisibility} language={this.props.language}/>
+                <LoginFormN 
+                onSubmit={()=>{this.props.loginUserRedux()}} 
+                errorMessage={this.props.loginError} 
+                errorMessageVisibility={this.props.loginErrorVisibility} 
+                language={this.props.language}
+                whatToShow={this.state.passwordType}
+                toggleVisibility={this.toggleVisibility.bind(this)}
+                />
+            </center>
           </div>
       </div> 
-      <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
      </IntlProvider>
     )
   }
@@ -64,4 +75,4 @@ const mapStateToProps=(state)=>{
   };
 }
 
-export default connect(mapStateToProps, actionCreators)(withCookies(Login));
+export default connect(mapStateToProps, actionCreators)(withCookies(Loginn));

@@ -1,11 +1,10 @@
 import React from 'react'
-import TopNavigation from './TopNavigation';
+import MaterialUiNavigation from './MaterialUiNavigation';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translations/Contribution';
 import { withCookies } from 'react-cookie';
-import Footer from './Footer';
 import AddContributionForm from "./forms/AddContributionForm";
 import { formValueSelector } from 'redux-form';
 
@@ -53,8 +52,7 @@ class AddMyQuestions extends React.Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <div>
-          <TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
-          <div className="container">
+          <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>          <div className="container">
             <h2><FormattedMessage id="addMyQuestions" /></h2>
             <br />
             <FormattedMessage id="youCanAddQuestions" />
@@ -69,7 +67,6 @@ class AddMyQuestions extends React.Component {
             </div>
           </div>
         </div>
-        <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
      </IntlProvider>
     )
   }

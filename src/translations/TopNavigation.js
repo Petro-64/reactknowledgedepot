@@ -19,6 +19,8 @@ const messages = {
       contribution: "Contribution",
       addQuestion: "Add question",
       editQuestion: "Edit question",
+      changePassword: "Change password",
+
     },
     ru: {
       home: "Домой",
@@ -40,6 +42,7 @@ const messages = {
       contribution: "Вклад пользователей",
       addQuestion: "Добавить вопрос",
       editQuestion: "Редактировать вопрос",
+      changePassword: "Cменить пароль",
     }
   };
 

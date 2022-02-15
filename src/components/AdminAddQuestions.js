@@ -1,7 +1,6 @@
 import React from 'react';
 import '../App.css';
-import TopNavigation from './TopNavigation';
-import Footer from './Footer';
+import MaterialUiNavigation from './MaterialUiNavigation';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';
 import { IntlProvider, FormattedMessage } from "react-intl";
@@ -48,7 +47,7 @@ class AdminAddQuestions extends React.Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
       <div>
-          <TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
+        <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
           <div className="container">
             <h2><FormattedMessage id="addQuestion" /></h2>
             <p style={this.state.currentSubjectName === ''  ? {} : {display: 'none'}}><FormattedMessage id="firstt" /></p>
@@ -66,7 +65,6 @@ class AdminAddQuestions extends React.Component {
             </div>
           </div>
       </div> 
-      <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
      </IntlProvider>  
     )
   }

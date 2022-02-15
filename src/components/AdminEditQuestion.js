@@ -1,13 +1,12 @@
 import React from 'react';
 import '../App.css';
-import TopNavigation from './TopNavigation';
-import Footer from './Footer';
+import MaterialUiNavigation from './MaterialUiNavigation';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translations/Questions';
 import AdminEditQuestionForm from "./forms/AdminEditQuestionForm";
-import Modal from './Modal';
+import Modal from './formelements/Modal';
 import { formValueSelector } from 'redux-form';
 
 
@@ -200,7 +199,7 @@ class AdminEditQuestion extends React.Component {
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
       <div>
           <Modal ref={this.modall}  message={'Please confirm question deletion'} toExecute = {this.deleteQuestion.bind(this)}/>
-          <TopNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
+          <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
           <div className="container">
             <h2><FormattedMessage id="editQuestion" /> # {this.state.currentQuestionId} </h2>
             <h4><FormattedMessage id="subject" />:&nbsp;{this.props.currentSubjectName}</h4>
@@ -231,7 +230,6 @@ class AdminEditQuestion extends React.Component {
             />
           </div>
       </div> 
-      <Footer logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} ref={this.child} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
      </IntlProvider>  
     )
   }
