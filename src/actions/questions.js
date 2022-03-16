@@ -14,6 +14,8 @@ import { LOAD_SUBJECTS_ADMIN, CLEAR_SENSITIVE_INFO, SET_RESULTS_FILTER_ACTIVE_SU
 import store from '../index.js';
 import {reset} from 'redux-form';
 import messages from '../translations/Questions';
+import showMuiFlashMessage from './snackBarControl';
+
 
 const BaseUrl = helpers.UrlSniffer();
 
@@ -186,18 +188,18 @@ export function deleteQuestion(ifNeedToRedirect){
                         if(ifNeedToRedirect){
                             dispatch(setRedirectFlagToBackToQuestionsList(2));
                         }
-                        showFlashMessage(dispatch, "Question has been deleted successfully", 'success');
+                        showMuiFlashMessage(dispatch, "Question has been deleted successfully", 'success');
                     } else {
-                        showFlashMessage(dispatch, "Question deletedion failure", 'error');
+                        showMuiFlashMessage(dispatch, "Question deletedion failure", 'error');
                         dispatch(clearSensitiveinfo([]))
                     };
                 })
                 .catch(error => {
-                    showFlashMessage(dispatch, "Question deletedion failure", 'error');
+                    showMuiFlashMessage(dispatch, "Question deletedion failure", 'error');
                     dispatch(clearSensitiveinfo([]))
                 });
             } else {
-                showFlashMessage(dispatch, "Question deletedion failure", 'error');
+                showMuiFlashMessage(dispatch, "Question deletedion failure", 'error');
                 dispatch(clearSensitiveinfo([]))
             };
         })
@@ -371,26 +373,16 @@ export const addNewQuestionAdmin = () => {
         .then(response => {
             if(response.data.payload.success === "true"){
                 dispatch(reset('editContibutionFormAdminRedux'));
-                dispatch(changeFlashMessageVisibility(1));
-                dispatch(changeFlashMessageMessage(messages[currentLang].questHasBeenAddedSucc));////'Question/answers has been added successfully, thanks'
-                dispatch(changeFlashMessageType('success'));
+                showMuiFlashMessage(dispatch, messages[currentLang].questHasBeenAddedSucc, 'success');
                 setTimeout(function(){ dispatch(changeFlashMessageVisibility(0)); }, timeout);
             } else {
-                alert("Network error, please try again later");
+                showMuiFlashMessage(dispatch, "Network error", 'error');
             };
         })
         .catch(error => {
-            throw(error);
+            showMuiFlashMessage(dispatch, "Network error", 'error');
         });
     };
-}
-
-function showFlashMessage(dispatch, message, type){
-    const timeout = store.getState().settingsReducer.flashMessagesTimeout;
-    dispatch(changeFlashMessageVisibility(1));
-    dispatch(changeFlashMessageMessage(message));
-    dispatch(changeFlashMessageType(type));
-    setTimeout(function(){ dispatch(changeFlashMessageVisibility(0)); }, timeout);
 }
 
 export function setResultsFiltered(results){
@@ -437,25 +429,4 @@ function changeFlashMessageVisibility(value){
         type: SET_FLASH_MESSAGES_VISIBILITY,
         flashMessageVisibility: value    
     } 
-}
-
-function changeFlashMessageMessage(message){
-    return{
-        type: SET_FLASH_MESSAGES_MESSAGE,
-        flashMessageMessage: message    
-    }
-}
-
-function changeFlashMessageType(type){
-    return{
-        type: SET_FLASH_MESSAGES_TYPE,
-        flashMessageType: type    
-    }
-}
-
-function ResultsFilterActiveSubjects(subjects){
-    return{
-        type: SET_RESULTS_FILTER_ACTIVE_SUBJECTS,
-        resultsFilterActiveSubjects: subjects    
-    }
 }

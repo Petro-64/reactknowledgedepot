@@ -53,6 +53,7 @@ class Loginn extends React.Component {
           <div className="container">
             <center><h2><FormattedMessage id="login" /></h2>
             <h3 style={(this.state.needToRedirectToLogin.length > 5) ? {} : {display: 'none'}}><FormattedMessage id="thanksforregistration" /></h3>
+            <br/><br/>
                 <LoginFormN 
                 onSubmit={()=>{this.props.loginUserRedux()}} 
                 errorMessage={this.props.loginError} 

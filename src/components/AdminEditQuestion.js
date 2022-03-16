@@ -153,6 +153,7 @@ class AdminEditQuestion extends React.Component {
   }
 
   showModal(){
+    console.log("show modal");
     this.modall.current.showModal();
   }
   
@@ -225,8 +226,8 @@ class AdminEditQuestion extends React.Component {
               nextIsAvailable={this.state.isThisTheLastQuestionForGivenSubject} 
               prevIsAvailable={this.state.isThisTheFirstQuestionForGivenSubject}
               loadnextQuestion={this.loadNextQuestion.bind(this)} 
-              loadPrevQuestion={this.loadPrevQuestion.bind(this)} s
-              howModal={this.showModal.bind(this)}
+              loadPrevQuestion={this.loadPrevQuestion.bind(this)}
+              showModal={this.showModal.bind(this)}
             />
           </div>
       </div> 

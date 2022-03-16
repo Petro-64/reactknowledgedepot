@@ -22,6 +22,7 @@ export function loadResults(){
                 dispatch(changeResults(responce.data.payload.results))
                 dispatch(setOverlayVisibilityDispatch(false))
             } else {
+                dispatch(setOverlayVisibilityDispatch(false))
                 dispatch(clearSensitiveinfo([]))
             };
         })

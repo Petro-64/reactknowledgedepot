@@ -10,6 +10,8 @@ let contributionState={
     redirectAfterSuccesfullAdministeringForAdmin: 1,  /// if 2, will redirect to contributions page from contribution item page
     userContribution: '',/// set of all contributions for given user 
     userContributionItem: '',///particular contributions for given user
+    contributionRateLimiterHours: 0,
+    contributionRateLimiterQuantity: 0
 }
 
 const contributionsReducer = (state=contributionState, action)=>{
@@ -19,6 +21,13 @@ const contributionsReducer = (state=contributionState, action)=>{
         return {
             ...state,
             contributionSubjectId: action.subjectId,
+        } 
+
+    case 'SET_RATE_LIMITER':
+        return {
+            ...state,
+            contributionRateLimiterHours: action.contributeRatelimiterHours,
+            contributionRateLimiterQuantity: action.contributeRatelimiterContributions
         } 
 
     case SET_CURRENT_CONTRIBUTION_SUBJECT_NAME:

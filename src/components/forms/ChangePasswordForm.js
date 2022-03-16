@@ -1,6 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import SmartField from '../formelements/SmartField';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 const checkPassword = (value, allValues, props ) => {
   if (!value) {
@@ -16,26 +17,40 @@ const checkPassword = (value, allValues, props ) => {
   }
 }
 
+const renderPasswordField = ({ input,  name,  label,  type,  meta: { touched, error, warning }, whatToShow}) => {
+  let err = touched && (!!(error));
+  let helpertextt = touched && error;
+  return (<TextField id={name} name={name} {...input} label={label} error={err} helperText={helpertextt} size="small" variant="outlined" fullWidth type={whatToShow}/>)
+}
+
 let ChangePasswordForm = props => {  
-  const { handleSubmit, pristine, reset, submitting, valid, language, messages } = props;
+  const { handleSubmit, pristine, reset, submitting, valid, language, messages, whatToShow, toggleVisibility } = props;
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <center>
+        <form onSubmit={handleSubmit}>
         <div>
-            <table>
-                <tbody>
-                    <tr><td><Field  name="password" component={SmartField} type="password" label={messages[language].enterNewPassw} validate={checkPassword}/></td></tr>
-                    <tr><td><Field  name="repeatPassword"   component={SmartField}    type="password"   label={messages[language].repeatNewPassw} validate={checkPassword} lang={language}/></td></tr>
-                </tbody>
-            </table>
-         </div>
-      </div>
-      <div>
-        <br /><br />
-      <button type="submit" className="btn btn-primary" disabled={pristine || submitting || !valid}>{messages[language].submit}</button>&nbsp;&nbsp;
-      <button type="button" className="btn btn-danger" disabled={pristine || submitting} onClick={reset}>{messages[language].clearValues}</button>
-      </div>
-    </form>
+          <div>
+              <table className="loginFormWrapper">
+                  <tbody>
+                      <tr>
+                        <td><Field  name="password" component={renderPasswordField} type="password" label={messages[language].enterNewPassw} validate={checkPassword}  whatToShow={whatToShow}/></td>
+                        <td className="visibilityToggleWrapper"><span className="visibilityToggle" onClick={toggleVisibility}>&nbsp;&nbsp;&nbsp;<i className="fa fa-eye" aria-hidden="true" style={whatToShow === 'text' ? {opacity: 0.4} : {}}></i></span></td>
+                      </tr>
+                      <tr>
+                        <td><Field  name="repeatPassword"   component={renderPasswordField}    type="password"   label={messages[language].repeatNewPassw} validate={checkPassword} lang={language} whatToShow={whatToShow}/></td>
+                        <td className="visibilityToggleWrapper"></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+        </div>
+        <div>
+          <br /><br />
+        <Button type="submit" variant="contained" disabled={!valid || pristine || submitting}>{messages[language].submit}</Button>&nbsp;&nbsp;&nbsp;
+        <Button variant="contained" color="error" disabled={pristine || submitting} onClick={reset}>{messages[language].clearValues}</Button>
+        </div>
+      </form>
+    </center>
   );
 };
 

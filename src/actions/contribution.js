@@ -1,11 +1,11 @@
 import axios from 'axios';
 import helpers from '../helpers/Helpers';
 import { SET_CURRENT_CONTRIBUTION_SUBJECT_ID, SET_CURRENT_CONTRIBUTION_SUBJECT_NAME, 
-    SET_FLASH_MESSAGES_VISIBILITY, SET_FLASH_MESSAGES_MESSAGE, SET_FLASH_MESSAGES_TYPE, 
     SET_ADMIN_CONTRIBUTION, CLEAR_SENSITIVE_INFO, SET_CONTRIBUTION_CONTENT, SET_REDIRECT_FLAG_FORADMIN, SET_USER_CONTRIBUTION, SET_USER_CONTRIBUTION_ITEM }  from '../types';
 import {reset} from 'redux-form';
 import messages from '../translations/actions/contribution';
 import store from '../index.js';
+import showMuiFlashMessage from './snackBarControl';
 
 
 const BaseUrl = helpers.UrlSniffer();
@@ -21,7 +21,6 @@ export const setCurrentContributionSubjectname = (name) => {
         dispatch(setCurrSubjectContributionNameRedux(name))
     };
 }
-
 
 export function sentMyContributionSaga({question, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, subjectId}){
     return (dispatch) => {
@@ -55,18 +54,15 @@ export function saveContributionAdmin() {
         .then(response => {
             if(response.data.payload.success === "true"){
                 dispatch(reset('editContibutionFormAdminRedux'));
-                dispatch(changeFlashMessageVisibility(1));
-                dispatch(changeFlashMessageMessage('Question has been approved and saved successfully, thanks'));
-                dispatch(changeFlashMessageType('success'));
+                showMuiFlashMessage(dispatch, 'Approved and saved, thanks', 'success');
                 dispatch(setContributionItemAdminResults({}));
                 dispatch(setRedirectFlagForAdminDispatch(2));
-                setTimeout(function(){ dispatch(changeFlashMessageVisibility(0)); }, timeout);
             } else {
-                alert("Network error, please try again later");
+                showMuiFlashMessage(dispatch, 'Network error', 'error');
             };
         })
         .catch(error => {
-            throw(error);
+            showMuiFlashMessage(dispatch, 'Network error', 'error');
         });
     };
 }
@@ -83,18 +79,15 @@ export function declineContributionAdmin() {
         .then(response => {
             if(response.data.payload.success === "true"){
                 dispatch(reset('editContibutionFormAdminRedux'));
-                dispatch(changeFlashMessageVisibility(1));
-                dispatch(changeFlashMessageMessage('Question has been declined successfully, thanks'));
-                dispatch(changeFlashMessageType('success'));
+                showMuiFlashMessage(dispatch, 'Declined, thanks', 'success');
                 dispatch(setContributionItemAdminResults({}));
-                dispatch(setRedirectFlagForAdminDispatch(2));
-                setTimeout(function(){ dispatch(changeFlashMessageVisibility(0)); }, timeout);
+                dispatch(setRedirectFlagForAdminDispatch(2));// this is done for auto redirection
             } else {
-                alert("Network error, please try again later");
+                showMuiFlashMessage(dispatch, 'Network error', 'error');
             };
         })
         .catch(error => {
-            throw(error);
+            showMuiFlashMessage(dispatch, 'Network error', 'error');
         });
     };
 }
@@ -148,13 +141,12 @@ export function loadContributionItemAdmin(id){
 }
 
 export function loadContributionItemUser(id){
-    console.log("loadContributionItemUser and id = ", id);
     const JWT = store.getState().loginSignUpReducer.JWToken;
     const headers = { 'JWToken': JWT };
     const timeout = store.getState().settingsReducer.flashMessagesTimeout;
 
     return (dispatch) => {
-        
+ 
         return axios.get(BaseUrl + 'react/getcontributionitemuser/' + id, {
             headers: headers
         })
@@ -210,27 +202,6 @@ function setRedirectFlagForAdminDispatch(value){
         type: SET_REDIRECT_FLAG_FORADMIN,
         redirectFlagForAdmin: value    
     }  
-}
-
-function changeFlashMessageVisibility(value){
-    return{
-        type: SET_FLASH_MESSAGES_VISIBILITY,
-        flashMessageVisibility: value    
-    } 
-}
-
-function changeFlashMessageMessage(message){
-    return{
-        type: SET_FLASH_MESSAGES_MESSAGE,
-        flashMessageMessage: message    
-    }
-}
-
-function changeFlashMessageType(type){
-    return{
-        type: SET_FLASH_MESSAGES_TYPE,
-        flashMessageType: type    
-    }
 }
 
 function setCurrSubjectContributionIdRedux(id){

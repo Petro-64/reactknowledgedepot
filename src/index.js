@@ -14,13 +14,14 @@ import Signup from './components/Signup';
 import Resultsn from './components/Resultsn';
 import Subjects from './components/Subjects';
 import AboutCookie from './components/AboutCookie'
-import FlashMessage from './components/formelements/FlashMessage';
 import CookieConsent from './components/CookieConsent';
 import PasswordReset from './components/PasswordReset';
 import AdminSettings from './components/AdminSettings';
-import FeedbackButton from './components/formelements/FeedbackButton';
 import ForgotPassword from './components/ForgotPassword';
 import AccountSettings from './components/AccountSettings';
+import FlashMessage from './components/formelements/FlashMessage';
+import FeedbackButton from './components/formelements/FeedbackButton';
+import MuiFlashMessage from './components/formelements/MuiFlashMessage';
 
 
 import SpinningOverlay from './components/SpinningOverlay';
@@ -79,6 +80,7 @@ class App extends React.Component{
             <FeedbackButton/>
             <SpinningOverlay />
             <FlashMessage />
+            <MuiFlashMessage />
             <CookieConsent />
             <Route exact path="/app" component={Home} />
             <NonAuthorizedRoute exact path="/app/test" component={Test}/>

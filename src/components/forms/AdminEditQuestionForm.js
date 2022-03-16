@@ -50,8 +50,7 @@ let AdminEditQuestionForm = props => {
           <button type="button" className="btn btn-primary" disabled={!valid || !prevIsAvailable} onClick={loadPrevQuestion}><FormattedMessage id="saveAndGoToThePrevQuestion" /></button>&nbsp;&nbsp;&nbsp;
           <button type="submit" className="btn btn-primary" disabled={!valid || pristine}><FormattedMessage id="saveQuestionAndReturnToQuestionsList" /></button>&nbsp;&nbsp;&nbsp;
           <button type="button" className="btn btn-primary" disabled={!valid || !nextIsAvailable} onClick={loadnextQuestion}><FormattedMessage id="saveAndGoToTheNextQuestion" /></button>&nbsp;&nbsp;&nbsp;
-          <br /><br /><br />
-          <button type="button" className="btn btn-danger" onClick={showModal}><FormattedMessage id="deleteAndReturn" /></button>&nbsp;&nbsp;&nbsp;
+          <button type="button" className="btn btn-danger" onClick={showModal}><FormattedMessage id="deleteAndReturn" /></button>
           </>
         </div>
       </form>

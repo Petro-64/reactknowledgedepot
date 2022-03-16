@@ -3,6 +3,7 @@ import { Field, reduxForm } from 'redux-form';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../../translations/forms/AddContributionForm';
 import SmartTextArea from '../formelements/SmartTextArea';
+import Button from '@mui/material/Button';
 
 const validate = values => {
     const errors = {}
@@ -32,7 +33,7 @@ let UserEditContributionForm = props => {
               <table style={{width: "100%"}} class="contributionForm">
                   <tbody>
                     <tr><td><Field  name="question"   component={SmartTextArea} label={translations.question} disabled={true} /></td></tr>
-                    <tr><td><br/><br/></td></tr>
+                    <tr><td><br/></td></tr>
                     <tr><td><Field  name="uncorrect0"   component={SmartTextArea} label={translations.firstAnswer} disabled={true} /></td></tr>
                     <tr><td><Field  name="uncorrect1"   component={SmartTextArea} label={translations.secondAnswer} disabled={true} /></td></tr>
                     <tr><td><Field  name="uncorrect2"   component={SmartTextArea} label={translations.thirdAnswer} disabled={true} /></td></tr>
@@ -42,9 +43,7 @@ let UserEditContributionForm = props => {
           </div>
         <br/><br/>
         <div>
-          <button type="button" className="btn btn-primary" disabled={submitting} onClick={backNavigation}>
-              <FormattedMessage id="backToContributionPage" />
-          </button>&nbsp;&nbsp;&nbsp;
+          <Button variant="contained"  disabled={submitting} onClick={backNavigation}><FormattedMessage id="backToContributionPage" /></Button>
         </div>
       </form>
     </IntlProvider>

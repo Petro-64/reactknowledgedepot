@@ -3,6 +3,9 @@ import { Field, reduxForm } from 'redux-form';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../../translations/Forgotpassword';
 import Captcha from '../Captcha';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+
 
 
 const validate = values => {
@@ -23,26 +26,14 @@ const validate = values => {
     return errors
   }
 
-  const renderField = ({
-    input,
-    label,
-    type,
-    meta: { touched, error, warning }
-  }) => (
-    <div>
-      <label>{label}</label>
-      <div>
-        <input {...input} placeholder={label} type={type} />
-        {touched &&
-          ((error && <span className="error">{error}</span>) ||
-            (warning && <span>{warning}</span>))}
-      </div>
-    </div>
-  )
-
+  const renderField = ({ input, name, label, type, meta: { touched, error, warning } }) => {
+    let err = touched && (!!(error));
+    let helpertextt = touched && error;
+    return (<TextField id={name} name={name} {...input} label={label} error={err} helperText={helpertextt} size="small" variant="outlined" fullWidth />)
+  }
 
 const ForgotPasswordForm = props => {
-  const { handleSubmit, pristine, reset, submitting, language, recaptchaText, onRecaptcaClick } = props;
+  const { handleSubmit, pristine, reset, submitting, language, recaptchaText, onRecaptcaClick, valid } = props;
   const translations = {
     emailAddress:  language === 'en' ? messages.en.emailAddress : messages.ru.emailAddress,
     username:  language === 'en' ? messages.en.username : messages.ru.username,
@@ -50,15 +41,14 @@ const ForgotPasswordForm = props => {
   }
   return (
     <IntlProvider locale={language} messages={messages[language]}>
-      <form onSubmit={handleSubmit}>
+      <center>
+        <form onSubmit={handleSubmit}>
         <div>
           <div>
-              <FormattedMessage id="pleaseEnter" /><br/><br/>
-              <FormattedMessage id="verifyaddress" /><br/><br/>
-              <table>
+              <table className="loginFormWrapper">
                   <tbody>
                       <tr><td><Field  name="email"   component={renderField} type="text" label={translations.emailAddress} /></td></tr>
-                      <tr><td><br/><FormattedMessage id="andor" /><br/><br/></td></tr>
+                      <tr><td><FormattedMessage id="andor" /></td></tr>
                       <tr><td><Field  name="username"   component={renderField} label={translations.username}/></td></tr>
                       <tr><td><Field  name="captcha"   component={renderField}    type="text" label={translations.enterTextInBlue} /></td></tr>
                       <tr><td><Captcha text={recaptchaText} onClick={onRecaptcaClick}/></td></tr>
@@ -66,12 +56,12 @@ const ForgotPasswordForm = props => {
               </table>
           </div>
         </div>
-        <br/><br/>
         <div>
-          <button type="submit" className="btn btn-primary" disabled={pristine || submitting}><FormattedMessage id="send" /></button>&nbsp;&nbsp;&nbsp;
-          <button type="button" className="btn btn-danger" disabled={pristine || submitting} onClick={reset}><FormattedMessage id="clearValues" /></button>
+          <Button type="submit" variant="contained" disabled={!valid || pristine || submitting}><FormattedMessage id="send" /></Button>&nbsp;&nbsp;&nbsp;
+          <Button variant="contained" color="error" disabled={pristine || submitting} onClick={reset}><FormattedMessage id="clearValues" /></Button>
         </div>
       </form>
+      </center>
     </IntlProvider>
   );
 };

@@ -1,12 +1,12 @@
 import axios from 'axios';
 import helpers from '../helpers/Helpers';
 import { LOGIN_ERROR, SET_ROLE_ID, SET_USER_NAME, SET_JWT_TOKEN, SET_USER_ID, CLEAR_SENSITIVE_INFO,
-    SET_FLASH_MESSAGES_VISIBILITY, SET_FLASH_MESSAGES_MESSAGE, SET_FLASH_MESSAGES_TYPE, 
-    SET_SIGNUP_CAPTCHA_TEXT, SET_COOKIE_CONSENT_OBTAINED, SET_SUSPENSION_REASON, SET_REDIRECT_FLAG_FOR_RESET_PASWORD_FUNCTION } from '../types';
+    SET_SIGNUP_CAPTCHA_TEXT, SET_COOKIE_CONSENT_OBTAINED, SET_SUSPENSION_REASON, SET_REDIRECT_FLAG_FOR_RESET_PASWORD_FUNCTION, 
+    SET_MUI_FLASH_MESSAGES_VISIBILITY } from '../types';
 import store from '../index.js';
 import {reset} from 'redux-form';
 import messages from '../translations/actions/loginsignup';
-
+import showMuiFlashMessage from './snackBarControl';
 
 const BaseUrl = helpers.UrlSniffer();
 
@@ -16,7 +16,7 @@ export const loginUserRedux = () => {
     return (dispatch) => {
         return axios.post(BaseUrl + 'react/login', {email, password})
         .then(response => {
-            //console.log(response.data.data.jwt_token);
+            console.log(response.data.data.jwt_token);//////////////////////////////////////////////////
             if(response.data.data.success === "true"){
                 dispatch(setRoleId(response.data.data.role_id));
                 dispatch(setUserName(response.data.data.name));
@@ -26,7 +26,7 @@ export const loginUserRedux = () => {
                 dispatch(setCookieConsenGiven(response.data.data.cookie_consent_given));
             } else {
                 dispatch(clearSensitiveinfo())
-                showFlashMessage(dispatch, response.data.data.message , 'error');
+                showMuiFlashMessage(dispatch, response.data.data.message , 'error');
                 setTimeout(function(){ 
                         dispatch(createHideLoginError()) 
                  }, 2000);
@@ -51,7 +51,7 @@ export function signup(){
     }
     return (dispatch) => {
         if((ifRecaptchaEnabled == 1) && (recaptchaFromStore !== recaptchaFromForm)){
-            showFlashMessage(dispatch, translations.wrongRecaptcha, 'error');
+            showMuiFlashMessage(dispatch, translations.wrongRecaptcha, 'error');
             return false;
         } 
         return axios.post(BaseUrl + 'react/signup', {name, email, password})
@@ -63,10 +63,10 @@ export function signup(){
                 dispatch(setUserId(response.data.data.id));
                 dispatch(setCookieConsenGiven(response.data.data.cookie_consent_given));
                 dispatch(reset('signupForm'));
-                showFlashMessage(dispatch, translations.accountCreateSuccess, 'success');
+                showMuiFlashMessage(dispatch, translations.accountCreateSuccess, 'success');
             } else {
                 dispatch(clearSensitiveinfo())
-                showFlashMessage(dispatch, response.data.data.message , 'error');
+                showMuiFlashMessage(dispatch, response.data.data.message , 'error');
                 setTimeout(function(){ 
                     dispatch(createHideLoginError()) 
              }, 2000);
@@ -95,17 +95,17 @@ export function sentForgotPasswordForm(){
     }
     return (dispatch) => {
         if((recaptchaFromStore !== recaptchaFromForm)){
-            showFlashMessage(dispatch, translations.wrongRecaptcha, 'error');
+            showMuiFlashMessage(dispatch, translations.wrongRecaptcha, 'error');
             return false;
         } 
         return axios.post(BaseUrl + 'react/forgotpassword', {username, email})
         .then(response => {
             if(response.data.data.success === "true"){
                 dispatch(reset('forgotPasswordFormRedux'));
-                showFlashMessage(dispatch, translations.forgotPasswordSuccess, 'success');
+                showMuiFlashMessage(dispatch, translations.forgotPasswordSuccess, 'success');
             } else {
                 dispatch(clearSensitiveinfo())
-                showFlashMessage(dispatch, response.data.data.message , 'error');
+                showMuiFlashMessage(dispatch, response.data.data.message , 'error');
                 setTimeout(function(){ 
                     dispatch(createHideLoginError()) 
              }, 2000);
@@ -120,25 +120,20 @@ export function sentForgotPasswordForm(){
 export function resetPassword(){
     const password = store.getState().form.passwordresetform.values.password;// in this case store is available
     const passwordRepeat = store.getState().form.passwordresetform.values.repeatpassword;// in this case store is available
-    //const recaptchaFromStore = store.getState().loginSignUpReducer.signupCaptchaText;
     const translations = {
         newpasswordsavedsucess:  store.getState().settingsReducer.language === 'en' ? messages.en.newpasswordsavedsucess : messages.ru.newpasswordsavedsucess,
         wrongRecaptcha:  store.getState().settingsReducer.language === 'en' ? messages.en.wrongRecaptcha : messages.ru.wrongRecaptcha,
     }
     return (dispatch) => {
-        //if((recaptchaFromStore !== recaptchaFromForm)){
-           // showFlashMessage(dispatch, translations.wrongRecaptcha, 'error');
-            //return false;
-        //} 
         return axios.post(BaseUrl + 'react/resetpassword', {password, passwordRepeat})
         .then(response => {
             if(response.data.data.success === "true"){
                 dispatch(reset('passwordresetform'));
-                showFlashMessage(dispatch, translations.newpasswordsavedsucess, 'success');
+                showMuiFlashMessage(dispatch, translations.newpasswordsavedsucess, 'success');
                 dispatch(setRedirectFlagForPasswordResetFunctioDispatch(2));//this is done for redirecting from reset form page to login page upon succesfull password reset
             } else {
                 dispatch(clearSensitiveinfo())
-                showFlashMessage(dispatch, response.data.data.message , 'error');
+                showMuiFlashMessage(dispatch, response.data.data.message , 'error');
                 setTimeout(function(){ 
                     dispatch(createHideLoginError()) 
              }, 2000);
@@ -150,15 +145,19 @@ export function resetPassword(){
     };
 }
 
-///react/forgotpassword
-
 export function logoutUser(){
     const translations = {
         logoutSuccess:  store.getState().settingsReducer.language === 'en' ? messages.en.logoutSuccess : messages.ru.logoutSuccess,
     }
     return(dispatch) => {
         dispatch(clearSensitiveinfo())
-        showFlashMessage(dispatch, translations.logoutSuccess, 'success');
+        showMuiFlashMessage(dispatch, translations.logoutSuccess, 'success');
+    }
+}
+
+export function setMuiFlashVisibility(value){
+    return(dispatch) => {
+        dispatch(changeMuiFlashMessageVisibility(value))
     }
 }
 
@@ -175,7 +174,7 @@ export function resendEmailConfirmation(){
             headers: headers
         }).then((responce)=>{
             if(responce.data.payload.success === "true"){
-                showFlashMessage(dispatch, translations.emailConfirmationSuccess, 'success');
+                showMuiFlashMessage(dispatch, translations.emailConfirmationSuccess, 'success');
             } else {
                 alert("Network error, please try again later resendEmailConfirmation");
             };
@@ -245,14 +244,6 @@ function setJWToken(JWToken){
     }
 }
 
-function createLoginError(data){
-    return{
-        type: LOGIN_ERROR,
-        loginError: data.data.message,
-        loginErrorVisibility: 'visible'
-    }
-}
-
 function createHideLoginError(){
     return{
         type: LOGIN_ERROR,
@@ -267,31 +258,9 @@ function clearSensitiveinfo(){
     }
 }
 
-function showFlashMessage(dispatch, message, type){
-    const timeout = store.getState().settingsReducer.flashMessagesTimeout;
-    dispatch(changeFlashMessageVisibility(1));
-    dispatch(changeFlashMessageMessage(message));
-    dispatch(changeFlashMessageType(type));
-    setTimeout(function(){ dispatch(changeFlashMessageVisibility(0)); }, timeout);
-}
-
-function changeFlashMessageVisibility(value){
+function changeMuiFlashMessageVisibility(value){
     return{
-        type: SET_FLASH_MESSAGES_VISIBILITY,
-        flashMessageVisibility: value    
+        type: SET_MUI_FLASH_MESSAGES_VISIBILITY,
+        muiFlashMessageVisibility: value    
     } 
-}
-
-function changeFlashMessageMessage(message){
-    return{
-        type: SET_FLASH_MESSAGES_MESSAGE,
-        flashMessageMessage: message    
-    }
-}
-
-function changeFlashMessageType(type){
-    return{
-        type: SET_FLASH_MESSAGES_TYPE,
-        flashMessageType: type    
-    }
 }

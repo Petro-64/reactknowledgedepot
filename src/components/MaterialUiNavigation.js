@@ -256,16 +256,13 @@ function MaterialUiNavigation(props) {
                     <Box p={1}>
                       <Tooltip title="Open account settings">
                         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                          {/*
-                          <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                          */}
                           <AvatarMy userName={props.userName}/>
                         </IconButton>
                       </Tooltip>
                       <Menu sx={{ mt: '45px' }} id="menu-appbar" anchorEl={anchorElUser} anchorOrigin={{ vertical: 'top',  horizontal: 'right',}} keepMounted transformOrigin={{vertical: 'top',horizontal: 'right',}}  open={Boolean(anchorElUser)}
                         onClose={handleCloseUserMenu}
                       >
-                         {(( props.roleId === 1) || ( props.roleId === 2))  && (
+                         {(( props.roleId === 1) || ( props.roleId === 2) || ( props.roleId === 3))  && (
                           <MenuItem key={"logout"} onClick={props.logoutUser}>
                             <Typography textAlign="center" onClick={handleCloseUserMenu}>
                               <FormattedMessage id="logout" />
@@ -290,7 +287,7 @@ function MaterialUiNavigation(props) {
                             </Link>
                           </>
                           )}
-                          {(( props.roleId === 1) || ( props.roleId === 2))  && (
+                          {(( props.roleId === 1) || ( props.roleId === 2) || ( props.roleId === 3))  && (
                           <Link to="/app/accountsettings" color="#444" variant="p" underline="none" className="drawerNavigationLink">
                             <MenuItem key={"Change password"} onClick={handleCloseUserMenu}>
                                 <Typography textAlign="center">
@@ -317,7 +314,7 @@ function MaterialUiNavigation(props) {
         {list('left')}
         <List style={{ marginTop: `auto` }}>
           <Link to="/app" color="#444" variant="p" underline="none" className="drawerNavigationLink" onClick={toggleDrawer('left', false)}>
-              <p class="drawerFooterLink">©2020 Copyright: Petro Niemkov</p>
+              <p className="drawerFooterLink">©2020 Copyright: Petro Niemkov</p>
           </Link>
         </List>
     </Drawer>

@@ -34,7 +34,14 @@ class UserContributionDetails extends React.Component {
   }
 
   render() {
-    let { questionStatus, createdAt } = this.props.userContributionItem;
+    let { questionStatus, createdAt, subjectId } = this.props.userContributionItem;
+    ////console.log("subjectId = ", subjectId);
+    let subjectName = this.props.subjectsUser.filter((e) => e.id === subjectId);
+    let subjName;
+    if(!!subjectName[0]){
+      subjName = subjectName[0]['name'];
+    }
+
     let statusWord = questionStatus == 0 ? messages[this.props.language].pending : questionStatus == '1' ? messages[this.props.language].approved : messages[this.props.language].declined;
     return (
       <StyledUserContributionItem >
@@ -43,7 +50,14 @@ class UserContributionDetails extends React.Component {
             <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
             <div className="container">
               <h2><FormattedMessage id="myConrtibutionDetails" /></h2>
-              <h4 style={questionStatus == '0' ? {backgroundColor: '#efe756'} : questionStatus == '1' ? {backgroundColor: '#9dd49b', color: 'white !important'} : {backgroundColor: '#efc9c9', color: 'white !important'}}><FormattedMessage id="status" />: {statusWord}</h4><h4 className="second"><FormattedMessage id="creationDate" />: {createdAt}</h4>
+              <h4 style={questionStatus == '0' ? {backgroundColor: '#efe756'} : questionStatus == '1' ? {backgroundColor: '#9dd49b', color: 'white !important'} : {backgroundColor: '#efc9c9', color: 'white !important'}}>
+                <FormattedMessage id="status" />: {statusWord}
+              </h4>&nbsp;&nbsp;
+              <h4>
+                <FormattedMessage id="subject" />: {subjName}
+              </h4>
+              <h4 className="second"><FormattedMessage id="creationDate" />: {createdAt}
+              </h4>
               <UserEditContributionForm  language={this.props.language}  initialValues={this.props.userContributionItem}   backNavigation={this.backNavigation.bind(this)} />
             </div>
         </div> 
@@ -55,7 +69,7 @@ class UserContributionDetails extends React.Component {
 
 const mapStateToProps=(state)=>{
   return {
-    ...state.loginSignUpReducer, ...state.settingsReducer, ...state.contributionsReducer, ...state.usersReducer
+    ...state.loginSignUpReducer, ...state.settingsReducer, ...state.contributionsReducer, ...state.usersReducer, ...state.subjectsReducer
   };
 }
 

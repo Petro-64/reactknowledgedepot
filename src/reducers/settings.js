@@ -1,5 +1,5 @@
 import { SET_LANGUAGE, SET_FLASH_MESSAGES_VISIBILITY, SET_FLASH_MESSAGES_MESSAGE, SET_FLASH_MESSAGES_TYPE, SET_GLOBAL_SETTINGS,
-    SET_COOKIE_CONSENT_VISIBILITY, SET_COOKIE_CONSENT_OBTAINED, CLEAR_SENSITIVE_INFO } from '../types'
+    SET_COOKIE_CONSENT_VISIBILITY, SET_COOKIE_CONSENT_OBTAINED, CLEAR_SENSITIVE_INFO, SET_MUI_FLASH_MESSAGES_VISIBILITY, SET_MUI_FLASH_MESSAGES_MESSAGE, SET_MUI_FLASH_MESSAGES_TYPE } from '../types'
 
 let settingsState={
     language: 'en',
@@ -11,6 +11,10 @@ let settingsState={
     needToShowRecaptcha: 1,
     cookieConsentVisibility: 0,
     cookieConsentObtained: 0,
+    muiFlashMessageVisibility: 0,
+    muiFlashMessagesMessage1: '',
+    muiFlashMessagesType: '',// 'error',
+    muiFlashMessagesTimeout: 3000,/// how long user will be able to see flash message
 }
 
 const settingsReducer = (state=settingsState, action)=>{
@@ -26,6 +30,24 @@ const settingsReducer = (state=settingsState, action)=>{
         return{
             ...state,
             flashMessagesVisibility: action.flashMessageVisibility
+        }
+
+    case SET_MUI_FLASH_MESSAGES_VISIBILITY:
+        return{
+            ...state,
+            muiFlashMessageVisibility: action.muiFlashMessageVisibility
+        }
+
+    case SET_MUI_FLASH_MESSAGES_MESSAGE:
+        return{
+            ...state,
+            muiFlashMessagesMessage1: action.muiFlashMessageMessage
+        }
+
+    case SET_MUI_FLASH_MESSAGES_TYPE:
+        return{
+            ...state,
+            muiFlashMessagesType: action.muiFlashMessageType
         }
 
     case SET_FLASH_MESSAGES_MESSAGE:

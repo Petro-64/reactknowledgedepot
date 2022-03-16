@@ -3,8 +3,8 @@ import { Field, reduxForm } from 'redux-form';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../../translations/forms/AddContributionForm';
 import SmartTextArea from '../formelements/SmartTextArea';
-
-
+import Button from '@mui/material/Button';
+import TextAreaCounterPeter from '../formelements/TextAreaCounterPeter';
 
 const validate = values => {
     const errors = {}
@@ -33,21 +33,21 @@ const AddContributionForm = props => {
         <div>
             <table style={{width: "100%"}} className="contributionForm">
                 <tbody>
-                  <tr><td><Field  name="question"   component={SmartTextArea} label={translations.question} /></td></tr>
-                  <tr><td><br/><br/></td></tr>
-                  <tr><td><Field  name="firstAnswer"   component={SmartTextArea} label={translations.firstAnswer} /></td></tr>
-                  <tr><td><Field  name="secondAnswer"   component={SmartTextArea} label={translations.secondAnswer} /></td></tr>
-                  <tr><td><Field  name="thirdAnswer"   component={SmartTextArea} label={translations.thirdAnswer} /></td></tr>
-                  <tr><td><Field  name="fourthAnswer"   component={SmartTextArea} label={translations.fourthAnswer} /></td></tr>
+                  <tr><td><Field  name="question" component={TextAreaCounterPeter} limit={1000} label={translations.question} language={language}/></td></tr>
+                  <tr><td><br/></td></tr>
+                  <tr><td><Field  name="firstAnswer" component={TextAreaCounterPeter} limit={1000} label={translations.firstAnswer} language={language}/></td></tr>
+                  <tr><td><Field  name="secondAnswer" component={TextAreaCounterPeter} limit={1000} label={translations.secondAnswer} language={language}/></td></tr>
+                  <tr><td><Field  name="thirdAnswer" component={TextAreaCounterPeter} limit={1000} label={translations.thirdAnswer} language={language}/></td></tr>
+                  <tr><td><Field  name="fourthAnswer" component={TextAreaCounterPeter} limit={1000} label={translations.fourthAnswer} language={language}/></td></tr>
 
                 </tbody>
             </table>
         </div>
         <br/><br/>
         <div>
-          <button type="submit" className="btn btn-primary" onClick={navigateFunction}><FormattedMessage id="seeMyContributionStatus" /></button>&nbsp;&nbsp;&nbsp;
-          <button type="submit" className="btn btn-primary" disabled={pristine || submitting || !valid}><FormattedMessage id="sendQuestion" /></button>&nbsp;&nbsp;&nbsp;
-          <button type="button" className="btn btn-danger" disabled={pristine || submitting} onClick={reset}><FormattedMessage id="clearValues" /></button>
+          <Button variant="contained" onClick={navigateFunction}><FormattedMessage id="seeMyContributionStatus" /></Button>&nbsp;&nbsp;&nbsp;
+          <Button type="submit" variant="contained" disabled={pristine || submitting || !valid}><FormattedMessage id="sendQuestion" /></Button>&nbsp;&nbsp;&nbsp;
+          <Button variant="contained" color="error" disabled={pristine || submitting} onClick={reset}><FormattedMessage id="clearValues" /></Button>
         </div>
       </form>
     </IntlProvider>

@@ -19,7 +19,8 @@ const messages = {
         deleteAndReturn: "Delete this question and return",
         sendFeedback: "Send feedback",
         deleteAndLoadNext: "Delete this question and load next >>",
-        seeMyContributionStatus: "Check status of my added questions",
+        seeMyContributionStatus: "Status of my questions",
+        limit: "Limit",
     },
     ru: {
         firstAnswer: "Первый неправильный ответ",
@@ -41,7 +42,8 @@ const messages = {
         deleteAndReturn: "Delete this question and return",
         sendFeedback: "Отправить отзыв",
         deleteAndLoadNext: "Delete this question and load next >>",
-        seeMyContributionStatus: "Проверить статус моих добавленных вопросов",
+        seeMyContributionStatus: "Cтатус моих вопросов",
+        limit: "Лимит",
      }
   };
 

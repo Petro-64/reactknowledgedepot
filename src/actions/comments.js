@@ -12,3 +12,14 @@ function postCommentDispatch({comment, route}){
     }
 }
 
+export function getRatelimiterSettings(){
+    return (dispatch) => {
+        dispatch(getRatelimiterSettingsDispatch())
+    };
+}
+
+function getRatelimiterSettingsDispatch(){
+    return{
+        type: 'GET_RATE_LIMITER_SETTINGS'
+    }
+}

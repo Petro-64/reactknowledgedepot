@@ -6,11 +6,14 @@ import messages from '../../translations/forms/AddCommentForm';
 import {connect} from 'react-redux';
 import * as actionCreators from '../../actions/index';
 import { formValueSelector } from 'redux-form';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
 
 class FeedbackButton extends React.Component {
     constructor() {
         super();
-        this.state = { visib: 'none'};
+        this.state = { visib: 'none', open: false};
       }
 
     showModal = () => {
@@ -25,12 +28,28 @@ class FeedbackButton extends React.Component {
         });
     };
 
+    componentDidMount(){
+        this.props.getRatelimiterSettings();// to be able to show proper message about rate limits
+    }
+
     clickSend = () => {
         this.setState({visib: 'none'});
     }
 
     handleChildClick = (e) => {
         e.stopPropagation();
+    }
+
+    handleClose = () =>{
+        this.setState({
+            open: false
+        });
+    }
+
+    handleClickOpen = () =>{
+        this.setState({
+            open: true
+        });
     }
 
     render() {
@@ -40,16 +59,14 @@ class FeedbackButton extends React.Component {
         return (
             <IntlProvider locale={language} messages={messages[this.props.language]}>
                 <StyledFeedbackButton  visib={this.state.visib} style={(this.props.roleId === 1 || this.props.roleId === 2) ? {} : {display: 'none'}}>
-                    <button className="btn btn-primary btn-sm rotated" onClick={this.showModal.bind(this)}>How are we doing?</button>
-                    <div className="overlay" onClick={this.hideModal.bind(this)}>
-                        <div className="winWrapper" onClick={this.handleChildClick.bind(this)}>
-                            <div className="modalHeader"></div>
-                            <div className="modalBody">
-                                <p className="bodyText"><FormattedMessage id="addFeedback" /></p>
-                                <AddCommentForm onSubmit={()=>{this.props.postComment({comment, route});}} language={this.props.language} cancell={this.hideModal.bind(this)}/>
-                            </div>
-                        </div>
-                    </div>
+                    <button className="btn btn-primary btn-sm rotated" style={(language === 'en') ? {} : {right: '-55px'}} onClick={this.handleClickOpen.bind(this)}><FormattedMessage id="howAreWeDoing"/></button>
+                    <Dialog open={this.state.open} onClose={this.handleClose.bind(this)}>
+                        <DialogTitle><FormattedMessage id="addFeedback" /></DialogTitle>
+                        <DialogContent>
+                            <FormattedMessage id="maximumNumberOfComments" />: {this.props.commentRateLimiterQuantity}<FormattedMessage id="perDay" />
+                            <AddCommentForm onSubmit={()=>{this.props.postComment({comment, route});}} language={this.props.language} cancell={this.handleClose.bind(this)}/>
+                        </DialogContent>
+                    </Dialog>
                 </StyledFeedbackButton>
             </IntlProvider>
         );

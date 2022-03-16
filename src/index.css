@@ -229,6 +229,7 @@ a.custom-mui-home-link:hover{
   color:rgba(14, 53, 104, 1);
   border-radius: 17px;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 .loginFormWrapper {
@@ -249,4 +250,20 @@ a.custom-mui-home-link:hover{
   top: -12px;
   left: -20px;
   cursor: pointer;
+}
+
+.dataGridPending{
+  background-color: #f9f5ce;
+}
+
+.dataGridApproved{
+  background-color: #d1efd1;
+}
+
+.dataGridDeclined{
+  background-color: #f3cdca;
+}
+
+.dataGridHeaderClassName {
+  background-color: #cac8c7;
 }

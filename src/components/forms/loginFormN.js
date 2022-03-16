@@ -2,15 +2,14 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../../translations/Login';
-import SmartField from '../formelements/SmartField';
 import { Link } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
-const validate = values => {
+const validate = (values, props) => {
     const errors = {}
-    if (!values.email) {  errors.email = 'Required'  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {  errors.email = 'Invalid email address'  }
-    if (!values.password) {   errors.password = 'Required' } 
+    if (!values.email) {  errors.email =  messages[props.language].required;  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {  errors.email = messages[props.language].emailIssue  }
+    if (!values.password) {   errors.password =  messages[props.language].required; } 
     return errors
 }
 

@@ -18,6 +18,8 @@ const messages = {
       test: " test",
       currentQuestion: "Current question",
       pleaseConfirmTestStop: "Please confirm test stop",
+      stopTesting: "Stop",
+      backToTest: "Back to test",
     },
     ru: {
       tests: "Tесты",
@@ -35,9 +37,11 @@ const messages = {
       correctAnswers: "Правильнo",
       doneThanks: "Готово, спасибо",
       startYour: "Начни свой ",
-      test: " тест",
+      test: " Tест",
       currentQuestion: "Текущий вопрос",
       pleaseConfirmTestStop: "Подтвердите остановку тестa",
+      stopTesting: "Стоп",
+      backToTest: "Назад к тесту",
     }
   };
 

@@ -8,6 +8,10 @@ const messages = {
       onceAdded: "Please take into consideration that once added, you can't change or edit your question. To check your question details, just click question status",
       addSuccess: "Your question has been sent to moderation, thanks",
       addError: "Network error, please try again later",
+      pleaseselectASubject: "Please select a subject",
+      clickToSelect: "Click to select",
+      maximumNumberOfContributions: "Maximum number of questions",
+      perDay: " per day"
     },
     ru: {
       contibute: "Мои вопросы",
@@ -18,6 +22,10 @@ const messages = {
       onceAdded: "Учтите, что после добавления вы не можете изменить или отредактировать свой вопрос. Чтобы проверить детали своего вопроса, просто нажмите на статус вопроса.",
       addSuccess: "Ваш вопрос отправлен на модерацию, спасибо",
       addError: "Ошибка сети, повторите попытку позже",
+      pleaseselectASubject: "Пожалуйста, выберите предмет",
+      clickToSelect: "Нажмите, чтобы выбрать",
+      maximumNumberOfContributions: "Максимальное количество вопросов",
+      perDay: " в день"
     }
   };
 

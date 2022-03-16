@@ -17,6 +17,7 @@ class Signup extends React.Component {
     this.recaptchaClick.bind(this);
     this.state={
       recaptcatext: '',
+      passwordType: 'password'
     }
   }
 
@@ -36,6 +37,10 @@ class Signup extends React.Component {
     this.props.setLanguage(lang);
   }
 
+  toggleVisibility = () =>{
+    this.state.passwordType === 'password' ? this.setState({ passwordType: 'text' }) : this.setState({ passwordType: 'password' });
+  }
+
   render() {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
@@ -49,6 +54,8 @@ class Signup extends React.Component {
               recaptchaText={this.state.recaptcatext} 
               onRecaptcaClick={this.recaptchaClick}
               language={this.props.language}
+              whatToShow={this.state.passwordType}
+              toggleVisibility={this.toggleVisibility.bind(this)}
               />
               }
 
@@ -58,6 +65,8 @@ class Signup extends React.Component {
               errorMessageVisibility={this.props.loginErrorVisibility} 
               onRecaptcaClick={this.recaptchaClick}
               language={this.props.language}
+              whatToShow={this.state.passwordType}
+              toggleVisibility={this.toggleVisibility.bind(this)}
               />
               }
             </div>

@@ -6,8 +6,11 @@ import { Link} from 'react-router-dom';
 import Countdown from './formelements/Countdown';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translations/Test';
-import Modal from './formelements/Modal';
+import ModalMUI from './formelements/ModalMUI';
 import StyledTesting from '../styled/StyledTesting';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Tooltip from '@mui/material/Tooltip';
 
 
 const ifToDestroyTemporaryQuestions = 1;
@@ -103,12 +106,12 @@ class Test extends React.Component {
 
   render() {
     const translations = {
-      pleaseConfirmTestStop:  this.props.pleaseConfirmTestStop === 'en' ? messages.en.submit : messages.ru.pleaseConfirmTestStop,
+      pleaseConfirmTestStop:  this.props.language === 'en' ? messages.en.pleaseConfirmTestStop : messages.ru.pleaseConfirmTestStop,
     }
      return (
       <StyledTesting>
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-            <Modal ref={this.modall} toExecute = {this.stopTestingButtonClicked.bind(this)} message={translations.pleaseConfirmTestStop}/>
+            <ModalMUI ref={this.modall} toExecute = {this.stopTestingButtonClicked.bind(this)} messages={messages[this.props.language]}/>
             <div>
             <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
                 <div className="container">
@@ -143,9 +146,9 @@ class Test extends React.Component {
 
                   {/* start test block starts */}
                   <div style={this.props.currentSubjectId === '' ? {display: 'none'} : {}} >
-                    <button type="button" className="btn btn-primary" onClick={this.startTestingButtonClicked} style={this.props.testingSessionHash === '' ?  {} : {display: 'none'}}>
+                    <Button variant="contained"  onClick={this.startTestingButtonClicked} style={this.props.testingSessionHash === '' ?  {} : {display: 'none'}}>
                       <FormattedMessage id="startYour" /> {this.props.currentSubjectName} <FormattedMessage id="test" />
-                    </button>
+                    </Button>
                   </div>
                   {/* start test block ends */}
 
@@ -168,9 +171,8 @@ class Test extends React.Component {
                     {this.props.answers.map((value) => 
                     <div className="answerBlock" title="Just click correct answer" style={(this.props.toShowTestingHints === "1" && this.props.toShowTestHintsBorder === 1) ? this.state.currentSubjectId === value.id ? {outline: '2px solid green'} : {outline: '2px solid red'}  : {}} 
                         key={value.id} data-id={value.id} onClick={() => this.answerClicked(value.id)}>{value.name}
-                    </div>)}<br/><br/><br/>
-                    <button type="button" className="btn btn-danger" onClick={this.openModal.bind(this)} ><FormattedMessage id="clickToStop" />
-                    </button>
+                    </div>)}<br/><br/>
+                    <Button variant="contained" color="error" onClick={this.openModal.bind(this)}><FormattedMessage id="clickToStop" /></Button>
                   </div>
                   {/* main test block ends */}
 

@@ -7,7 +7,10 @@ const messages = {
       delete: "Delete",
       createdAt: "Created At",
       status: "Status",
-      userName: "User Name"
+      userName: "User Name",
+      pending:"Pending",
+      declined:"Declined",
+      approved: "Approved",
     },
     ru: {
         subject: "Предмет",
@@ -17,7 +20,10 @@ const messages = {
         delete: "Удалить",
         createdAt: "Дата создания",
         status: "Cтатус",
-        userName: "Имя пользователя"
+        userName: "Имя пользователя",
+        pending:"В ожидании",
+        declined:"Отклоненный",
+        approved: "Одобренный",
     }
   };
 

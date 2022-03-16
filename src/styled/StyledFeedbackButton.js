@@ -4,7 +4,8 @@ const StyledFeedbackButton = styled.div`
 button.rotated{
     position: fixed;
     top: 50%;
-    right: -50px;
+    z-index: 30000;
+    right: -45px;
     transform:rotate(-90deg);
 }
 

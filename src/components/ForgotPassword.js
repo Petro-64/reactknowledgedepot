@@ -44,7 +44,10 @@ class ForgotPassword extends React.Component {
         <div>
         <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
           <div className="container">
-            <h2><FormattedMessage id="forgotpassword" /></h2>
+            <center><h2><FormattedMessage id="forgotpassword" /></h2></center>
+            <FormattedMessage id="pleaseEnter" /><br/><br/>
+            <FormattedMessage id="verifyaddress" /><br/><br/>
+            <center>
             <ForgotPasswordForm onSubmit={()=>{this.props.sentForgotPasswordForm()}} 
             errorMessage={this.props.loginError} 
             errorMessageVisibility={this.props.loginErrorVisibility} 
@@ -52,7 +55,7 @@ class ForgotPassword extends React.Component {
             recaptchaText={this.state.recaptcatext} 
             onRecaptcaClick={this.recaptchaClick}
             />
-
+            </center>
           </div>
       </div>
      </IntlProvider>
