@@ -12,7 +12,7 @@ const messages = {
         required: "Required",
     },
     ru: {
-        login: "Отправить",
+        login: "Логин",
         clearValues: "Oчистить формy",
         emailAddress: "Адрес электронной почты",
         password: "Пароль",

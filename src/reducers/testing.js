@@ -38,6 +38,13 @@ const testReducer = (state=testState, action)=>{
             spinnerOverlayVisibility: action.visibility     
     }
 
+    case 'SET_REMAINING_QUESTIONS_TO_ZERO':
+        return {
+            ...state,
+            ifRemainQuestions: 0,
+            currentQuestion: '',     
+    }
+
     case SET_IF_TO_SHOW_TEST_HINTS_BORDER:
         return {
             ...state,

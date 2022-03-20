@@ -8,7 +8,7 @@ const messages = {
       currentSubject: "Current subject",
       questHasBeenAddedSucc: "Question/answers has been added successfully, thanks",
       filterResults: "Filter results",
-      itemsPerPage: "Items qty.",
+      itemsPerPage: "Items qty per page",
       status: "Status",
       subject: "Subject",
       cleareditedList: "Clear edited questions list",

@@ -45,9 +45,9 @@ const AddContributionForm = props => {
         </div>
         <br/><br/>
         <div>
-          <Button variant="contained" onClick={navigateFunction}><FormattedMessage id="seeMyContributionStatus" /></Button>&nbsp;&nbsp;&nbsp;
           <Button type="submit" variant="contained" disabled={pristine || submitting || !valid}><FormattedMessage id="sendQuestion" /></Button>&nbsp;&nbsp;&nbsp;
-          <Button variant="contained" color="error" disabled={pristine || submitting} onClick={reset}><FormattedMessage id="clearValues" /></Button>
+          <Button variant="contained" color="error" disabled={pristine || submitting} onClick={reset}><FormattedMessage id="clearValues" /></Button>&nbsp;&nbsp;&nbsp;
+          <Button variant="contained" onClick={navigateFunction}><FormattedMessage id="seeMyContributionStatus" /></Button>
         </div>
       </form>
     </IntlProvider>

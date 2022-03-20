@@ -5,7 +5,7 @@ const messages = {
       subjects: "Subjects",
       subject: "Subject",
       filterResults: "Filter results",
-      itemsPerPage: "Items qty.",
+      itemsPerPage: "Items qty per page",
       sortingOptons: "Sort",
       score: "Score",
       answeredQuestions: "Answered",

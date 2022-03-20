@@ -67,6 +67,19 @@ export function startNewTest(currentSubjectId, testingSessionId){
     };
 }
 
+export function setRemainingQuestionsToZero(){
+    return (dispatch) => {
+        dispatch(setRemainingQuestionsToZeroDispatch())
+    };
+}
+
+
+export function setRemainingQuestionsToZeroDispatch(){
+    return{
+        type: 'SET_REMAINING_QUESTIONS_TO_ZERO'
+    }
+}
+
 export function setIfToShowTestingHints(value){
     return (dispatch) => {
         dispatch(setIfToShowTestingHintsDispatch(value))

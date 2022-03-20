@@ -2,8 +2,10 @@ import styled from 'styled-components'
 
 const StyledCountDown = styled.div`
 .timeLeftSeconds{
-    width: 130px;
+  color: #fff;
+  font-weight: bold;
 }
+
 .pie {
     --p: ${props => props.degrees};
     --b:25px;

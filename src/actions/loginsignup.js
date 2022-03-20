@@ -13,6 +13,9 @@ const BaseUrl = helpers.UrlSniffer();
 export const loginUserRedux = () => {
     const email = store.getState().form.loginFormRedux.values.email;// in this case store is available
     const password = store.getState().form.loginFormRedux.values.password;// in this case store is available
+    const translations = {
+        wrongEmailPassword:  store.getState().settingsReducer.language === 'en' ? messages.en.wrongEmailPassword : messages.ru.wrongEmailPassword,
+    }
     return (dispatch) => {
         return axios.post(BaseUrl + 'react/login', {email, password})
         .then(response => {
@@ -26,7 +29,7 @@ export const loginUserRedux = () => {
                 dispatch(setCookieConsenGiven(response.data.data.cookie_consent_given));
             } else {
                 dispatch(clearSensitiveinfo())
-                showMuiFlashMessage(dispatch, response.data.data.message , 'error');
+                showMuiFlashMessage(dispatch, translations.wrongEmailPassword , 'error');
                 setTimeout(function(){ 
                         dispatch(createHideLoginError()) 
                  }, 2000);
@@ -48,7 +51,10 @@ export function signup(){
     const translations = {
         accountCreateSuccess:  store.getState().settingsReducer.language === 'en' ? messages.en.accountCreateSuccess : messages.ru.accountCreateSuccess,
         wrongRecaptcha:  store.getState().settingsReducer.language === 'en' ? messages.en.wrongRecaptcha : messages.ru.wrongRecaptcha,
+        emailTaken: store.getState().settingsReducer.language === 'en' ? messages.en.emailTaken : messages.ru.emailTaken,
+        nameTaken: store.getState().settingsReducer.language === 'en' ? messages.en.nameTaken : messages.ru.nameTaken,
     }
+    let errorMessage;
     return (dispatch) => {
         if((ifRecaptchaEnabled == 1) && (recaptchaFromStore !== recaptchaFromForm)){
             showMuiFlashMessage(dispatch, translations.wrongRecaptcha, 'error');
@@ -65,8 +71,13 @@ export function signup(){
                 dispatch(reset('signupForm'));
                 showMuiFlashMessage(dispatch, translations.accountCreateSuccess, 'success');
             } else {
+                if(response.data.data.message == "This email is already taken"){
+                    errorMessage = translations.emailTaken;
+                } else if(response.data.data.message == "This name is already taken"){
+                    errorMessage = translations.nameTaken;
+                }
                 dispatch(clearSensitiveinfo())
-                showMuiFlashMessage(dispatch, response.data.data.message , 'error');
+                showMuiFlashMessage(dispatch, errorMessage, 'error');
                 setTimeout(function(){ 
                     dispatch(createHideLoginError()) 
              }, 2000);

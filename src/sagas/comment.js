@@ -1,8 +1,9 @@
 import {reset} from 'redux-form';
 import store from '../index.js';
-import { put, takeLatest, all, takeEvery, call, delay } from 'redux-saga/effects';
+import { put, call } from 'redux-saga/effects';
 import messages from '../translations/Comments';
 import { createComment } from '../api/comment';
+import { showHideSpinnerAndMessage } from './sagaUtilities';
 
 export function* postComment({comment, route}) {// route is the page url to store to be able to identify page
     const translations = {
@@ -22,45 +23,16 @@ export function* postComment({comment, route}) {// route is the page url to stor
         yield put({ type: 'SET_OVERLAY_VISIBILITY', visibility: 1 });
         const responceData = yield call(createComment, {comment, route});
         if (responceData.data.payload.success == 'true'){
-            yield all([
-                put({ type: 'SET_OVERLAY_VISIBILITY', visibility: 0 }),
-                put({ type: 'SET_MUI_FLASH_MESSAGES_MESSAGE', muiFlashMessageMessage: translations.commentSuccess}),
-                put({ type: 'SET_MUI_FLASH_MESSAGES_VISIBILITY', muiFlashMessageVisibility: 1}),
-                put({ type: 'SET_MUI_FLASH_MESSAGES_TYPE', muiFlashMessageType: 'success'}),
-            ])
-            yield delay(3000);
-            yield put({ type: 'SET_MUI_FLASH_MESSAGES_VISIBILITY', muiFlashMessageVisibility: 0});
+            yield showHideSpinnerAndMessage(0, translations.commentSuccess, 1, 'success'); 
         } else if (responceData.data.payload.success == 'false' && responceData.data.payload.message == 'ratelimiter issue'){
-            yield all([
-                put({ type: 'SET_OVERLAY_VISIBILITY', visibility: 0 }),
-                put({ type: 'SET_MUI_FLASH_MESSAGES_MESSAGE', muiFlashMessageMessage: errorMessage}),
-                put({ type: 'SET_MUI_FLASH_MESSAGES_VISIBILITY', muiFlashMessageVisibility: 1}),
-                put({ type: 'SET_MUI_FLASH_MESSAGES_TYPE', muiFlashMessageType: 'error'}),
-            ])
-            yield delay(3000);
-            yield put({ type: 'SET_MUI_FLASH_MESSAGES_VISIBILITY', muiFlashMessageVisibility: 0});
+            yield showHideSpinnerAndMessage(0, errorMessage, 1, 'error');
         } else {
-            yield all([
-                put({ type: 'SET_OVERLAY_VISIBILITY', visibility: 0 }),
-                put({ type: 'SET_MUI_FLASH_MESSAGES_MESSAGE', muiFlashMessageMessage: translations.commenttError}),
-                put({ type: 'SET_MUI_FLASH_MESSAGES_VISIBILITY', muiFlashMessageVisibility: 1}),
-                put({ type: 'SET_MUI_FLASH_MESSAGES_TYPE', muiFlashMessageType: 'error'}),
-            ])
-            yield delay(3000);
-            yield put({ type: 'SET_MUI_FLASH_MESSAGES_VISIBILITY', muiFlashMessageVisibility: 0});
+            yield showHideSpinnerAndMessage(0, translations.commenttError, 1, 'error');
         }
         yield  put (reset('addCommentFormRedux'));
-     
     } catch(e) {
-        yield  put (reset('addCommentFormRedux'));
-        yield put({ type: 'SET_OVERLAY_VISIBILITY', visibility: 0 });
-        yield all([
-            put({ type: 'SET_MUI_FLASH_MESSAGES_MESSAGE', muiFlashMessageMessage: translations.commenttError}),
-            put({ type: 'SET_MUI_FLASH_MESSAGES_VISIBILITY', muiFlashMessageVisibility: 1}),
-            put({ type: 'SET_MUI_FLASH_MESSAGES_TYPE', muiFlashMessageType: 'error'}),
-        ])
-        yield delay(3000);
-        yield put({ type: 'SET_MUI_FLASH_MESSAGES_VISIBILITY', muiFlashMessageVisibility: 0});
+        yield put(reset('addCommentFormRedux'));
+        yield showHideSpinnerAndMessage(0, translations.commenttError, 1, 'error');
     }
 }
 

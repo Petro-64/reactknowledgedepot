@@ -10,15 +10,14 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import helpers from '../helpers/Helpers';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translations/Resultsn';
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from 'react-accessible-accordion';
-import 'react-accessible-accordion/dist/fancy-example.css';
+
 import StyledAccordeon from '../styled/StyledAccordeon'
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 
 class Resultsn extends React.Component {
   constructor(props) {
@@ -128,42 +127,38 @@ class Resultsn extends React.Component {
       <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>        <div className="container">
           <h2><FormattedMessage id="results" /></h2>
           <StyledAccordeon>
-                <Accordion allowMultipleExpanded="true" allowZeroExpanded="true">
-                  <AccordionItem>
-                      <AccordionItemHeading>
-                          <AccordionItemButton>
-                            <FormattedMessage id="filterResults" />
-                          </AccordionItemButton>
-                      </AccordionItemHeading>
-                      <AccordionItemPanel>
-                        <table className="resultsFilter">
-                          <tbody>
-                            <tr>
-                              <th><FormattedMessage id="subjects" />:</th>
-                              <th><FormattedMessage id="itemsPerPage" />:</th>
-                              <th><FormattedMessage id="sortingOptons" />:</th>
-                            </tr>
-                            <tr>
-                              <td>{this.createCheckboxes()}</td>
-                              <td><Select options={this.state.resultsPerPage} onChange={this.onDropdownChangeItemsPerPage} defaultt={this.props.resultsFilterPerPage}/></td>
-                              <td><Select options={ sortOptions } onChange={this.onDropdownChangeSortingOptions} defaultt={this.props.resultsFilterSortingOption}/></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </AccordionItemPanel>
-                  </AccordionItem>
-              </Accordion>
-            </StyledAccordeon>
-            <div style={(this.props.resultsFiltered.length === 0) ? {display: 'none'} : {}}>
-              <Pagination paginationQuantity={this.props.resultsFilterPaginationQuantity} paginationNumber={this.props.resultsFilterPaginationNumber} 
-                paginationClick={this.paginationClick}/>
-              <BootstrapTable keyField='id' data={ this.props.resultsFiltered } columns={ columns } />
-              <Pagination paginationQuantity={this.props.resultsFilterPaginationQuantity} paginationNumber={this.props.resultsFilterPaginationNumber} 
-                paginationClick={this.paginationClick}/>
-            </div>
-            <div style={(this.props.resultsFiltered.length === 0) ? {} : {display: 'none'}}>
-              <br /><br /><br /><center><h4><FormattedMessage id="noResults" /></h4></center>
-            </div>
+            <Accordion>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content"  id="panel1a-header">
+                <Typography><FormattedMessage id="filterResults" /></Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <table className="resultsFilter">
+                  <tbody>
+                    <tr>
+                      <th><FormattedMessage id="subjects" />:</th>
+                      <th><FormattedMessage id="itemsPerPage" />:</th>
+                      <th><FormattedMessage id="sortingOptons" />:</th>
+                    </tr>
+                    <tr>
+                      <td>{this.createCheckboxes()}</td>
+                      <td><Select options={this.state.resultsPerPage} onChange={this.onDropdownChangeItemsPerPage} defaultt={this.props.resultsFilterPerPage}/></td>
+                      <td><Select options={ sortOptions } onChange={this.onDropdownChangeSortingOptions} defaultt={this.props.resultsFilterSortingOption}/></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </AccordionDetails>
+            </Accordion>
+          </StyledAccordeon>
+          <div style={(this.props.resultsFiltered.length === 0) ? {display: 'none'} : {}}>
+            <Pagination paginationQuantity={this.props.resultsFilterPaginationQuantity} paginationNumber={this.props.resultsFilterPaginationNumber} 
+              paginationClick={this.paginationClick}/>
+            <BootstrapTable keyField='id' data={ this.props.resultsFiltered } columns={ columns } />
+            <Pagination paginationQuantity={this.props.resultsFilterPaginationQuantity} paginationNumber={this.props.resultsFilterPaginationNumber} 
+              paginationClick={this.paginationClick}/>
+          </div>
+          <div style={(this.props.resultsFiltered.length === 0) ? {} : {display: 'none'}}>
+            <br /><br /><br /><center><h4><FormattedMessage id="noResults" /></h4></center>
+          </div>
         </div>
       </div>
      </IntlProvider>   

@@ -4,7 +4,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import messages from '../../translations/Contribution';
 
 function MuiDropDownMenu(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -14,15 +13,13 @@ function MuiDropDownMenu(props) {
     setAnchorEl(event.currentTarget);
   };
 
-{/**/}
-
   const translations = {
-    select:  props.language === 'en' ? messages.en.select : messages.ru.select,
-    clickToSelect:  props.language === 'en' ? messages.en.clickToSelect : messages.ru.clickToSelect,
+    select:  props.language === 'en' ? props.messages.en.select : props.messages.ru.select,
+    clickToSelect:  props.language === 'en' ? props.messages.en.clickToSelect : props.messages.ru.clickToSelect,
   }
 
-  const select = props.language === 'en' ? messages.en.select : messages.ru.select;
-  const clickToSelect = props.language === 'en' ? messages.en.clickToSelect : messages.ru.clickToSelect;
+  const select = props.language === 'en' ? props.messages.en.select : props.messages.ru.select;
+  const clickToSelect = props.language === 'en' ? props.messages.en.clickToSelect : props.messages.ru.clickToSelect;
 
   const myOptions = props.options;
   let name = !!myOptions[selectedIndex] ? myOptions[selectedIndex].name : translations.select;
@@ -33,12 +30,14 @@ function MuiDropDownMenu(props) {
     setAnchorEl(null);
   };
 
+  const visibility = !!props.visibility && props.visibility === 'none' ? 'none' : 'block';
+
   const handleClose = () => {
     setAnchorEl(null);
   };
 
   return (
-    <div>
+    <div style={{display: visibility}}>
       <List
         component="nav"
         aria-label="Device settings"

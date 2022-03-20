@@ -85,9 +85,9 @@ class Countdown extends Component {
             <table>
             <tbody>
                 <tr>
-                    <td className="timeLeftSeconds"><p><FormattedMessage id="timeLeft" />: {this.state.time.s} <FormattedMessage id="seconds" /></p></td>
+                    <td className="timeLeftSeconds" style={{backgroundColor : this.state.bgcolor, color: 'white'}}>&nbsp;<FormattedMessage id="timeLeft" />: {this.state.time.s} <FormattedMessage id="seconds" />&nbsp;</td>
                     {/*<td><div className = "countdownindicator" style={{width : this.state.widthh, backgroundColor: this.state.bgcolor}}></div></td>*/}
-                    <td><div className="pie no-round"></div></td>
+                    {/*<td><div className="pie no-round"></div></td>*/}
                 </tr>
             </tbody>
             </table>

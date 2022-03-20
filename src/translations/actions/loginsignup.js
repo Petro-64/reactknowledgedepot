@@ -8,6 +8,9 @@ const messages = {
         verifyaddress: "Password reset link will be sent to the email address/username specified. Usually it takes up to 3 minutes for system to send email. Just click this link and fill password reset form",
         enterTextInBlue: "Enter text in blue below",
         newpasswordsavedsucess: "New password has been saved successfully",
+        emailTaken: "This email is already taken",
+        nameTaken: "This name is already taken",
+        wrongEmailPassword: "Wrong email or password",
     },
     ru: {
         accountCreateSuccess: "Аккаунт успешно создан",
@@ -18,6 +21,9 @@ const messages = {
         verifyaddress: "Ссылка для сброса пароля будет отправлена ​​на указанный адрес электронной почты/имя пользователя. Обычно система отправляет электронное письмо в течение 3 минут. Просто нажмите на эту ссылку и заполните форму сброса пароля",
         enterTextInBlue: "Введите текст, выделенный синим цветом",
         newpasswordsavedsucess: "Новый пароль успешно сохранен",
+        emailTaken: "Этот электронный адрес уже используется",
+        nameTaken: "Это имя уже используется",
+        wrongEmailPassword: "Неправильный адрес электронной почты или пароль",
     }
   };
 

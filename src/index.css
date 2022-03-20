@@ -267,3 +267,11 @@ a.custom-mui-home-link:hover{
 .dataGridHeaderClassName {
   background-color: #cac8c7;
 }
+
+.testsHeader{
+  margin-bottom: 20px;
+}
+
+.testingInfo{
+  margin-top: -15px;
+}
