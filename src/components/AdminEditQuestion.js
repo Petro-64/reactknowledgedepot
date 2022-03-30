@@ -31,7 +31,7 @@ class AdminEditQuestion extends React.Component {
   }
 
   componentDidUpdate(){
-    if(this.props.redirectAfterSuccesfullQuestionsSaving == 2){/// this means that user came from email confirmation link
+    if(this.props.redirectAfterSuccesfullQuestionsSaving === 2){/// this means that user came from email confirmation link
       this.props.history.push('/app/admineditquestion');
     };
   }
@@ -204,19 +204,6 @@ class AdminEditQuestion extends React.Component {
           <div className="container">
             <h2><FormattedMessage id="editQuestion" /> # {this.state.currentQuestionId} </h2>
             <h4><FormattedMessage id="subject" />:&nbsp;{this.props.currentSubjectName}</h4>
-            {/* 
-            <AdminEditQuestionForm  onSubmit={()=>{this.props.editQuestions(true)}} 
-              language={this.props.language} 
-              declineFunction={this.props.declineContributionAdmin} 
-              initialValues={initialValues} 
-              backNavigation={this.backNavigation.bind(this)}
-              nextIsAvailable={this.state.isThisTheLastQuestionForGivenSubject}
-              prevIsAvailable={this.state.isThisTheFirstQuestionForGivenSubject}
-              loadnextQuestion={this.loadNextQuestion.bind(this)}
-              loadPrevQuestion={this.loadPrevQuestion.bind(this)}
-              showModal={this.showModal.bind(this)}
-            />
-             */}
               <AdminEditQuestionForm  
               onSubmit={()=>{this.props.editQuestionsSaga({editedValues})}} 
               language={this.props.language} 

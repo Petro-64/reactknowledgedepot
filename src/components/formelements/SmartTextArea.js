@@ -1,12 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 class SmartTextArea extends Component {
-    constructor () {
-        super()
-    }
 
     render() {
-        const { input, label, type, disabled, meta: { touched, error, warning, dirty } } = this.props;
+        const { input, label, type, disabled, meta: { touched, error, warning } } = this.props;
         let color='';
         if(input.value.length > 1000){ color = "red"; } else {color = "green";}
         return (

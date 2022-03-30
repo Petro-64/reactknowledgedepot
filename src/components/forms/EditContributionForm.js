@@ -4,7 +4,7 @@ import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../../translations/EditContributionForm';
 
 const EditContributionForm = props => {
-  const { contributions, language, users } = props;
+  const { contributions, language } = props;
   return (
     <IntlProvider locale={language} messages={messages[language]}>
       <table className="table">

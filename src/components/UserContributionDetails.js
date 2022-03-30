@@ -42,7 +42,7 @@ class UserContributionDetails extends React.Component {
       subjName = subjectName[0]['name'];
     }
 
-    let statusWord = questionStatus == 0 ? messages[this.props.language].pending : questionStatus == '1' ? messages[this.props.language].approved : messages[this.props.language].declined;
+    let statusWord = questionStatus === 0 ? messages[this.props.language].pending : questionStatus === '1' ? messages[this.props.language].approved : messages[this.props.language].declined;
     return (
       <StyledUserContributionItem >
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
@@ -50,7 +50,7 @@ class UserContributionDetails extends React.Component {
             <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
             <div className="container">
               <h2><FormattedMessage id="myConrtibutionDetails" /></h2>
-              <h4 style={questionStatus == '0' ? {backgroundColor: '#efe756'} : questionStatus == '1' ? {backgroundColor: '#9dd49b', color: 'white !important'} : {backgroundColor: '#efc9c9', color: 'white !important'}}>
+              <h4 style={questionStatus === '0' ? {backgroundColor: '#efe756'} : questionStatus === '1' ? {backgroundColor: '#9dd49b', color: 'white !important'} : {backgroundColor: '#efc9c9', color: 'white !important'}}>
                 <FormattedMessage id="status" />: {statusWord}
               </h4>&nbsp;&nbsp;
               <h4>

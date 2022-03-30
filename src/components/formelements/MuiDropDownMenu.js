@@ -18,9 +18,6 @@ function MuiDropDownMenu(props) {
     clickToSelect:  props.language === 'en' ? props.messages.en.clickToSelect : props.messages.ru.clickToSelect,
   }
 
-  const select = props.language === 'en' ? props.messages.en.select : props.messages.ru.select;
-  const clickToSelect = props.language === 'en' ? props.messages.en.clickToSelect : props.messages.ru.clickToSelect;
-
   const myOptions = props.options;
   let name = !!myOptions[selectedIndex] ? myOptions[selectedIndex].name : translations.select;
 

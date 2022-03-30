@@ -23,7 +23,7 @@ class PasswordReset extends React.Component {
   }
 
   componentDidUpdate() {
-    if(this.props.redirectFlagForPasswordresetFunctionality == 2){
+    if(this.props.redirectFlagForPasswordresetFunctionality === 2){
     this.props.history.push('/app/login');
     }
   }

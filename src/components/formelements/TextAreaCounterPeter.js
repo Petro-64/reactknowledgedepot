@@ -25,7 +25,7 @@ function TextAreaCounterPeter(props) {
             multiline
             onChange={handleChange("comment")}
             {...props.input}
-            error={props.input.value.length == CHARACTER_LIMIT}
+            error={props.input.value.length === CHARACTER_LIMIT}
             fullWidth
           />
         </div>

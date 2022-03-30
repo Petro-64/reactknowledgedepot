@@ -5,10 +5,6 @@ import StyledFlashMessage from '../../styled/StyledFlashMessage'
 
 
 class FlashMessage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
         <StyledFlashMessage ifVisible={this.props.flashMessagesVisibility} bGcolorr = {this.props.flashMessagesType}>

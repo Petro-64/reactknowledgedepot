@@ -20,7 +20,7 @@ class AdminContributionDetails extends React.Component {
 
 
   componentDidUpdate(){
-    if(this.props.redirectAfterSuccesfullAdministeringForAdmin == 2){/// this means that user came from email confirmation link
+    if(this.props.redirectAfterSuccesfullAdministeringForAdmin === 2){/// this means that user came from email confirmation link
       this.props.history.push('/app/admincontribution');
     };
   }

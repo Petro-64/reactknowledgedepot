@@ -26,7 +26,7 @@ class AddMyQuestions extends React.Component {
   }
 
   onDropdownChange = (event) => {
-    const subjName = this.props.subjectsUser.filter(value => value.id == event.target.value);
+    const subjName = this.props.subjectsUser.filter(value => value.id === event.target.value);
     this.setState({
       currentSubjectId: event.target.value,
       currentSubjectName: subjName
@@ -40,7 +40,6 @@ class AddMyQuestions extends React.Component {
   };
 
   onMuiDropdownChange = (id, name) => {
-    const subjName = name;
     this.setState({
       currentSubjectId: id,
       currentSubjectName: name

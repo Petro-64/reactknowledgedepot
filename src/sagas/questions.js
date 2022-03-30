@@ -1,7 +1,5 @@
-import {reset} from 'redux-form';
 import store from '../index.js';
-import { put, takeLatest, all, takeEvery, call, delay } from 'redux-saga/effects';
-import messages from '../translations/Comments';
+import { put, all, call, delay } from 'redux-saga/effects';
 import { editQuestionPost, getQuestionsBySubjectAndStatus } from '../api/questions';
 import helpers from '../helpers/Helpers';
 
@@ -14,9 +12,9 @@ export function* postEditQuestions({editedValues}) {
     try {
         yield put({ type: 'SET_OVERLAY_VISIBILITY', visibility: 1 });
         const responceData = yield call(editQuestionPost, {editedValues});
-        if (responceData.data.payload.success == 'true'){
+        if (responceData.data.payload.success === 'true'){
             const getResponceData = yield call(getQuestionsBySubjectAndStatus, {currentSubjId, currentStatus});
-            if (getResponceData.data.payload.success == 'true'){
+            if (getResponceData.data.payload.success === 'true'){
                 yield put({ type: 'SET_NUMBER_OF_CURRENT_QUESTIONS_BY_SUBJECT_TO_EDIT',  number: getResponceData.data.payload.questions.length });
                 yield put({ type: 'PUSH_EDITED_QUESTION_ID_TO_ARRAY_TO_BE_ABLE_TO_SEE_RECENTLY_EDITED_QUESTIONS', id: parseInt(editedValues.questionId) });
                 yield put({ type: 'SET_CURRENT_QUESTIONS_BY_SUBJECT_TO_EDIT',  questions: getResponceData.data.payload.questions });

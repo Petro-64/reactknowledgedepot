@@ -4,41 +4,12 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import { Link } from 'react-router-dom';
-import { IntlProvider, FormattedMessage } from "react-intl";
+import { IntlProvider } from "react-intl";
 import messages from '../translations/TopNavigation';
 import ToggleLanguageButton from './formelements/ToggleLanguageButton';
 
 
 function MaterialUiNavigationMini(props) {
-  const [state, setState] = React.useState({top: false, left: false,  bottom: false, right: false, });
-
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
-
-    setState({ ...state, [anchor]: open });
-  };
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const [selectedIndex, setSelectedIndex] = React.useState("");
-  const handleClick = index => {
-    if (selectedIndex === index) {
-      setSelectedIndex("")
-    } else {
-      setSelectedIndex(index)
-    }
-  }
-
-  const [age, setAge] = React.useState('');
   return (
     <div>
     <IntlProvider locale={props.language} messages={messages[props.language]}>

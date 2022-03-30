@@ -66,7 +66,7 @@ class AdmineditQuestions extends React.Component {
   }
 
   onDropdownChange = (event) => {// subjects dropdown
-    let subjNameObj = this.props.subjectsAdmin.filter(value => value.id == event.target.value);
+    let subjNameObj = this.props.subjectsAdmin.filter(value => value.id === event.target.value);
     let subjName;
     if(typeof subjNameObj[0] !== "undefined"){
       subjName = subjNameObj[0].name;
@@ -77,7 +77,7 @@ class AdmineditQuestions extends React.Component {
 
     this.props.setSubjName(subjName)
     this.props.setCurrentPagination(1);
-    if(event.target.value != 0){
+    if(event.target.value !== 0){
         this.setState({
             currentSubjectId: event.target.value,
           })
@@ -103,8 +103,8 @@ class AdmineditQuestions extends React.Component {
           <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
           <div className="container">
             <h2><FormattedMessage id="editQuestion" /></h2>
-            <p style={this.props.numberOfQuestionsBySubject != 0 ? {display: 'none'} : {}}><FormattedMessage id="firstt" /></p>
-            <p style={this.props.numberOfQuestionsBySubject != 0 ? {} : {display: 'none'}}><FormattedMessage id="currentSubject" />&nbsp;{this.props.currentSubjectName}</p>
+            <p style={this.props.numberOfQuestionsBySubject !== 0 ? {display: 'none'} : {}}><FormattedMessage id="firstt" /></p>
+            <p style={this.props.numberOfQuestionsBySubject !== 0 ? {} : {display: 'none'}}><FormattedMessage id="currentSubject" />&nbsp;{this.props.currentSubjectName}</p>
             <select className="form-control" onChange={this.onDropdownChange} value={this.props.currentSubjectId}>
             <FormattedMessage id="select">{(formattedValue)=>(<option key="0" value="0">{formattedValue}</option>)}</FormattedMessage>{/* ugly way to get just translated string, but this works */}
                 {
@@ -113,7 +113,7 @@ class AdmineditQuestions extends React.Component {
                 }
             </select>
             <br />
-            <div style={this.props.numberOfQuestionsBySubject == 0  ? {display: 'none'} : {}}>
+            <div style={this.props.numberOfQuestionsBySubject === 0  ? {display: 'none'} : {}}>
               <StyledAccordeon>
                   <Accordion allowMultipleExpanded="true" allowZeroExpanded="true">
                     <AccordionItem>

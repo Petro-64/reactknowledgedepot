@@ -2,7 +2,6 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../../translations/forms/AddContributionForm';
-import SmartTextArea from '../formelements/SmartTextArea';
 import Button from '@mui/material/Button';
 import TextAreaCounterPeter from '../formelements/TextAreaCounterPeter';
 
@@ -17,7 +16,7 @@ const validate = values => {
   }
 
 const AddContributionForm = props => {
-  const { handleSubmit, pristine, reset, submitting, language, backNavigation, valid, navigateFunction } = props;
+  const { handleSubmit, pristine, reset, submitting, language, valid, navigateFunction } = props;
   const translations = {
     firstAnswer:  language === 'en' ? messages.en.firstAnswer : messages.ru.firstAnswer,
     secondAnswer:  language === 'en' ? messages.en.secondAnswer : messages.ru.secondAnswer,

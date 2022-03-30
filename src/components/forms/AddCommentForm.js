@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { IntlProvider, FormattedMessage } from "react-intl";
+import { IntlProvider } from "react-intl";
 import messages from '../../translations/forms/AddCommentForm';
 import {connect} from 'react-redux';
 import Button from '@mui/material/Button';

@@ -1,8 +1,8 @@
 import React from 'react';
-import { IntlProvider } from "react-intl";
 import messages from '../../translations/EditContributionForm';
 import { DataGrid } from '@mui/x-data-grid';
 import { Link } from 'react-router-dom';
+import { IntlProvider, FormattedMessage } from "react-intl";
 
 
 
@@ -16,6 +16,7 @@ const MuiMyContributionStatus = props => {
     pending: language === 'en' ? messages.en.pending : messages.ru.pending,
     approved: language === 'en' ? messages.en.approved : messages.ru.approved,
     declined: language === 'en' ? messages.en.declined : messages.ru.declined,
+    noAddedQuestions: language === 'en' ? messages.en.noAddedQuestions : messages.ru.noAddedQuestions,
   }
 
   const renderLink = (params) => {
@@ -30,8 +31,7 @@ const MuiMyContributionStatus = props => {
     let myres = value.reduce(
     function(newArr, ind){
       ind.createdAt = ind.createdAt.substring(0, 10);
-      let url = '/app/mycontribution/' + ind.id;
-      let statusWord = (ind.status == 0 ? translations.pending : ind.status == 1 ? translations.approved : translations.declined);
+      let statusWord = (ind.status === 0 ? translations.pending : ind.status === 1 ? translations.approved : translations.declined);
       let link = '<a href="/app/mycontribution/' + ind.id + '">' + {statusWord} + '</a>';
       ind = {...ind, statusWord: statusWord, link: link};
       newArr.push(ind);
@@ -52,9 +52,11 @@ const MuiMyContributionStatus = props => {
   ];
 
   return (
-
-    <div style={{ height: 800, width: 'auto' }}>
-      <IntlProvider locale={language} messages={messages[language]}>
+    <IntlProvider locale={language} messages={messages[language]}>
+    <div style={contributionTransformed.length !== 0 ? {display: 'none', height: 800, width: 'auto'} : {height: 800, width: 'auto'}}>
+      <FormattedMessage id="noAddedQuestions" />
+    </div>
+    <div style={contributionTransformed.length === 0 ? {display: 'none', height: 800, width: 'auto'} : {height: 800, width: 'auto'}}>
         <DataGrid
           rows={contributionTransformed}
           columns={columns}
@@ -71,12 +73,13 @@ const MuiMyContributionStatus = props => {
             },
           }}
           getCellClassName={(params) => {
-            let styleName = (params.row.status == 0 ? 'dataGridPending' : params.row.status == 1 ? 'dataGridApproved' : 'dataGridDeclined');
+            let styleName = (params.row.status === 0 ? 'dataGridPending' : params.row.status === 1 ? 'dataGridApproved' : 'dataGridDeclined');
             return styleName;
           }}
         />
-      </IntlProvider>
     </div>
+    </IntlProvider>
+
   );
 };
 

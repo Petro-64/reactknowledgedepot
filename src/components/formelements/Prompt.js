@@ -53,7 +53,7 @@ class Prompt extends React.Component {
                         <textarea id="w3review" name="w3review" rows="2" cols="30" onChange={this.onChange.bind(this)} placeholder="required"></textarea>
                         <p className="bodyText">{this.props.message}</p>
                         <button type="button" className="btn btn-danger" onClick={this.hideModal.bind(this)}>Cancel</button>
-                        <button type="button" className="btn btn-success" onClick={this.clickYes.bind(this)} disabled={this.state.value.length == 0}>Yes</button>
+                        <button type="button" className="btn btn-success" onClick={this.clickYes.bind(this)} disabled={this.state.value.length === 0}>Yes</button>
                     </div>
                 </div>
             </StyledModal>;

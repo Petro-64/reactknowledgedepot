@@ -23,7 +23,7 @@ const validate = values => {
         errors.repeatpassword = 'Must be 15 characters or less'
     }
 
-    if (values.repeatpassword != values.password) {
+    if (values.repeatpassword !== values.password) {
         errors.password = 'Password doesn\'t match';
         errors.repeatpassword = 'Password doesn\'t match';
     } 

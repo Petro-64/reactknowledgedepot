@@ -22,9 +22,9 @@ export function* postComment({comment, route}) {// route is the page url to stor
     try {
         yield put({ type: 'SET_OVERLAY_VISIBILITY', visibility: 1 });
         const responceData = yield call(createComment, {comment, route});
-        if (responceData.data.payload.success == 'true'){
+        if (responceData.data.payload.success === 'true'){
             yield showHideSpinnerAndMessage(0, translations.commentSuccess, 1, 'success'); 
-        } else if (responceData.data.payload.success == 'false' && responceData.data.payload.message == 'ratelimiter issue'){
+        } else if (responceData.data.payload.success === 'false' && responceData.data.payload.message === 'ratelimiter issue'){
             yield showHideSpinnerAndMessage(0, errorMessage, 1, 'error');
         } else {
             yield showHideSpinnerAndMessage(0, translations.commenttError, 1, 'error');

@@ -8,6 +8,8 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translations/Home';
 import {withCookies} from 'react-cookie';
+import Button from '@mui/material/Button';
+
 
 
 class Home extends React.Component {
@@ -79,7 +81,7 @@ class Home extends React.Component {
                 <p>                  <FormattedMessage id="verifyaddress" />                </p>
                 <p>                  <FormattedMessage id="haventReceivedLink" />                </p>
                 <br/><br/>
-                <button type="button" className="btn btn-success" onClick={this.resendEmailConfirmation.bind(this)}>{translations.buttonText}</button>
+                <Button variant="contained"  onClick={this.resendEmailConfirmation.bind(this)}>{translations.buttonText}</Button>
               </div>
               <div style={(this.props.roleId === 4) ? {} : {display: 'none'}}>
               <br/><br/><br/><br/><br/>

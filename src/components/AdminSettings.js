@@ -4,7 +4,7 @@ import MaterialUiNavigation from './MaterialUiNavigation';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import { IntlProvider, FormattedMessage } from "react-intl";
+import { IntlProvider } from "react-intl";
 import messages from '../translations/Home';
 import {
     Accordion,

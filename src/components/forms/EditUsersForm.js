@@ -1,6 +1,6 @@
 import React from 'react';
 import EditUserRow from './EditUsertRow';
-import { IntlProvider, FormattedMessage } from "react-intl";
+import { IntlProvider } from "react-intl";
 import messages from '../../translations/EditSubjectForm';
 
 const EditSubjectForm = props => {

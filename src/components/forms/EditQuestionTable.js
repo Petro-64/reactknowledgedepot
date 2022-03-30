@@ -1,15 +1,11 @@
 import React from 'react';
 import EditQuestionrRow from './EditQuestionrRow';
-import { IntlProvider, FormattedMessage } from "react-intl";
+import { IntlProvider } from "react-intl";
 import messages from '../../translations/EditSubjectForm';
 
 
 
 export default class EditQuestionTable extends React.Component {
-    constructor(props){
-        super(props);
-    }
-   
     render() {
         const { questions, language, toggleQuestionActivity, onTdRollover, answersToShow, editedQuestionsArray } = this.props;
         return  (

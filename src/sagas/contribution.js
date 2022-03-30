@@ -23,10 +23,10 @@ export function* postContribution({question, firstAnswer, secondAnswer, thirdAns
     try {
         yield put({ type: 'SET_OVERLAY_VISIBILITY', visibility: 1 });
         const responceData = yield call(sendContributionSaga, {question, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, subjectId});
-        if (responceData.data.payload.success == 'true'){
+        if (responceData.data.payload.success === 'true'){
             yield  put (reset('addContibutionFormRedux'));
             yield showHideSpinnerAndMessage(0, translations.addSuccess, 1, 'success'); 
-        } else if (responceData.data.payload.success == 'false' && responceData.data.payload.message == 'ratelimiter issue'){
+        } else if (responceData.data.payload.success === 'false' && responceData.data.payload.message === 'ratelimiter issue'){
             yield  put (reset('addContibutionFormRedux'));
             yield showHideSpinnerAndMessage(0, errorMessage, 1, 'error');
         } else {

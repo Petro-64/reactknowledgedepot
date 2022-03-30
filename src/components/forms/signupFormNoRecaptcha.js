@@ -60,12 +60,11 @@ const validate = (values) => {
 
 
 let SignupFormNoRecaptcha = props => {
-  const { handleSubmit, pristine, reset, submitting, errorMessage, onRecaptcaClick, language } = props;
+  const { handleSubmit, pristine, reset, submitting, language } = props;
   const translations = {
     name:  language === 'en' ? messages.en.name : messages.ru.name,
     emailAddress:  language === 'en' ? messages.en.emailAddress : messages.ru.emailAddress,
     password:  language === 'en' ? messages.en.password : messages.ru.password,
-    emailAddress:  language === 'en' ? messages.en.emailAddress : messages.ru.emailAddress,
     enterTextInBlue:  language === 'en' ? messages.en.enterTextInBlue : messages.ru.enterTextInBlue,
     confirmPasword: language === 'en' ? messages.en.confirmPasword : messages.ru.confirmPasword
   }

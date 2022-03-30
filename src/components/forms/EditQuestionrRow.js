@@ -1,5 +1,5 @@
 import React from 'react';
-import { IntlProvider, FormattedMessage } from "react-intl";
+import { IntlProvider } from "react-intl";
 import messages from '../../translations/EditSubjRow';
 import StyledEditQuestionrRow from '../../styled/StyledEditQuestionrRow';
 import { Link } from 'react-router-dom';
@@ -38,7 +38,7 @@ export default class EditQuestionrRow extends React.Component {
         let { editedQuestionsArray } = this.props;
         let edited = editedQuestionsArray.includes(this.state.id);
         created_at = created_at.substring(0, 10);
-        let statusWord = active == 1 ? 'active' : 'unactive';
+        let statusWord = active === 1 ? 'active' : 'unactive';
         let url = '/app/admineditquestions/' + this.state.id;
         const { language, answersToShow } = this.props;
         return  (
@@ -50,7 +50,7 @@ export default class EditQuestionrRow extends React.Component {
                             <td width="55%" className="questionCell" onMouseOver={this.onRollover.bind(this)}>
                                 {name}
                                 <div className="popupAnswersHint">
-                                    {answersToShow.map(answer => <div className={answer.correct == 1 ? 'correctAnswer' : 'uncorrectAnswer'} key={answer.id}>{answer.name}</div> )}
+                                    {answersToShow.map(answer => <div className={answer.correct === 1 ? 'correctAnswer' : 'uncorrectAnswer'} key={answer.id}>{answer.name}</div> )}
                                 </div>
                             </td>
                             <td width="15%">{created_at}</td>

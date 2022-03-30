@@ -3,7 +3,6 @@ import helpers from '../helpers/Helpers';
 import { SET_CURRENT_CONTRIBUTION_SUBJECT_ID, SET_CURRENT_CONTRIBUTION_SUBJECT_NAME, 
     SET_ADMIN_CONTRIBUTION, CLEAR_SENSITIVE_INFO, SET_CONTRIBUTION_CONTENT, SET_REDIRECT_FLAG_FORADMIN, SET_USER_CONTRIBUTION, SET_USER_CONTRIBUTION_ITEM }  from '../types';
 import {reset} from 'redux-form';
-import messages from '../translations/actions/contribution';
 import store from '../index.js';
 import showMuiFlashMessage from './snackBarControl';
 
@@ -46,7 +45,6 @@ export function saveContributionAdmin() {
 
     const JWT = store.getState().loginSignUpReducer.JWToken;
     const headers = { 'JWToken': JWT };
-    const timeout = store.getState().settingsReducer.flashMessagesTimeout;
     return (dispatch) => {
         return axios.post(BaseUrl + 'react/approvecontributionitemadmin', { question, firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, contibutionid, subjectId, userId }, {
             headers: headers
@@ -71,7 +69,6 @@ export function declineContributionAdmin() {
     const contibutionid = store.getState().form.editContibutionFormAdminRedux.values.contibutionid;
     const JWT = store.getState().loginSignUpReducer.JWToken;
     const headers = { 'JWToken': JWT };
-    const timeout = store.getState().settingsReducer.flashMessagesTimeout;
     return (dispatch) => {
         return axios.post(BaseUrl + 'react/declinecontributionitemadmin', { contibutionid }, {
             headers: headers
@@ -121,7 +118,6 @@ export function loadContributionAdmin(){
 export function loadContributionItemAdmin(id){
     const JWT = store.getState().loginSignUpReducer.JWToken;
     const headers = { 'JWToken': JWT };
-    const timeout = store.getState().settingsReducer.flashMessagesTimeout;
 
     return (dispatch) => {
         return axios.get(BaseUrl + 'react/getcontributionitemadmin/' + id, {
@@ -143,7 +139,6 @@ export function loadContributionItemAdmin(id){
 export function loadContributionItemUser(id){
     const JWT = store.getState().loginSignUpReducer.JWToken;
     const headers = { 'JWToken': JWT };
-    const timeout = store.getState().settingsReducer.flashMessagesTimeout;
 
     return (dispatch) => {
  

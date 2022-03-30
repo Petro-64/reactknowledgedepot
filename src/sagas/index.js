@@ -1,4 +1,4 @@
-import { put, takeLatest, all, takeEvery, call, delay } from 'redux-saga/effects';
+import { takeLatest, all } from 'redux-saga/effects';
 import { postComment } from './comment';
 import { postContribution } from './contribution';
 import { postEditQuestions } from './questions';

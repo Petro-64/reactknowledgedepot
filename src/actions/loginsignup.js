@@ -19,7 +19,7 @@ export const loginUserRedux = () => {
     return (dispatch) => {
         return axios.post(BaseUrl + 'react/login', {email, password})
         .then(response => {
-            console.log(response.data.data.jwt_token);//////////////////////////////////////////////////
+            ////console.log(response.data.data.jwt_token);//////////////////////////////////////////////////
             if(response.data.data.success === "true"){
                 dispatch(setRoleId(response.data.data.role_id));
                 dispatch(setUserName(response.data.data.name));
@@ -56,7 +56,7 @@ export function signup(){
     }
     let errorMessage;
     return (dispatch) => {
-        if((ifRecaptchaEnabled == 1) && (recaptchaFromStore !== recaptchaFromForm)){
+        if((ifRecaptchaEnabled === 1) && (recaptchaFromStore !== recaptchaFromForm)){
             showMuiFlashMessage(dispatch, translations.wrongRecaptcha, 'error');
             return false;
         } 
@@ -71,9 +71,9 @@ export function signup(){
                 dispatch(reset('signupForm'));
                 showMuiFlashMessage(dispatch, translations.accountCreateSuccess, 'success');
             } else {
-                if(response.data.data.message == "This email is already taken"){
+                if(response.data.data.message === "This email is already taken"){
                     errorMessage = translations.emailTaken;
-                } else if(response.data.data.message == "This name is already taken"){
+                } else if(response.data.data.message === "This name is already taken"){
                     errorMessage = translations.nameTaken;
                 }
                 dispatch(clearSensitiveinfo())
@@ -174,7 +174,6 @@ export function setMuiFlashVisibility(value){
 
 export function resendEmailConfirmation(){
     const userId = store.getState().loginSignUpReducer.userId;
-    const timeout = store.getState().settingsReducer.flashMessagesTimeout;
     const JWT = store.getState().loginSignUpReducer.JWToken;
     const headers = { 'JWToken': JWT };
     const translations = {

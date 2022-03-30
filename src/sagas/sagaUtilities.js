@@ -1,6 +1,4 @@
-import {reset} from 'redux-form';
-import store from '../index.js';
-import { put, takeLatest, all, takeEvery, call, delay } from 'redux-saga/effects';
+import { put, all, delay } from 'redux-saga/effects';
 
 export function* showHideSpinnerAndMessage(overlayVisibility, message, flashVisibility, flashType){
     yield all([

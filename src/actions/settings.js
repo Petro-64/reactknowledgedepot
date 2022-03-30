@@ -3,7 +3,6 @@ import helpers from '../helpers/Helpers';
 import { CLEAR_SENSITIVE_INFO, SET_FLASH_MESSAGES_VISIBILITY, SET_FLASH_MESSAGES_MESSAGE, SET_FLASH_MESSAGES_TYPE, SET_LANGUAGE, SET_GLOBAL_SETTINGS, 
     SET_COOKIE_CONSENT_VISIBILITY, SET_COOKIE_CONSENT_OBTAINED } from '../types';
 import store from '../index.js';
-import {reset} from 'redux-form';
 
 const BaseUrl = helpers.UrlSniffer();
 
@@ -96,7 +95,7 @@ export function loadGlobalSettings(lang){
 export function setCookieConsentVisibility(visibility){
     const userId = store.getState().loginSignUpReducer.userId;
     const roleId = store.getState().loginSignUpReducer.roleId;
-    if(visibility == 0 && userId && roleId !== 4){ /// roleId == 4 is the suspended user 
+    if(visibility === 0 && userId && roleId !== 4){ /// roleId == 4 is the suspended user 
         const JWT = store.getState().loginSignUpReducer.JWToken;
         const headers = { 'JWToken': JWT };
         return (dispatch) => {
@@ -111,7 +110,7 @@ export function setCookieConsentVisibility(visibility){
                 };
             })
         }
-    } else if(visibility == 0){
+    } else if(visibility === 0){
         return (dispatch) => {
             dispatch(setCookieConsentVisibilityDispatch(0))
         }

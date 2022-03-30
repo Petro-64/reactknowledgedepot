@@ -1,6 +1,5 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { connect } from 'react-redux';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../../translations/forms/AddContributionForm';
 import SmartTextArea from '../formelements/SmartTextArea';

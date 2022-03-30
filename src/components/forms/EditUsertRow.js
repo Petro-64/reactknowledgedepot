@@ -1,5 +1,5 @@
 import React from 'react';
-import { IntlProvider, FormattedMessage } from "react-intl";
+import { IntlProvider } from "react-intl";
 import messages from '../../translations/EditSubjRow';
 import Modal from '../formelements/Modal';
 import Prompt from '../formelements/Prompt';
@@ -22,7 +22,7 @@ export default class EditUserRow extends React.Component {
     }
 
     openPromptt(){
-       if(this.props.user.status == 'user-confirmed'){
+       if(this.props.user.status === 'user-confirmed'){
             this.promptt.current.showModal();
        } else {
             this.props.toggleusersuspend({id: this.state.id, reason: 'none'});
@@ -46,7 +46,7 @@ export default class EditUserRow extends React.Component {
     }
 
     render(props) {
-        const { name, email, status, resultsNumber, createdAt, id, suspension_reason } = this.props.user;
+        const { name, email, status, resultsNumber, createdAt, suspension_reason } = this.props.user;
         const { language } = this.props;
       return  (
         <>

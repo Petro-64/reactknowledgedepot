@@ -42,27 +42,17 @@ function MaterialUiNavigation(props) {
 
     setState({ ...state, [anchor]: open });
   };
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-
-  const toggleLanguage = (e) => {
-    props.toggleLanguage(e.target.value);
-  }
 
   const [selectedIndex, setSelectedIndex] = React.useState("");
   const handleClick = index => {
@@ -72,12 +62,6 @@ function MaterialUiNavigation(props) {
       setSelectedIndex(index)
     }
   }
-
-  const [age, setAge] = React.useState('');
-
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
 
   const list = (anchor) => (
     <IntlProvider locale={props.language} messages={messages[props.language]}>

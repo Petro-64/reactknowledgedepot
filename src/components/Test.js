@@ -24,8 +24,7 @@ class Test extends React.Component {
     this.countdown = React.createRef();
     this.state = {
       currentSubjectId: '',
-      currentSubjectName: '',
-      currentSubjectId: ''
+      currentSubjectName: ''
     }
     this.modall = React.createRef();
   }
@@ -63,7 +62,7 @@ class Test extends React.Component {
   }
 
   onDropdownChange = (event) => {
-    const subjName = this.props.subjectsUser.filter(value => value.id == event.target.value);
+    const subjName = this.props.subjectsUser.filter(value => value.id === event.target.value);
     this.setState({
       currentSubjectId: event.target.value,
       currentSubjectName: subjName
@@ -77,7 +76,6 @@ class Test extends React.Component {
   };
 
   onMuiDropdownChange = (id, name) => {
-    const subjName = name;
     this.setState({
       currentSubjectId: id,
       currentSubjectName: name
@@ -121,7 +119,7 @@ class Test extends React.Component {
   }
 
   navigateOutFromTestingPage = () =>{
-    if(this.props.roleId == 0){// depends is this user registered or not, we redirect him to 'results' or 'home' page
+    if(this.props.roleId === 0){// depends is this user registered or not, we redirect him to 'results' or 'home' page
       this.props.history.push(resultsPageAddrNotUser);
     } else {
       this.props.history.push(resultsPageAddrUser);
@@ -133,10 +131,6 @@ class Test extends React.Component {
   }
 
   render() {
-    const translations = {
-      pleaseConfirmTestStop:  this.props.language === 'en' ? messages.en.pleaseConfirmTestStop : messages.ru.pleaseConfirmTestStop,
-    }
-
     const visibility = this.props.testingSessionHash === '' ?  '' : 'none';
 
      return (

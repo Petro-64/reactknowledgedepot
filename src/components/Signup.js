@@ -47,7 +47,7 @@ class Signup extends React.Component {
         <div>
         <MaterialUiNavigationMini logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>            <div className="container">
               <center><h2><FormattedMessage id="register" /></h2></center>
-              {this.props.needToShowRecaptcha == 1 && 
+              {this.props.needToShowRecaptcha === 1 && 
               <SignupFormN onSubmit={()=>{this.props.signup()}} 
               errorMessage={this.props.loginError} 
               errorMessageVisibility={this.props.loginErrorVisibility} 
@@ -59,7 +59,7 @@ class Signup extends React.Component {
               />
               }
 
-              {this.props.needToShowRecaptcha == 0 && 
+              {this.props.needToShowRecaptcha === 0 && 
               <SignupFormNoRecaptcha onSubmit={()=>{this.props.signup()}} 
               errorMessage={this.props.loginError} 
               errorMessageVisibility={this.props.loginErrorVisibility} 

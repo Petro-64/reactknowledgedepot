@@ -11,6 +11,7 @@ const messages = {
       pending:"Pending",
       declined:"Declined",
       approved: "Approved",
+      noAddedQuestions: "No added questions",
     },
     ru: {
         subject: "Предмет",
@@ -24,6 +25,7 @@ const messages = {
         pending:"В ожидании",
         declined:"Отклоненный",
         approved: "Одобренный",
+        noAddedQuestions: "Нет добавленных вопросов",
     }
   };
 

@@ -6,6 +6,7 @@ import {withCookies} from 'react-cookie';
 import messages from '../translations/CookieConsent';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 
 class CookieConsent extends React.Component {
@@ -20,14 +21,14 @@ class CookieConsent extends React.Component {
 
   componentDidMount(){
     setTimeout(() => { 
-        if(!this.state.cookieConsentObtained && this.props.cookieConsentObtained == 0){/// this means that user came from email confirmation link
+        if(!this.state.cookieConsentObtained && this.props.cookieConsentObtained === 0){/// this means that user came from email confirmation link
             this.props.setCookieConsentVisibility(1);
         };
     }, 5000);
   }
 
   componentDidUpdate(){
-    if(this.props.cookieConsentObtained == 1){/// this means that user came from email confirmation link
+    if(this.props.cookieConsentObtained === 1){/// this means that user came from email confirmation link
         this.props.setCookieConsentVisibility(0);
     } 
   }
@@ -44,7 +45,9 @@ class CookieConsent extends React.Component {
                 <div className="flashMessageBody">
                     <p className="message"><FormattedMessage id="consent" /></p>
                     <Link to="/app/aboutcookie"><FormattedMessage id="details" /></Link>
-                    <button type="button" className="btn btn-success" onClick={this.hideConsent.bind(this)}><FormattedMessage id="agree" /></button>
+                    <Button variant="contained"  onClick={this.hideConsent.bind(this)}>
+                      <FormattedMessage id="agree" />
+                    </Button>
                 </div>
             </StyledCookieConsent>
         </IntlProvider>

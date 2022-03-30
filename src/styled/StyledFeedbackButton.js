@@ -5,7 +5,7 @@ button.rotated{
     position: fixed;
     top: 50%;
     z-index: 30000;
-    right: -45px;
+    right: -48px;
     transform:rotate(-90deg);
 }
 

@@ -23,9 +23,9 @@ class AdminAddQuestions extends React.Component {
   }
 
   onDropdownChange = (event) => {
-    const subjName = this.props.subjectsAdmin.filter(value => value.id == event.target.value);
+    const subjName = this.props.subjectsAdmin.filter(value => value.id === event.target.value);
 
-    if(event.target.value != 0){
+    if(event.target.value !== 0){
         this.setState({
             currentSubjectId: event.target.value,
             currentSubjectName: subjName[0].name
