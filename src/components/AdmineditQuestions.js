@@ -129,6 +129,7 @@ class AdmineditQuestions extends React.Component {
                                 <th><FormattedMessage id="itemsPerPage" />:</th>
                                 <th><FormattedMessage id="status" />:</th>
                                 <th><FormattedMessage id="cleareditedList" /></th>
+                                <th>Refresh questions</th>
                               </tr>
                               <tr>
                                 <td><Select options={this.state.resultsPerPage} onChange={this.onDropdownChangeItemsPerPage} defaultt={this.props.resultsFilterPerPage}/></td>
@@ -136,6 +137,11 @@ class AdmineditQuestions extends React.Component {
                                 <td>
                                   <button type="button" className="btn btn-danger" onClick={this.props.clearEditedQuestionsList}>
                                     <FormattedMessage id="cleareditedList" />
+                                  </button>
+                                </td>
+                                <td>
+                                  <button type="button" className="btn btn-danger" onClick={this.props.loadQuestions}>
+                                    Click
                                   </button>
                                 </td>
                               </tr>

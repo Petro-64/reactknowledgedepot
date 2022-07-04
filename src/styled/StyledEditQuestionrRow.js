@@ -18,7 +18,7 @@ const StyledEditQuestionrRow = styled.tr`
   }
   .questionCell > .popupAnswersHint {
     position: absolute;
-    top: 45px;
+    bottom: 100%;
     left: 13px;
     display: none;
     background-color: #5d8ed9;

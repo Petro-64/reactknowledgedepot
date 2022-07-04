@@ -48,6 +48,9 @@ class Test extends React.Component {
     this.props.loadSubjectsUsers();
     this.resetAll();
     this.jqueryClickEmulation();
+    document.getElementsByClassName("testContainer")[0].addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+    });
   }
 
   componentDidUpdate(){
@@ -139,7 +142,7 @@ class Test extends React.Component {
             <ModalMUI ref={this.modall} toExecute = {this.stopTestingButtonClicked.bind(this)} messages={messages[this.props.language]}/>
             <div>
               <MaterialUiNavigation logoutUser={this.props.logoutUser} userName={this.props.userName} roleId={this.props.roleId} toggleLanguage={this.toggleLanguage} language={this.props.language}/>
-              <div className="container">
+              <div className="container testContainer">
                 <h2 className="testsHeader"><FormattedMessage id="tests" /></h2>
                 <h5 style={this.state.currentSubjectName === '' ? {display: 'none'} :  {}}>
                   <FormattedMessage id="currentSubject" />: {this.props.currentSubjectName} 

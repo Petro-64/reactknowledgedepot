@@ -7,6 +7,17 @@ const Styledtesting = styled.div`
         border: none;
         margin: 10px 0;
         cursor: pointer;
+        -webkit-user-select: none;  
+        -moz-user-select: none;    
+        -ms-user-select: none;      
+        user-select: none;
+    }
+    
+    .qusetionBlock{
+        -webkit-user-select: none;  
+        -moz-user-select: none;    
+        -ms-user-select: none;      
+        user-select: none;
     }
 `;
 

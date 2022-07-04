@@ -45,7 +45,7 @@ export function loadQuestions(){
     const itemsPerPage = store.getState().questionsReducer.resultsFilterPerPage;
     const currentPagination = store.getState().questionsReducer.currentPagination;
     let currentSubjId = store.getState().questionsReducer.currentSubjectId;
-    const currentStatus = store.getState().questionsReducer.currentStatus;
+    const currentStatus = store.getState().questionsReducer.currentStatus;// all, active, unactive
     const headers = { 'JWToken': JWT };
     return (dispatch) => {
         return axios.get(BaseUrl + 'react/questions/' + currentSubjId + '/' + currentStatus, {
