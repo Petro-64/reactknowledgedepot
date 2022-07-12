@@ -7,6 +7,7 @@ import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../../translations/Signupform';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 
 const validate = (values, props) => {
@@ -97,7 +98,8 @@ let SignupFormN = props => {
         </div>
         <div>
           <Button type="submit" variant="contained" disabled={!valid || pristine || submitting}><FormattedMessage id="register" /></Button>&nbsp;&nbsp;&nbsp;
-          <Button variant="contained" color="error" disabled={pristine || submitting} onClick={reset}><FormattedMessage id="clearValues" /></Button>
+          <Button variant="contained" color="error" disabled={pristine || submitting} onClick={reset}><FormattedMessage id="clearValues" /></Button>&nbsp;&nbsp;&nbsp;
+          <Link to="/app/login"><Button variant="contained" color="error"><FormattedMessage id="login" /></Button></Link>
         </div>
       </form>
       </center>

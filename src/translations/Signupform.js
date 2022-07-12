@@ -12,7 +12,8 @@ const messages = {
         emailIssue: "Invalid email address",
         eightOrMore: 'Must be 8 characters or more',
         fifteenOrLess: 'Must be 15 characters or less',
-        passworsNotMatching: "Passwords aren't matching"
+        passworsNotMatching: "Passwords aren't matching",
+        login: "Login"
 
     },
     ru: {
@@ -28,7 +29,8 @@ const messages = {
         emailIssue: "Неверный адрес электронной почты",
         eightOrMore: "Должно быть 8 символов или более",
         fifteenOrLess: 'Должно быть не более 15 символов',
-        passworsNotMatching: "Пароли не совпадают"
+        passworsNotMatching: "Пароли не совпадают",
+        login: "Aвторизоваться"
     }
   };
 

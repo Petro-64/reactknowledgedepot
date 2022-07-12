@@ -19,6 +19,18 @@ const Styledtesting = styled.div`
         -ms-user-select: none;      
         user-select: none;
     }
+    table.testingDetails{
+        width: 100%;
+    }
+    table.testingDetails td:first-child{
+        width: 100px;
+    }
+    table.testingDetails td:nth-child(2){
+        width: 130px;
+    }
+    .floatRight{
+        float: right;
+    }
 `;
 
 export default Styledtesting

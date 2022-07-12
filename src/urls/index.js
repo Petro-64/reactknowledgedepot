@@ -3,6 +3,7 @@ const urls = {
       addContribution: 'react/addmycontribution',
       adminEditQuestion: 'react/editquestions/',
       getRateLimiter: 'react/ratelimiters',
+      addquestionreport: 'react/addquestionreport'
   };
 
 export default urls;

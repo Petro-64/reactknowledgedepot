@@ -11,11 +11,15 @@ import StyledTesting from '../styled/StyledTesting';
 import Button from '@mui/material/Button';
 import MuiDropDownMenu from './formelements/MuiDropDownMenu';
 import $ from 'jquery';
+import BugReportIcon from '@mui/icons-material/BugReport';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
 
 const ifToDestroyTemporaryQuestions = 1;
 const resultsPageAddrUser = '/app/resultsn';// if this guy registered, sent him to results page
 const resultsPageAddrNotUser = '/app';// if this guy not registered, just sent him to home page
-
+const testPage = '/app/test';
 
 class Test extends React.Component {
   constructor(props) {
@@ -48,7 +52,7 @@ class Test extends React.Component {
     this.props.loadSubjectsUsers();
     this.resetAll();
     this.jqueryClickEmulation();
-    document.getElementsByClassName("testContainer")[0].addEventListener('contextmenu', (e) => {
+    document.getElementsByClassName("testContainer")[0].addEventListener('contextmenu', (e) => {// this is for disabling right click
       e.preventDefault();
     });
   }
@@ -129,12 +133,24 @@ class Test extends React.Component {
     }
   }
 
+  navigateOnTest = () => {
+    // on before unmount
+    this.props.setCurrentPaginationAction(0);
+    this.props.destroyTemporaryTestingQuestions(this.props.testingSessionHash, ifToDestroyTemporaryQuestions);
+    this.resetAll();
+    ///on mount
+    this.props.loadSubjectsUsers();
+    this.resetAll();
+    this.jqueryClickEmulation();
+  }
+
   toggleLanguage = (lang) =>{
     this.props.setLanguage(lang);
   }
 
   render() {
     const visibility = this.props.testingSessionHash === '' ?  '' : 'none';
+    const currentQuestionId = this.props.currentQuestionId;
 
      return (
       <StyledTesting>
@@ -162,7 +178,7 @@ class Test extends React.Component {
                 {/* introductory block ends */}
 
                 {/* select subject block starts */}
-                <MuiDropDownMenu options={this.props.subjectsUser} onMuiDropdownChange={this.onMuiDropdownChange} language={this.props.language} messages={messages} visibility={visibility}/>
+                <MuiDropDownMenu options={this.props.subjectsUser} onMuiDropdownChange={this.onMuiDropdownChange} language={this.props.language} messages={messages} visibility={visibility} selectedSubj = {this.props.currentSubjectId}/>
                 <br/>
                 {/* select subject block ends */}
 
@@ -176,13 +192,25 @@ class Test extends React.Component {
 
                 {/* main test block starts */}
                 <div className="testingInfo" style={this.props.currentQuestion === '' ? {display: 'none'} : {}} >
-                  <table>
+                  <table className="testingDetails">
                     <tbody>
                       <tr>
                           <td><FormattedMessage id="answeredQuestions" />: {this.props.numberOfAnsweredQuestions}&nbsp;</td>
                           <td><Countdown ref={this.countdown} stopFunction = {this.stopTestingButtonClicked} language={this.props.language} /></td>
+                          <td>
+                            <div className="floatRight" style={(this.props.roleId === 1 || this.props.roleId === 2) ? {} : { display: 'none' } }>
+                              <ListItemButton sx={{ color: 'red' }} onClick={()=>{this.props.postReport({questionId: this.props.currentQuestionId})}}>
+                                <ListItemIcon >
+                                  <BugReportIcon sx={{ color: 'red' }} />
+                                </ListItemIcon>
+                                <ListItemText sx={{ mx: -2, padding: '5px' }}>
+                                  <FormattedMessage id="reportQuestion" />
+                                </ListItemText>
+                              </ListItemButton>
+                            </div>
+                          </td>
                       </tr>
-                      <tr><td><FormattedMessage id="correctAnswers" />: {this.props.numberOfCorrectQuestions}</td><td></td></tr>
+                      <tr><td><FormattedMessage id="correctAnswers" />: {this.props.numberOfCorrectQuestions}</td><td></td><td></td></tr>
                     </tbody>
                   </table>
                   <br/>
@@ -204,7 +232,20 @@ class Test extends React.Component {
                   <p><FormattedMessage id="allQuestionAreAnswered" />:</p>
                   <p><FormattedMessage id="answeredQuestions" />: {this.props.numberOfAnsweredQuestions} </p>  
                   <p><FormattedMessage id="correctAnswers" />: {this.props.numberOfCorrectQuestions} </p>
-                  <Button variant="contained"  onClick={this.navigateOutFromTestingPage}><FormattedMessage id="doneThanks" /></Button>
+                  <Button variant="contained" onClick={this.navigateOnTest}>
+                    <div>
+                      <FormattedMessage id="anotherTest" />
+                    </div>
+                  </Button>
+                  &nbsp;&nbsp;&nbsp;
+                  <Button variant="contained"  onClick={this.navigateOutFromTestingPage}>
+                    <div style={this.props.roleId !== 0 ? {display: 'none'} : {}}>
+                      <FormattedMessage id="doneThanks" />
+                    </div>
+                    <div style={this.props.roleId === 0 ? {display: 'none'} : {}}>
+                      <FormattedMessage id="myResults" />
+                    </div>
+                  </Button>
                 </div>
                 {/* results block ends */}
 

@@ -4,19 +4,19 @@ import { SET_USER_NAME, SET_ROLE_ID, SET_JWT_TOKEN, SET_USER_ID, CLEAR_SENSITIVE
 let loginSignUpState={
     loginError: '',
     loginErrorVisibility: 'hidden',
-      
-   
+     
+     /* 
     userName: 'Petro',   
     roleId: 2, //0 by default, 2 for admin
-    JWToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJsb2dpbl90aW1lc3RhbXAiOjE2NTY3MDY3OTR9.eCBzEHe+gAep+M7GfTYkPhhDR1dmeklRwt6zVlmR4cs=',
+    JWToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJsb2dpbl90aW1lc3RhbXAiOjE2NTczMDc0OTJ9.R8ajR5Iseqe91sFj7zfjNg0uPnKS9TUjxkYuePZnkqU=',
     userId: '1',
-    /*
-
+ */ 
+  
     userName: '',   
     roleId: 0, //0 by default, 2 for admin
     JWToken: '',
     userId: '',
-   */ 
+  
     signupCaptchaText: '',
     suspensionReason: '',
     redirectFlagForPasswordresetFunctionality: 1, // when password reset succesfully, we need to redirect user to login page, so this redirect will be controlled by this flag

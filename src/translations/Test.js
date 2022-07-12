@@ -11,15 +11,18 @@ const messages = {
       question: "Question",
       justClickCorrectAnswer: "Just click correct answer",
       clickToStop: "Click to stop your test",
-      allQuestionAreAnswered: "Test is finished, below are results",
+      allQuestionAreAnswered: "Test is finished",
       correctAnswers: "Correct",
       doneThanks: "Done, thanks",
+      myResults: "My all results",
       startYour: "Start your ",
       test: " test",
       currentQuestion: "Current question",
       pleaseConfirmTestStop: "Please confirm test stop",
       stopTesting: "Stop",
       backToTest: "Back to test",
+      reportQuestion: "Complain about this question",
+      anotherTest: "Another test"
     },
     ru: {
       tests: "Tесты",
@@ -33,15 +36,18 @@ const messages = {
       question: "Вопрос",
       justClickCorrectAnswer: "Просто нажмите правильный ответ",
       clickToStop: "Нажмите, чтобы остановить тест",
-      allQuestionAreAnswered: "Tест закончен, результаты:",
+      allQuestionAreAnswered: "Tест закончен c результатoм:",
       correctAnswers: "Правильнo",
       doneThanks: "Готово, спасибо",
+      myResults: "Предыдущиe pезультаты",
       startYour: "Начни свой ",
       test: " тест",
       currentQuestion: "Текущий вопрос",
       pleaseConfirmTestStop: "Подтвердите остановку тестa",
       stopTesting: "Стоп",
       backToTest: "Назад к тесту",
+      reportQuestion: "Пожаловаться на этот вопрос",
+      anotherTest: "Еще один тест"
     }
   };
 

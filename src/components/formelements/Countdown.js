@@ -6,7 +6,7 @@ import StyledCountDown from '../../styled/StyledCountDown';
 class Countdown extends Component {
     constructor() {
         super();
-        this.state = { time: {}, seconds: 60, widthh: "200px", bgcolor: '' };
+        this.state = { time: {}, seconds: 61, widthh: "200px", bgcolor: '' };
         this.timer = 0;
         this.startTimer = this.startTimer.bind(this);
         this.countDown = this.countDown.bind(this);
@@ -42,6 +42,10 @@ class Countdown extends Component {
       }
     
       startTimer() {
+        clearInterval(this.timer);
+        this.timer = 0;
+        this.setState({ time: {} });
+        this.setState({ seconds: 61});
         if (this.timer === 0 && this.state.seconds > 0) {
           this.timer = setInterval(this.countDown, 1000);
         }
@@ -72,6 +76,9 @@ class Countdown extends Component {
         // Check if we're at zero.
         if (seconds === 0) { 
           clearInterval(this.timer);
+          this.timer = 0;
+          this.setState({ time: {} });
+          this.setState({ seconds: 61});
           this.props.stopFunction();
         }
       }
@@ -85,7 +92,7 @@ class Countdown extends Component {
             <table>
             <tbody>
                 <tr>
-                    <td className="timeLeftSeconds" style={{backgroundColor : this.state.bgcolor, color: 'white'}}>&nbsp;<FormattedMessage id="timeLeft" />: {this.state.time.s} <FormattedMessage id="seconds" />&nbsp;</td>
+                    <td className="timeLeftSeconds" style={{backgroundColor : this.state.bgcolor, color: 'white', width: '133px'}}>&nbsp;<FormattedMessage id="timeLeft" />: {this.state.time.s} <FormattedMessage id="seconds" />&nbsp;</td>
                     {/*<td><div className = "countdownindicator" style={{width : this.state.widthh, backgroundColor: this.state.bgcolor}}></div></td>*/}
                     {/*<td><div className="pie no-round"></div></td>*/}
                 </tr>

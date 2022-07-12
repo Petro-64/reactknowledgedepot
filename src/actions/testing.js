@@ -2,7 +2,7 @@ import axios from 'axios';
 import helpers from '../helpers/Helpers';
 import { SET_CURRENT_SUBJECT_ID, SET_TESTING_SESSION_HASH, SET_CURRENT_SUBJECT_NAME, 
     SET_CURRENT_QUESTION, SET_ANSWERS, SET_NUMBER_OF_ANSWERED, SET_NUMBER_OF_CORRECT, SET_IF_REMAIN_QUESTIONS, SET_CORRECT_ANSWER_ID, SET_IF_TO_SHOW_TEST_HINTS_BORDER,
-    SET_IF_TO_SHOW_TEST_HINTS, SET_OVERLAY_VISIBILITY } from '../types';
+    SET_IF_TO_SHOW_TEST_HINTS, SET_OVERLAY_VISIBILITY, SET_CURRENT_QUESTION_ID } from '../types';
 import store from '../index.js';
 
 const BaseUrl = helpers.UrlSniffer();
@@ -23,6 +23,7 @@ export const processTesting = (testingSessionHash, answerId) => {
                     dispatch(setNumberOfCorrect(response.data.payload.correct));
                     dispatch(setIfRemainQuestions(response.data.payload.ifRemainQuestions));
                     dispatch(setCorrectAnswerId(response.data.payload.correctAnswerId));
+                    dispatch(setCurrentQuestionId(response.data.payload.questionId));
                     //dispatch(setHintsBorderVisibility(0))
                     ///store.getState().testReducer.testHintsBorderTimeout
                 } else {
@@ -32,6 +33,7 @@ export const processTesting = (testingSessionHash, answerId) => {
                     dispatch(setNumberOfCorrect(response.data.payload.correct));
                     dispatch(setIfRemainQuestions(response.data.payload.ifRemainQuestions));
                     dispatch(setCorrectAnswerId(response.data.payload.correctAnswerId));
+                    dispatch(setCurrentQuestionId(response.data.payload.questionId));
                     ///dispatch(setHintsBorderVisibility(0))
                 }
                 dispatch(setHintsBorderVisibility(0))
@@ -85,6 +87,8 @@ export function setIfToShowTestingHints(value){
         dispatch(setIfToShowTestingHintsDispatch(value))
     };
 }
+
+
 
 export const destroyTemporaryTestingQuestions = (testingSessionHash, ifToDestroyTemporaryQuestions) => {
     return (dispatch) => {
@@ -207,3 +211,10 @@ export function setIfRemainQuestions(number){
     }
 }
 
+
+export function setCurrentQuestionId(id){
+    return {
+        type: SET_CURRENT_QUESTION_ID,
+        id: id,
+    }
+}

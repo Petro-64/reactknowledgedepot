@@ -54,7 +54,8 @@ const LoginFormN = props => {
         <br/><br/>
         <div>
           <Button type="submit" variant="contained" disabled={!valid || pristine || submitting}><FormattedMessage id="login" /></Button>&nbsp;&nbsp;&nbsp;
-          <Button variant="contained" color="error" disabled={pristine || submitting} onClick={reset}><FormattedMessage id="clearValues" /></Button>
+          <Button variant="contained" color="error" disabled={pristine || submitting} onClick={reset}><FormattedMessage id="clearValues" /></Button>&nbsp;&nbsp;&nbsp;
+          <Link to="/app/signup"><Button variant="contained" color="error"><FormattedMessage id="signup" /></Button></Link>
         </div>
       </form>
     </IntlProvider>

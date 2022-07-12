@@ -9,7 +9,9 @@ export function* getRateLimiter() {
                 commentRatelimiterComments: responceData.data.payload.commentRatelimiterComments, 
                 commentRatelimiterHours: responceData.data.payload.commentRatelimiterHours,
                 contributeRatelimiterHours: responceData.data.payload.contributeRatelimiterHours,
-                contributeRatelimiterContributions: responceData.data.payload.contributeRatelimiterContributions
+                contributeRatelimiterContributions: responceData.data.payload.contributeRatelimiterContributions,
+                questionReportRatelimiterHours: responceData.data.payload.questionReportRatelimiterHours,
+                questionReportRatelimiterReports: responceData.data.payload.questionReportRatelimiterReports
             })
         } else {
             alert("comments ratelimiter issue");

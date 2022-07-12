@@ -19,7 +19,7 @@ function MuiDropDownMenu(props) {
   }
 
   const myOptions = props.options;
-  let name = !!myOptions[selectedIndex] ? myOptions[selectedIndex].name : translations.select;
+  let name = props.selectedSubj == "" ? translations.select : myOptions[selectedIndex].name;
 
   const handleMenuItemClick = (event, index, id, name) => {
     props.onMuiDropdownChange(id, name); 

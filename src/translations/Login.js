@@ -10,6 +10,7 @@ const messages = {
         senddata: "Send password",
         emailIssue: "Invalid email address",
         required: "Required",
+        signup: "Signup"
     },
     ru: {
         login: "Логин",
@@ -22,6 +23,7 @@ const messages = {
         senddata: "Отправить пароль",
         emailIssue: "Неверный адрес электронной почты",
         required: "Обязательное поле",
+        signup: "3арегистрироваться"
     }
   };
 

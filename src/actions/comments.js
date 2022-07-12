@@ -4,11 +4,25 @@ export function postComment({comment, route}){
     };
 }
 
+export function postReport({questionId}){
+    return (dispatch) => {
+        dispatch(postReportDispatch({questionId}))
+    };
+}
+
 function postCommentDispatch({comment, route}){
     return{
         type: 'POST_COMMENT',
         comment: comment,
         route: route,
+    }
+}
+
+function postReportDispatch({questionId, userId}){
+    return{
+        type: 'POST_REPORT',
+        questionId: questionId,
+        userId: userId
     }
 }
 

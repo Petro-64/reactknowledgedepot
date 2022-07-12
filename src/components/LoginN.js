@@ -6,6 +6,7 @@ import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translations/Login';
 import { withCookies } from 'react-cookie';
 import MaterialUiNavigationMini from './MaterialUiNavigationMini'
+import { Link} from 'react-router-dom';
 
 
 class Loginn extends React.Component {
