@@ -4,6 +4,7 @@ const StyledPagination = styled.div`
 margin: 20px 0;
  li{
      width: 37px;
+     text-align: center;
  }
 
  li:first-child{

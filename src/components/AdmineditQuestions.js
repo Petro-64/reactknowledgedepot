@@ -55,6 +55,8 @@ class AdmineditQuestions extends React.Component {
   };
 
   componentDidMount(){
+    //this.props.resetQuestionsSet();
+    //this.props.setCurrentSubjectIdToAddQuestion("");
     this.props.loadSubjectsAdmin();
     this.props.setRedirectFlagToBackToQuestionsList(1);
   }

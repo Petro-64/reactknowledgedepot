@@ -5,13 +5,13 @@ let loginSignUpState={
     loginError: '',
     loginErrorVisibility: 'hidden',
      
-     /* 
+ /*      
     userName: 'Petro',   
     roleId: 2, //0 by default, 2 for admin
-    JWToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJsb2dpbl90aW1lc3RhbXAiOjE2NTczMDc0OTJ9.R8ajR5Iseqe91sFj7zfjNg0uPnKS9TUjxkYuePZnkqU=',
+    JWToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJsb2dpbl90aW1lc3RhbXAiOjE2NTc4MjU5NzR9.oLqG7W0Ex8xML+zOwRr2gIMEI8LQ6LzLdKLQXDDuZLc=',
     userId: '1',
- */ 
-  
+  */ 
+
     userName: '',   
     roleId: 0, //0 by default, 2 for admin
     JWToken: '',

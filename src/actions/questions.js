@@ -106,6 +106,12 @@ export function toggleQuestionActivity(id){
     }
 }
 
+export function resetQuestionsSet(){
+    return (dispatch) => {
+        dispatch(setNumberOfQuestionsToEdit(0));
+    }
+}
+
 export function loadAnswers(id){
     const JWT = store.getState().loginSignUpReducer.JWToken;
     const headers = { 'JWToken': JWT };

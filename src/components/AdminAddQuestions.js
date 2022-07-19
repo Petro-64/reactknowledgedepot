@@ -20,11 +20,16 @@ class AdminAddQuestions extends React.Component {
 
   componentDidMount(){
     this.props.loadSubjectsAdmin();
+    this.props.setCurrentSubjectIdToAddQuestion("");
+  }
+
+  componentWillUnmount(){
+    this.props.resetQuestionsSet();
+    this.props.setCurrentSubjectIdToAddQuestion("");
   }
 
   onDropdownChange = (event) => {
-    const subjName = this.props.subjectsAdmin.filter(value => value.id === event.target.value);
-
+    const subjName = this.props.subjectsAdmin.filter(value => value.id == event.target.value);
     if(event.target.value !== 0){
         this.setState({
             currentSubjectId: event.target.value,
