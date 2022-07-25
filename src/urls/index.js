@@ -3,7 +3,8 @@ const urls = {
       addContribution: 'react/addmycontribution',
       adminEditQuestion: 'react/editquestions/',
       getRateLimiter: 'react/ratelimiters',
-      addquestionreport: 'react/addquestionreport'
+      addquestionreport: 'react/addquestionreport',
+      searchQuestionByKey: 'react/searchquestionbykey'
   };
 
 export default urls;

@@ -155,13 +155,13 @@ class AdmineditQuestions extends React.Component {
               </StyledAccordeon>
               <PaginationSimple totalNumberOfItems={this.props.numberOfQuestionsBySubject} itemsPerPage={this.props.resultsFilterPerPage} paginationClick={this.paginationClick} currentPagination={this.props.currentPagination} />
               <EditQuestionTable 
-              questions={ this.props.questionsPaginated } 
-              language={this.props.language}
-              toggleQuestionActivity={this.props.toggleQuestionActivity}
-              onTdRollover={this.props.loadAnswers}
-              answersToShow={this.props.answers}
-              editedQuestionsArray={this.props.recentlyEditedQuestionsarray}
-             />
+                questions={ this.props.questionsPaginated } 
+                language={this.props.language}
+                toggleQuestionActivity={this.props.toggleQuestionActivity}
+                onTdRollover={this.props.loadAnswers}
+                answersToShow={this.props.answers}
+                editedQuestionsArray={this.props.recentlyEditedQuestionsarray}
+              />
               <PaginationSimple totalNumberOfItems={this.props.numberOfQuestionsBySubject} itemsPerPage={this.props.resultsFilterPerPage} paginationClick={this.paginationClick} currentPagination={this.props.currentPagination} />
             </div>
           </div>

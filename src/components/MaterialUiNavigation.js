@@ -31,6 +31,7 @@ import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import ToggleLanguageButton from './formelements/ToggleLanguageButton';
 import AvatarMy from './formelements/AvatarMy';
+import SearchIcon from '@mui/icons-material/Search';
 
 function MaterialUiNavigation(props) {
   const [state, setState] = React.useState({top: false, left: false,  bottom: false, right: false, });
@@ -209,6 +210,16 @@ function MaterialUiNavigation(props) {
                   </ListItemIcon>
                   <ListItemText sx={{ mx: -2 }}>
                   <FormattedMessage id="editQuestion" />
+                  </ListItemText>
+                </ListItemButton>
+              </Link>
+              <Link to="/app/adminsearchquestion" color="#444" variant="p" underline="none" className="drawerNavigationLink">
+                <ListItemButton onClick={toggleDrawer('left', false)}>
+                  <ListItemIcon>
+                    <SearchIcon />
+                  </ListItemIcon>
+                  <ListItemText sx={{ mx: -2 }}>
+                  <FormattedMessage id="searchForQusestion" />
                   </ListItemText>
                 </ListItemButton>
               </Link>

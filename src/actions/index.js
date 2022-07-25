@@ -7,6 +7,7 @@ export * from './settings';
 export * from './contribution';
 export * from './questions';
 export * from './comments';
+export * from './search';
 
 
 

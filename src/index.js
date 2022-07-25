@@ -31,6 +31,7 @@ import AdminContribution from './components/AdminContribution';
 import AdmineditQuestions from './components/AdmineditQuestions';
 import AdminContributionDetails from './components/AdminContributionDetails';
 import UserContributionDetails from './components/UserContributionDetails';
+import AdminSearchQuestion from './components/AdminSearchQuestion';
 
 
 import {createStore, applyMiddleware, combineReducers } from 'redux';
@@ -106,6 +107,8 @@ class App extends React.Component{
             <AuthorizedRouteAdmin exact path="/app/admineditquestions/:id" component={AdminEditQuestion} />
             <AuthorizedRouteAdmin exact path="/app/adminaddquestion" component={AdminAddQuestions} />
             <AuthorizedRouteAdmin exact path="/app/admineditquestion" component={AdmineditQuestions} />
+            <AuthorizedRouteAdmin exact path="/app/adminsearchquestion" component={AdminSearchQuestion} />
+
           </div>
       </Router>
     )

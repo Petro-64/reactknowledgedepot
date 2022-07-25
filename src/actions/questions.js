@@ -166,6 +166,22 @@ export function editQuestionsSagaDispatch({editedValues}){
     }
 }
 
+
+export function editSearchQuestionsSaga({editedValues}){
+    return (dispatch) => {
+        dispatch(editSearchQuestionsSagaDispatch({editedValues}));
+    }
+}
+
+export function editSearchQuestionsSagaDispatch({editedValues}){
+    return{
+        type: 'POST_EDITED_SEARCH_QUESTIONS',
+        editedValues: editedValues
+    }
+}
+
+
+
 export function deleteQuestion(ifNeedToRedirect){
     const JWT = store.getState().loginSignUpReducer.JWToken;
     const headers = { 'JWToken': JWT };

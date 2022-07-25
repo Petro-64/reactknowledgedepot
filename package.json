@@ -23,6 +23,7 @@
     "react-collapsible": "^2.8.1",
     "react-cookie": "^4.0.3",
     "react-dom": "^16.13.1",
+    "react-highlight-words": "^0.18.0",
     "react-intl": "^5.10.16",
     "react-redux": "^7.2.1",
     "react-redux-form-validation": "^1.1.0",

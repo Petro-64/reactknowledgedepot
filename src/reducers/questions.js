@@ -16,7 +16,9 @@ let questionsState={
     answers: [],
     adminEditQuestionItem: '',
     redirectAfterSuccesfullQuestionsSaving: 1,
-    recentlyEditedQuestionsarray: []
+    recentlyEditedQuestionsarray: [],
+    foundQuestionsByWord: [],
+    foundQuestionsById: [],
 }
 
 const questionsReducer = (state=questionsState, action)=>{
@@ -105,6 +107,13 @@ const questionsReducer = (state=questionsState, action)=>{
             ...state,
             currentPagination: action.number
         }
+
+    case 'SET_SEARCH_QUESTIONS_BY_KEY_RESULT':
+        return {
+            ...state,
+            foundQuestionsByWord: action.questions
+        }
+///
 
     default: 
         return {

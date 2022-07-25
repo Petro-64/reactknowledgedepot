@@ -31,8 +31,10 @@ class AdminEditQuestion extends React.Component {
   }
 
   componentDidUpdate(){
-    if(this.props.redirectAfterSuccesfullQuestionsSaving === 2){/// this means that user came from email confirmation link
+    if(this.props.redirectAfterSuccesfullQuestionsSaving === 2){// this means need to redirect to questions list
       this.props.history.push('/app/admineditquestion');
+    } else if(this.props.redirectAfterSuccesfullQuestionsSaving === 3){// this means need to redirect to question search form
+      this.props.history.push('/app/adminsearchquestion');
     };
   }
 
@@ -152,6 +154,24 @@ class AdminEditQuestion extends React.Component {
     }   
   }
 
+  saveSearchQuestion(){
+    let editedValues = {
+      question: this.props.questionFromForm,
+      subjectId: this.props.adminEditQuestionItem.subjectId,
+      questionId: this.props.adminEditQuestionItem.questionId,
+      answerCorrect: this.props.fourthAnswerFromForm,
+      correctId: this.props.adminEditQuestionItem.correctId,
+      uncorrect0: this.props.firstAnswerFromForm,
+      uncorrect1: this.props.secondAnswerFromForm,
+      uncorrect2: this.props.thirdAnswerFromForm,
+      uncorrectId0: this.props.adminEditQuestionItem.uncorrectId0,
+      uncorrectId1: this.props.adminEditQuestionItem.uncorrectId1,
+      uncorrectId2: this.props.adminEditQuestionItem.uncorrectId2,
+      ifNeedToRedirectToSearch: true
+    }
+    this.props.editSearchQuestionsSaga({editedValues})
+  }
+
   showModal(){
     console.log("show modal");
     this.modall.current.showModal();
@@ -165,7 +185,14 @@ class AdminEditQuestion extends React.Component {
     this.props.history.push('/app/admineditquestion');
   }
 
+  backNavigationsearch(){
+    this.props.history.push('/app/adminsearchquestion');
+  }
+
   render() {
+    let prevPath;
+    !this.props.location.state  ? prevPath={prevPath: ''} : prevPath = this.props.location.state;
+
     let initialValues={// this way of assignment looks weird, but otherwise, if simpler, it gives error
       question: this.props.adminEditQuestionItem.question,
       subjectId: this.props.adminEditQuestionItem.subjectId,
@@ -215,6 +242,9 @@ class AdminEditQuestion extends React.Component {
               loadnextQuestion={this.loadNextQuestion.bind(this)} 
               loadPrevQuestion={this.loadPrevQuestion.bind(this)}
               showModal={this.showModal.bind(this)}
+              prevPath={prevPath}
+              backNavigationsearch={this.backNavigationsearch.bind(this)}
+              saveSearchQuestion={this.saveSearchQuestion.bind(this)}
             />
           </div>
       </div> 

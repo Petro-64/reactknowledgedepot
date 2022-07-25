@@ -4,6 +4,8 @@ import { postContribution } from './contribution';
 import { postEditQuestions } from './questions';
 import { getRateLimiter } from './ratelimiter';
 import { addQuestReport } from './addquestionreport';
+import { searchQuestionsByKey } from './search';
+import { postEditSearchQuestions } from './searchQuestions';
 
 function* commentsActionWatcher() {
     yield takeLatest('POST_COMMENT', postComment)
@@ -25,12 +27,22 @@ function* getRateLimiterWatcher() {
     yield takeLatest('GET_RATE_LIMITER_SETTINGS', getRateLimiter)
 }
 
+function* searchQuestionsByKeyWordWatcher() {
+    yield takeLatest('SEARCH_QUESTION_BY_KEYWORD', searchQuestionsByKey)
+}
+
+function* editFoundByKeyWordQuestionsActionWatcher() {
+    yield takeLatest('POST_EDITED_SEARCH_QUESTIONS', postEditSearchQuestions)
+}
+
 export default function* rootSaga() {
     yield all([
         commentsActionWatcher(),
         contributionActionWatcher(),
         editQuestionsActionWatcher(),
         getRateLimiterWatcher(),
-        addQuestionReportWatcher()
+        addQuestionReportWatcher(),
+        searchQuestionsByKeyWordWatcher(),
+        editFoundByKeyWordQuestionsActionWatcher()
     ]);
 }

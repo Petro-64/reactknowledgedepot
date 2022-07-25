@@ -16,7 +16,7 @@ const validate = values => {
   }
 
 let AdminEditQuestionForm = props => {
-  const { handleSubmit, submitting, language,  backNavigation,  pristine,  valid, nextIsAvailable, loadnextQuestion, loadPrevQuestion, prevIsAvailable, showModal} = props;
+  const { handleSubmit, submitting, language,  backNavigation,  pristine,  valid, nextIsAvailable, loadnextQuestion, loadPrevQuestion, prevIsAvailable, showModal, prevPath, backNavigationsearch, saveSearchQuestion} = props;
   const translations = {
     firstAnswer:  language === 'en' ? messages.en.firstAnswer : messages.ru.firstAnswer,
     secondAnswer:  language === 'en' ? messages.en.secondAnswer : messages.ru.secondAnswer,
@@ -43,13 +43,19 @@ let AdminEditQuestionForm = props => {
           </table>
         </div>
         <br/><br/>
-        <div>
+        <div style={prevPath.prevPath === '/app/adminsearchquestion' ? {display: 'none'} : {}}>
           <>
           <button type="button" className="btn btn-primary" disabled={submitting} onClick={backNavigation}><FormattedMessage id="backToContributionPage" /></button>&nbsp;&nbsp;&nbsp;
           <button type="button" className="btn btn-primary" disabled={!valid || !prevIsAvailable} onClick={loadPrevQuestion}><FormattedMessage id="saveAndGoToThePrevQuestion" /></button>&nbsp;&nbsp;&nbsp;
           <button type="submit" className="btn btn-primary" disabled={!valid || pristine}><FormattedMessage id="saveQuestionAndReturnToQuestionsList" /></button>&nbsp;&nbsp;&nbsp;
           <button type="button" className="btn btn-primary" disabled={!valid || !nextIsAvailable} onClick={loadnextQuestion}><FormattedMessage id="saveAndGoToTheNextQuestion" /></button>&nbsp;&nbsp;&nbsp;
           <button type="button" className="btn btn-danger" onClick={showModal}><FormattedMessage id="deleteAndReturn" /></button>
+          </>
+        </div>
+        <div style={prevPath.prevPath === '/app/adminsearchquestion' ? {} : {display: 'none'}}>
+          <>
+          <button type="button" className="btn btn-primary" disabled={submitting} onClick={backNavigationsearch}><FormattedMessage id="backToContributionPage" /></button>&nbsp;&nbsp;&nbsp;
+          <button type="button" className="btn btn-primary" disabled={!valid || pristine} onClick={saveSearchQuestion}><FormattedMessage id="save" /></button>&nbsp;&nbsp;&nbsp;
           </>
         </div>
       </form>
