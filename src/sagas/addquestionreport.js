@@ -1,4 +1,3 @@
-import {reset} from 'redux-form';
 import store from '../index.js';
 import { put, call } from 'redux-saga/effects';
 import messages from '../translations/AddQuestionReport';

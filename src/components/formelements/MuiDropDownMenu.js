@@ -19,10 +19,19 @@ function MuiDropDownMenu(props) {
   }
 
   const myOptions = props.options;
-  let name = props.selectedSubj == "" ? translations.select : myOptions[selectedIndex].name;
+
+  
+  let toShow
+  if((typeof myOptions[selectedIndex] === 'undefined') || ( myOptions[selectedIndex] === null)) {
+    toShow = '';
+  } else {
+    toShow =  myOptions[selectedIndex].name;
+  }
+
+  let name = props.selectedSubj == "" ? translations.select : toShow;
 
   const handleMenuItemClick = (event, index, id, name) => {
-    props.onMuiDropdownChange(id, name); 
+    props.onMuiDropdownChange(id, name, event); 
     setSelectedIndex(index);
     setAnchorEl(null);
   };
@@ -35,11 +44,7 @@ function MuiDropDownMenu(props) {
 
   return (
     <div style={{display: visibility}}>
-      <List
-        component="nav"
-        aria-label="Device settings"
-        sx={{ bgcolor: 'background.paper' }}
-      >
+      <List        component="nav"        aria-label="Device settings"        sx={{ bgcolor: 'background.paper' }}      >
         <ListItem
           button
           id="lock-button"
@@ -49,10 +54,7 @@ function MuiDropDownMenu(props) {
           aria-expanded={open ? 'true' : undefined}
           onClick={handleClickListItem}
         >
-          <ListItemText
-            primary={translations.clickToSelect}
-            secondary={name}
-          />
+          <ListItemText primary={translations.clickToSelect} secondary={name}/>
         </ListItem>
       </List>
       <Menu

@@ -4,7 +4,8 @@ const urls = {
       adminEditQuestion: 'react/editquestions/',
       getRateLimiter: 'react/ratelimiters',
       addquestionreport: 'react/addquestionreport',
-      searchQuestionByKey: 'react/searchquestionbykey'
+      searchQuestionByKey: 'react/searchquestionbykey',
+      mistakes: 'react/mistakes'
   };
 
 export default urls;

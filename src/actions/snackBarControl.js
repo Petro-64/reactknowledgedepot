@@ -1,4 +1,6 @@
-import { SET_MUI_FLASH_MESSAGES_VISIBILITY, SET_MUI_FLASH_MESSAGES_MESSAGE, SET_MUI_FLASH_MESSAGES_TYPE } from '../types';
+import { SET_MUI_FLASH_MESSAGES_VISIBILITY,
+     SET_MUI_FLASH_MESSAGES_MESSAGE, 
+     SET_MUI_FLASH_MESSAGES_TYPE } from '../types';
 
 export default function showMuiFlashMessage(dispatch, message, type){
     dispatch(changeMuiFlashMessageVisibility(1));

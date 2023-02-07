@@ -7,7 +7,6 @@ import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translations/SearchForQuestions';
 import {withCookies} from 'react-cookie';
-import Button from '@mui/material/Button';
 import QuestionSearchResultRow from './forms/QuestionSearchResultRow';
 
 
@@ -22,7 +21,6 @@ import SearchQuestionByKeyWord from './forms/SearchQuestionByKeyWord';
 
 
 import StyledAccordeon from '../styled/StyledAccordeon';
-import Select from './formelements/Select';
 import { formValueSelector } from 'redux-form';
 
 class AdminSearchQuestion extends React.Component {

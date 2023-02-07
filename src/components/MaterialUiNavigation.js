@@ -32,6 +32,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import ToggleLanguageButton from './formelements/ToggleLanguageButton';
 import AvatarMy from './formelements/AvatarMy';
 import SearchIcon from '@mui/icons-material/Search';
+import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
 
 function MaterialUiNavigation(props) {
   const [state, setState] = React.useState({top: false, left: false,  bottom: false, right: false, });
@@ -99,16 +100,28 @@ function MaterialUiNavigation(props) {
                 </ListItemButton>
               </Link>
               {(props.roleId === 1 || props.roleId === 2) && (
-              <Link to="/app/resultsn" color="#444" variant="p" underline="none" className="drawerNavigationLink">
-                <ListItemButton onClick={toggleDrawer('left', false)}>
-                  <ListItemIcon>
-                    <SummarizeIcon />
-                  </ListItemIcon>
-                  <ListItemText sx={{ mx: -2 }}>
-                  <FormattedMessage id="testResults" />
-                  </ListItemText>
-                </ListItemButton>
-              </Link>
+              <>
+                <Link to="/app/resultsn" color="#444" variant="p" underline="none" className="drawerNavigationLink">
+                  <ListItemButton onClick={toggleDrawer('left', false)}>
+                    <ListItemIcon>
+                      <SummarizeIcon />
+                    </ListItemIcon>
+                    <ListItemText sx={{ mx: -2 }}>
+                    <FormattedMessage id="testResults" />
+                    </ListItemText>
+                  </ListItemButton>
+                </Link>
+                <Link to="/app/mistakes" color="#444" variant="p" underline="none" className="drawerNavigationLink">
+                  <ListItemButton onClick={toggleDrawer('left', false)}>
+                    <ListItemIcon>
+                      <ReportGmailerrorredIcon />
+                    </ListItemIcon>
+                    <ListItemText sx={{ mx: -2 }}>
+                    <FormattedMessage id="mistakes" />
+                    </ListItemText>
+                  </ListItemButton>
+                </Link>
+              </>
               )}
           </Collapse>
 

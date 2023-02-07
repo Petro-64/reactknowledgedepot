@@ -5,7 +5,7 @@ const messages = {
       ifYouWouldLike: "If you woul'd like to have an advantage of keeping statistics of your test results or adding your own questions, we'll ask you to register ",
       herre: "here.",
       firstt: "First, please select subject you want to start testing:",
-      select: "--select--",
+      select: "Select subject",
       currentSubject: "Subject",
       answeredQuestions: "Answered",//"Answered questions"
       question: "Question",
@@ -30,7 +30,7 @@ const messages = {
       ifYouWouldLike: "Если вы хотите вести статистику результатов тестов или добавлять свои собственные вопросы, мы попросим вас зарегистрироваться ",
       herre: "здесь.",
       firstt: "Сначала выберите предмет, по которой хотите начать тестирование:",
-      select: "--выбери--",
+      select: "Bыбери предмет",
       currentSubject: "Предмет",
       answeredQuestions: "Отвеченo",//
       question: "Вопрос",

@@ -12,6 +12,7 @@ import Loginn from './components/LoginN';
 import Users from './components/Users';
 import Signup from './components/Signup';
 import Resultsn from './components/Resultsn';
+import Mistakes from './components/Mistakes';
 import Subjects from './components/Subjects';
 import AboutCookie from './components/AboutCookie'
 import CookieConsent from './components/CookieConsent';
@@ -44,6 +45,7 @@ import resultsReducer from "./reducers/results";
 import settingsReducer from "./reducers/settings";
 import commentsReducer from './reducers/comments';
 import subjectsReducer from "./reducers/subjects";
+import mistakesReducer from "./reducers/mistakes";
 import questionsReducer from "./reducers/questions";
 import loginSignUpReducer from "./reducers/loginsignup";
 import AddMyQuestions from './components/AddMyQuestions';
@@ -67,6 +69,7 @@ const rootReducer = combineReducers({
   contributionsReducer,
   questionsReducer,
   commentsReducer,
+  mistakesReducer,
   form: formReducer
 })
 
@@ -92,6 +95,7 @@ class App extends React.Component{
             <NonAuthorizedRoute exact path="/app/aboutcookie" component={AboutCookie}/>
  
             <AuthorizedRouteUser exact path="/app/resultsn" component={Resultsn} />
+            <AuthorizedRouteUser exact path="/app/mistakes" component={Mistakes} />
             <AuthorizedRouteUser exact path="/app/test" component={Test} />
             <AuthorizedRouteUser exact path="/app/aboutcookie" component={AboutCookie}/>
             <AuthorizedRouteUser exact path="/app/addmyquestion" component={AddMyQuestions} />

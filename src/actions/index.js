@@ -8,6 +8,7 @@ export * from './contribution';
 export * from './questions';
 export * from './comments';
 export * from './search';
+export * from './mistakes';
 
 
 

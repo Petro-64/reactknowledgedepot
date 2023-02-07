@@ -173,7 +173,6 @@ class AdminEditQuestion extends React.Component {
   }
 
   showModal(){
-    console.log("show modal");
     this.modall.current.showModal();
   }
   

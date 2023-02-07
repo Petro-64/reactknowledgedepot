@@ -1,4 +1,3 @@
-import store from '../index.js';
 import { put, all, call, delay } from 'redux-saga/effects';
 import { editQuestionPost, getQuestionsBySubjectAndStatus } from '../api/questions';
 

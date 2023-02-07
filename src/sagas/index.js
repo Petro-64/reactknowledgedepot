@@ -6,6 +6,7 @@ import { getRateLimiter } from './ratelimiter';
 import { addQuestReport } from './addquestionreport';
 import { searchQuestionsByKey } from './search';
 import { postEditSearchQuestions } from './searchQuestions';
+import { getMistakesSaga } from './mistakes';
 
 function* commentsActionWatcher() {
     yield takeLatest('POST_COMMENT', postComment)
@@ -35,6 +36,10 @@ function* editFoundByKeyWordQuestionsActionWatcher() {
     yield takeLatest('POST_EDITED_SEARCH_QUESTIONS', postEditSearchQuestions)
 }
 
+function* getMistakesActionWatcher() {
+    yield takeLatest('GET_MISTAKES', getMistakesSaga)
+}
+
 export default function* rootSaga() {
     yield all([
         commentsActionWatcher(),
@@ -43,6 +48,7 @@ export default function* rootSaga() {
         getRateLimiterWatcher(),
         addQuestionReportWatcher(),
         searchQuestionsByKeyWordWatcher(),
-        editFoundByKeyWordQuestionsActionWatcher()
+        editFoundByKeyWordQuestionsActionWatcher(),
+        getMistakesActionWatcher()
     ]);
 }

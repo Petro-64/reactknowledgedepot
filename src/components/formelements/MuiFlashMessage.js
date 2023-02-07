@@ -22,8 +22,15 @@ render() {
    if(!!this.props.muiFlashMessagesType){
     severity = this.props.muiFlashMessagesType;
    }
+
+   let open = false;
+
+   if(this.props.muiFlashMessageVisibility === 1){
+    open = true;
+   }
+
     return (
-        <Snackbar open={this.props.muiFlashMessageVisibility} anchorOrigin={{vertical: 'top', horizontal: 'right'}}>
+        <Snackbar open={open} anchorOrigin={{vertical: 'top', horizontal: 'right'}}>
             <Alert  severity={severity} sx={{ width: '100%' }} >
                 {this.props.muiFlashMessagesMessage1}
             </Alert>

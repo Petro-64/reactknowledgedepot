@@ -19,7 +19,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 const ifToDestroyTemporaryQuestions = 1;
 const resultsPageAddrUser = '/app/resultsn';// if this guy registered, sent him to results page
 const resultsPageAddrNotUser = '/app';// if this guy not registered, just sent him to home page
-const testPage = '/app/test';
 
 class Test extends React.Component {
   constructor(props) {
@@ -33,8 +32,7 @@ class Test extends React.Component {
     this.modall = React.createRef();
   }
 
-  jqueryClickEmulation = () =>{
-    $('.container').trigger('click');// for Iphone there is a bug when shadow stays on answer div after page reloaded
+  jqueryClickEmulation = () =>{    $('.container').trigger('click');// for Iphone there is a bug when shadow stays on answer div after page reloaded
   }
 
   resetAll(){
@@ -57,9 +55,7 @@ class Test extends React.Component {
     });
   }
 
-  componentDidUpdate(){
-    this.jqueryClickEmulation();
-  }
+  componentDidUpdate(){    this.jqueryClickEmulation();  }
 
 
   componentWillUnmount() {
@@ -112,18 +108,14 @@ class Test extends React.Component {
 
   }
 
-  openModal(){
-      this.modall.current.showModal();
-  }
+  openModal(){      this.modall.current.showModal();  }
 
   startTestingButtonClicked = () =>{
     this.props.startNewTest(this.state.currentSubjectId, this.props.testingSessionId);
     this.countdown.current.startTimer();
   }
 
-  stopTestingButtonClicked = () =>{
-    this.props.setRemainingQuestionsToZero();
-  }
+  stopTestingButtonClicked = () =>{    this.props.setRemainingQuestionsToZero();  }
 
   navigateOutFromTestingPage = () =>{
     if(this.props.roleId === 0){// depends is this user registered or not, we redirect him to 'results' or 'home' page
@@ -144,13 +136,10 @@ class Test extends React.Component {
     this.jqueryClickEmulation();
   }
 
-  toggleLanguage = (lang) =>{
-    this.props.setLanguage(lang);
-  }
+  toggleLanguage = (lang) =>{    this.props.setLanguage(lang);  }
 
   render() {
     const visibility = this.props.testingSessionHash === '' ?  '' : 'none';
-    const currentQuestionId = this.props.currentQuestionId;
 
      return (
       <StyledTesting>
@@ -178,7 +167,12 @@ class Test extends React.Component {
                 {/* introductory block ends */}
 
                 {/* select subject block starts */}
-                <MuiDropDownMenu options={this.props.subjectsUser} onMuiDropdownChange={this.onMuiDropdownChange} language={this.props.language} messages={messages} visibility={visibility} selectedSubj = {this.props.currentSubjectId}/>
+                <MuiDropDownMenu options={this.props.subjectsUser} 
+                onMuiDropdownChange={this.onMuiDropdownChange} 
+                language={this.props.language} 
+                messages={messages} 
+                visibility={visibility} 
+                selectedSubj = {this.props.currentSubjectId}/>
                 <br/>
                 {/* select subject block ends */}
 

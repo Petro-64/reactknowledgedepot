@@ -20,7 +20,8 @@ const messages = {
       addQuestion: "Add question",
       editQuestion: "Edit question",
       changePassword: "Change password",
-      searchForQusestion: "Search for question"
+      searchForQusestion: "Search for question",
+      mistakes: "My mistakes"
 
     },
     ru: {
@@ -44,7 +45,8 @@ const messages = {
       addQuestion: "Добавить вопрос",
       editQuestion: "Редактировать вопрос",
       changePassword: "Cменить пароль",
-      searchForQusestion: "Поиск вопроса"
+      searchForQusestion: "Поиск вопроса",
+      mistakes: "Мои ошибки"
     }
   };
 
