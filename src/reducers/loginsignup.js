@@ -4,18 +4,18 @@ import { SET_USER_NAME, SET_ROLE_ID, SET_JWT_TOKEN, SET_USER_ID, CLEAR_SENSITIVE
 let loginSignUpState={
     loginError: '',
     loginErrorVisibility: 'hidden',
-  
+    /* 
     userName: '',   
     roleId: 0, //0 by default, 2 for admin
     JWToken: '',  
     userId: '',
-     /* 
- 
+   
+    */   
     userName: 'Petro',   
     roleId: 2, //0 by default, 2 for admin
     JWToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJsb2dpbl90aW1lc3RhbXAiOjE2NzkwMDE2Mzh9.Ht0l6tHySHu99cGxg4nDrTAXtuKMrQygK8I8twZSwFU=',
     userId: '1',
-    */   
+ 
    
  
     signupCaptchaText: '',

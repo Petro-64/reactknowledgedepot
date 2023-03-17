@@ -115,7 +115,7 @@ class AdmineditQuestions extends React.Component {
                 }
             </select>
             <br />
-            <div style={this.props.numberOfQuestionsBySubject === 0  ? {display: 'none'} : {}}>
+            <div>
               <StyledAccordeon>
                   <Accordion allowMultipleExpanded="true" allowZeroExpanded="true">
                     <AccordionItem>

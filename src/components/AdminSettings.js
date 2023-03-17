@@ -94,7 +94,7 @@ class AdminSettings extends React.Component {
                           </AccordionItemButton>
                       </AccordionItemHeading>
                       <AccordionItemPanel>
-                            Dump doesn't wor full functionality, because there is no SQL command to dump, only generic OS command. So, it's done manually, see manual in VBOX18-1
+                            Dump doesn't work full functionality, because there is no SQL command to dump, only generic OS command. So, it's done manually, see manual in VBOX18-1
                             <button type="button" className="btn btn-success" onClick={this.download.bind(this)}>Click to Download Dump</button>{/* onClick={this.clickYes.bind(this)} */}
                       </AccordionItemPanel>
                     </AccordionItem>
