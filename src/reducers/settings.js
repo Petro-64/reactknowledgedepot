@@ -1,5 +1,6 @@
 import { SET_LANGUAGE, SET_FLASH_MESSAGES_VISIBILITY, SET_FLASH_MESSAGES_MESSAGE, SET_FLASH_MESSAGES_TYPE, SET_GLOBAL_SETTINGS,
-    SET_COOKIE_CONSENT_VISIBILITY, SET_COOKIE_CONSENT_OBTAINED, CLEAR_SENSITIVE_INFO, SET_MUI_FLASH_MESSAGES_VISIBILITY, SET_MUI_FLASH_MESSAGES_MESSAGE, SET_MUI_FLASH_MESSAGES_TYPE } from '../types'
+    SET_COOKIE_CONSENT_VISIBILITY, SET_COOKIE_CONSENT_OBTAINED, CLEAR_SENSITIVE_INFO, SET_MUI_FLASH_MESSAGES_VISIBILITY, 
+    SET_MUI_FLASH_MESSAGES_MESSAGE, SET_MUI_FLASH_MESSAGES_TYPE, GET_SQL_DUMP } from '../types'
 
 let settingsState={
     language: 'en',
@@ -15,6 +16,7 @@ let settingsState={
     muiFlashMessagesMessage1: '',
     muiFlashMessagesType: '',// 'error',
     muiFlashMessagesTimeout: 3000,/// how long user will be able to see flash message
+    sqlDump: '',
 }
 
 const settingsReducer = (state=settingsState, action)=>{
@@ -91,6 +93,12 @@ const settingsReducer = (state=settingsState, action)=>{
         return{
             ...state,
             cookieConsentObtained: 0,
+        }
+
+    case GET_SQL_DUMP:
+        return{
+            ...state,
+            sqlDump: action.data,
         }
 
     default: 

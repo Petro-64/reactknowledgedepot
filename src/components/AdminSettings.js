@@ -24,7 +24,9 @@ class AdminSettings extends React.Component {
   
   componentDidMount(){
     this.props.loadGlobalSettings();
+    this.props.loadSqlDump();
   }
+
   toggleEmailConfirmation(){
     this.props.toggleEmailConfirmation();
   }
@@ -35,6 +37,17 @@ class AdminSettings extends React.Component {
 
   toggleLanguage = (lang) =>{
     this.props.setLanguage(lang);
+  }
+ 
+  download(){
+    console.log("download logic here");
+    const texts = [this.props.sqlDump];
+    const file = new Blob(texts, {type: 'text/plain'});
+    const element = document.createElement("a");
+    element.href = URL.createObjectURL(file);
+    element.download = "dump-" + Date.now() + ".sql";
+    document.body.appendChild(element);
+    element.click();
   }
 
   render() {
@@ -74,7 +87,18 @@ class AdminSettings extends React.Component {
                             Enabled &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" className="btn btn-danger" onClick={this.toggleRecaptcha.bind(this)}>Click to disable</button>
                         </div>
                       </AccordionItemPanel>
-                  </AccordionItem>
+                      <AccordionItem>
+                      <AccordionItemHeading>
+                          <AccordionItemButton>
+                            Dump Database
+                          </AccordionItemButton>
+                      </AccordionItemHeading>
+                      <AccordionItemPanel>
+                            <button type="button" className="btn btn-success" onClick={this.download.bind(this)}>Click to Download Dump</button>{/* onClick={this.clickYes.bind(this)} */}
+                      </AccordionItemPanel>
+                    </AccordionItem>
+                    </AccordionItem>
+
                   </AccordionItem>
               </Accordion>
             </StyledAccordeon><br/><br/>

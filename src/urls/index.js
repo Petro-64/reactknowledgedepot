@@ -5,7 +5,8 @@ const urls = {
       getRateLimiter: 'react/ratelimiters',
       addquestionreport: 'react/addquestionreport',
       searchQuestionByKey: 'react/searchquestionbykey',
-      mistakes: 'react/mistakes'
+      mistakes: 'react/mistakes',
+      getSqlDump: 'angular/mysqldump',
   };
 
 export default urls;

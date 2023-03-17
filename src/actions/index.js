@@ -9,6 +9,7 @@ export * from './questions';
 export * from './comments';
 export * from './search';
 export * from './mistakes';
+export * from './sqldump';
 
 
 
