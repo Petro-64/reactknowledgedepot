@@ -1490,14 +1490,14 @@
     "themeBackground": "#1e1e1e",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///var/www/laravelknowlegdedepot",
-            "backupPath": "/home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/Backups/89b1264b74870be9080ea89710dfefe1",
+            "folder": "file:///home/petro/Desktop/reactKnowlegde/reactknowledgedepot",
+            "backupPath": "/home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/Backups/645d17e661835b45e71e68c44fa4afa0",
             "uiState": {
                 "mode": 1,
-                "x": 65,
-                "y": 615,
-                "width": 1783,
-                "height": 737
+                "x": 342,
+                "y": 84,
+                "width": 1834,
+                "height": 1178
             }
         },
         "openedWindows": [
@@ -1506,8 +1506,8 @@
                 "backupPath": "/home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/Backups/645d17e661835b45e71e68c44fa4afa0",
                 "uiState": {
                     "mode": 1,
-                    "x": 43,
-                    "y": 62,
+                    "x": 342,
+                    "y": 84,
                     "width": 1834,
                     "height": 1178
                 }

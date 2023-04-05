@@ -124,5 +124,5 @@ file:///var/www/laravelknowlegdedepot/toDoList.txt {"mtime":1680642112277,"ctime
 126) ///fixed/// 23/03/23 when only one question exists for given subject, and this question deleted successfully, subjects table still shows one question and it's impossible to delete it
 127) //// On mistakes page need to have question id to be able to check and fix it
 128) /// Label "Нажмите, чтобы выбрать предмет" invisible on mistakes filter dropdown on "Mistakes" page, fixed by resetting subject to none for mistakes page
-128) Label "Нажмите, чтобы выбрать предмет" invisible on contribution filter dropdown on "Contribution" page, fixed by resetting subject to none for mistakes page
-129) Admin contribution page broken functionality, no way to approve / decline
+129) Label "Нажмите, чтобы выбрать предмет" invisible on contribution filter dropdown on "Contribution" page, fixed by resetting subject to none for mistakes page
+130) Admin contribution page broken functionality, no way to approve / decline
