@@ -1,0 +1,11 @@
+[Info  - 4:42:54 p.m.] Angular language server process ID: 15569
+[Info  - 4:42:54 p.m.] Using typescript/lib/tsserverlibrary v4.1.5 from /home/petro/.vscode/extensions/angular.ng-template-11.2.14/node_modules/typescript/lib/tsserverlibrary.js
+[Info  - 4:42:54 p.m.] Using @angular/language-service v11.2.12 from /home/petro/.vscode/extensions/angular.ng-template-11.2.14/node_modules/@angular/language-service/bundles/language-service.js
+[Info  - 4:42:54 p.m.] Logging is turned off. To enable, run command 'Open Angular server log'.
+[Info  - 4:43:14 p.m.] Disabling language service for /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/tsconfig.json because it is not an Angular project ('@angular/core' could not be found).
+[Error - 4:43:14 p.m.] Unknown compiler option 'noImplicitOverride'.
+Unknown compiler option 'noPropertyAccessFromIndexSignature'.
+Argument for '--target' option must be: 'es3', 'es5', 'es6', 'es2015', 'es2016', 'es2017', 'es2018', 'es2019', 'es2020', 'esnext'.
+Argument for '--module' option must be: 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'esnext'.
+Argument for '--lib' option must be: 'es5', 'es6', 'es2015', 'es7', 'es2016', 'es2017', 'es2018', 'es2019', 'es2020', 'esnext', 'dom', 'dom.iterable', 'webworker', 'webworker.importscripts', 'webworker.iterable', 'scripthost', 'es2015.core', 'es2015.collection', 'es2015.generator', 'es2015.iterable', 'es2015.promise', 'es2015.proxy', 'es2015.reflect', 'es2015.symbol', 'es2015.symbol.wellknown', 'es2016.array.include', 'es2017.object', 'es2017.sharedmemory', 'es2017.string', 'es2017.intl', 'es2017.typedarrays', 'es2018.asyncgenerator', 'es2018.asynciterable', 'es2018.intl', 'es2018.promise', 'es2018.regexp', 'es2019.array', 'es2019.object', 'es2019.string', 'es2019.symbol', 'es2020.bigint', 'es2020.promise', 'es2020.sharedmemory', 'es2020.string', 'es2020.symbol.wellknown', 'es2020.intl', 'esnext.array', 'esnext.symbol', 'esnext.asynciterable', 'esnext.intl', 'esnext.bigint', 'esnext.string', 'esnext.promise', 'esnext.weakref'.
+[Info  - 12:05:13 p.m.] Disabling language service for /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/node_modules/rxjs/tsconfig.json because it is not an Angular project ('@angular/core' could not be found).

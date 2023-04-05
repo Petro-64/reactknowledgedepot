@@ -1,0 +1,247 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --git-dir
+Open repository: /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :src/app/common/reducers/app.reducer.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/reducers/app.reducer.ts
+> git cat-file -s 1d65c8717403ed8e70a3155666ea7e0c0452498d
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/reducers/app.reducer.ts
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/app/common/reducers/results.reducer.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/reducers/results.reducer.ts
+> git cat-file -s 24dc9cab1affebab46416e023a924bae2ef64a4f
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :src/app/common/services/http/getResults.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/http/getResults.service.ts
+> git cat-file -s 7350a55f55f30280702051bfdcb86aa3d8642c0f
+> git show --textconv :src/app/common/reducers/app.reducer.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/reducers/app.reducer.ts
+> git cat-file -s 1d65c8717403ed8e70a3155666ea7e0c0452498d
+> git show --textconv :src/app/common/services/http/getResults.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/http/getResults.service.ts
+> git cat-file -s 7350a55f55f30280702051bfdcb86aa3d8642c0f
+> git show --textconv :src/app/common/services/http/getJwsToken.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/http/getJwsToken.service.ts
+> git cat-file -s 6524f04b0c09e97e3c27ed93b36cad820abb551e
+> git show --textconv :src/app/common/services/http/getResults.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/http/getResults.service.ts
+> git cat-file -s 7350a55f55f30280702051bfdcb86aa3d8642c0f
+> git show --textconv :src/app/common/services/http/getsubjects.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/http/getsubjects.service.ts
+> git cat-file -s 6faecd852a5626d6abaf8bd7187d21fe4edf2181
+> git show --textconv :src/app/common/services/http/getResults.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/http/getResults.service.ts
+> git cat-file -s 7350a55f55f30280702051bfdcb86aa3d8642c0f
+> git status -z -u
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/http/getResults.service.ts
+> git symbolic-ref --short HEAD
+> git cat-file -s 02d201e2de0c58445ff8ec4c737be7a80b92bb69
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git show --textconv :src/app/common/services/http/getResults.service.ts
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :src/app/components/results/results.component.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/components/results/results.component.ts
+> git cat-file -s e947ed4e8a63a044b3d1eb2b7927a0fbe7d9c6c9
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :tsconfig.json
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/tsconfig.json
+> git cat-file -s 36d3de1d914ec9c268da992b387e68d7823bbd54
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :tsconfig.json
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/tsconfig.json
+> git cat-file -s 36d3de1d914ec9c268da992b387e68d7823bbd54
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/app-routing.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app-routing.module.ts
+> git cat-file -s 7f1b37c425238c037d9f73d4a94868d1770caf25
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/app-routing.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app-routing.module.ts
+> git cat-file -s 7f1b37c425238c037d9f73d4a94868d1770caf25
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/common/services/http/getResults.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/http/getResults.service.ts
+> git cat-file -s 02d201e2de0c58445ff8ec4c737be7a80b92bb69
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/app-routing.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app-routing.module.ts
+> git cat-file -s 7f1b37c425238c037d9f73d4a94868d1770caf25
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/common/services/http/getJwsToken.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/http/getJwsToken.service.ts
+> git cat-file -s 5c83d2ca9fa318da9b6243d5f8e820eb1ba6cf8d
+> git show --textconv :src/app/common/reducers/results.reducer.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/reducers/results.reducer.ts
+> git cat-file -s 24dc9cab1affebab46416e023a924bae2ef64a4f
+> git show --textconv :src/app/common/services/http/getJwsToken.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/http/getJwsToken.service.ts
+> git cat-file -s 5c83d2ca9fa318da9b6243d5f8e820eb1ba6cf8d
+> git show --textconv :src/app/common/reducers/app.reducer.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/reducers/app.reducer.ts
+> git cat-file -s 065c9b55de7c57181268dcd6ae23580b3cef3f70
+> git show --textconv :src/app/common/services/http/getResults.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/http/getResults.service.ts
+> git cat-file -s 02d201e2de0c58445ff8ec4c737be7a80b92bb69
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/common/services/http/getResults.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/http/getResults.service.ts
+> git cat-file -s 02d201e2de0c58445ff8ec4c737be7a80b92bb69
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/app-routing.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app-routing.module.ts
+> git cat-file -s 7f1b37c425238c037d9f73d4a94868d1770caf25
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/app-routing.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app-routing.module.ts
+> git cat-file -s 7f1b37c425238c037d9f73d4a94868d1770caf25
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/app-routing.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app-routing.module.ts
+> git cat-file -s 7f1b37c425238c037d9f73d4a94868d1770caf25
+> git show --textconv :src/app/app.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app.module.ts
+> git cat-file -s 6385ba8def787e20dc6ca9078462732fa09a538a
+> git show --textconv :src/app/app-routing.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app-routing.module.ts
+> git cat-file -s 7f1b37c425238c037d9f73d4a94868d1770caf25
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/app.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app.module.ts
+> git cat-file -s 6385ba8def787e20dc6ca9078462732fa09a538a
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/components/results/results.component.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/components/results/results.component.ts
+> git cat-file -s e947ed4e8a63a044b3d1eb2b7927a0fbe7d9c6c9
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/common/services/http/getJwsToken.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/http/getJwsToken.service.ts
+> git cat-file -s 5c83d2ca9fa318da9b6243d5f8e820eb1ba6cf8d
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/common/services/auth.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth.service.ts
+> git check-ignore -v -z --stdin
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/common/services/auth.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth.service.ts
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/common/services/auth.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth.service.ts
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/common/services/auth.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth.service.ts
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/common/services/auth.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth.service.ts
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/common/services/auth.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth.service.ts
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/common/services/auth.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth.service.ts
+> git show --textconv :src/app/app-routing.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app-routing.module.ts
+> git cat-file -s 7f1b37c425238c037d9f73d4a94868d1770caf25
+> git show --textconv :src/app/common/services/auth.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth.service.ts
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/common/services/http/getResults.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/http/getResults.service.ts
+> git cat-file -s 02d201e2de0c58445ff8ec4c737be7a80b92bb69
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/common/services/auth.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth.service.ts
+> git show --textconv :src/app/app-routing.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app-routing.module.ts
+> git cat-file -s 7f1b37c425238c037d9f73d4a94868d1770caf25
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/app-routing.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app-routing.module.ts
+> git cat-file -s 7f1b37c425238c037d9f73d4a94868d1770caf25
+> git show --textconv :src/app/app.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app.module.ts
+> git cat-file -s 6385ba8def787e20dc6ca9078462732fa09a538a
+> git show --textconv :src/app/app-routing.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app-routing.module.ts
+> git cat-file -s 7f1b37c425238c037d9f73d4a94868d1770caf25
+> git show --textconv :src/app/app.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app.module.ts
+> git cat-file -s 6385ba8def787e20dc6ca9078462732fa09a538a
+> git show --textconv :src/app/app-routing.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app-routing.module.ts
+> git cat-file -s 7f1b37c425238c037d9f73d4a94868d1770caf25
+> git show --textconv :src/app/common/services/auth.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth.service.ts
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts
+> git show --textconv :src/app/app.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app.module.ts
+> git cat-file -s 6385ba8def787e20dc6ca9078462732fa09a538a
+> git show --textconv :src/app/app-routing.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app-routing.module.ts
+> git cat-file -s 7f1b37c425238c037d9f73d4a94868d1770caf25
+> git show --textconv :src/app/app.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app.module.ts
+> git cat-file -s 6385ba8def787e20dc6ca9078462732fa09a538a
+> git show --textconv :src/app/app-routing.module.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/app-routing.module.ts
+> git cat-file -s 7f1b37c425238c037d9f73d4a94868d1770caf25
+> git show --textconv :src/app/common/services/auth.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth.service.ts
+> git show --textconv :src/app/common/services/auth-guard.service.ts
+> git ls-files --stage -- /home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts

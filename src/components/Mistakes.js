@@ -38,6 +38,8 @@ class Mistakes extends React.Component {
 
   componentDidMount(){
     this.props.getMistakes();
+    this.props.setCurrentMistakesSubjectId('');
+    this.props.setCurrentMistakesSubjectName('');
   }
 
   toggleLanguage = (lang) =>{
@@ -46,9 +48,13 @@ class Mistakes extends React.Component {
 
   render() {
     const visibility = true;
-    const columns = [{
+    const columns = this.state.currentSubjectId == '' ? [{
       dataField: 'name',
       text:  this.props.language === 'en' ? messages.en.subjName : messages.ru.subjName,
+      sort: true,
+    }, {
+      dataField: 'questionId',
+      text:  this.props.language === 'en' ? messages.en.questionId : messages.ru.questionId,
       sort: true,
     }, {
       dataField: 'question',
@@ -60,7 +66,21 @@ class Mistakes extends React.Component {
       sort: true
     }
 
-   ];
+   ] : [{
+    dataField: 'questionId',
+    text:  this.props.language === 'en' ? messages.en.questionId : messages.ru.questionId,
+    sort: true,
+  }, {
+    dataField: 'question',
+    text: this.props.language === 'en' ? messages.en.question : messages.ru.question,
+    sort: false
+  }, {
+    dataField: 'countt',
+    text: this.props.language === 'en' ? messages.en.numbMistakes : messages.ru.numbMistakes,
+    sort: true
+  }
+
+ ];
    
     const translations = {
       buttonText: this.props.language === 'en' ? messages.en.resendLink : messages.ru.resendLink,

@@ -1,0 +1,249 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --git-dir
+Open repository: /var/www/laravelknowlegdedepot
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :public/index.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/public/index.php
+> git cat-file -s c7b843262d618e0738c189c3c0e8f20d07d9eb0a
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :resources/views/spa.blade.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/resources/views/spa.blade.php
+> git cat-file -s 5e1686d13d3edd1fca0048bed45549667f3ffce3
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :resources/views/layouts/app.blade.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/resources/views/layouts/app.blade.php
+> git cat-file -s f2013541c8b7aa416c7fd3e800df639b38fce5ca
+> git show --textconv :resources/views/spa.blade.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/resources/views/spa.blade.php
+> git cat-file -s 5e1686d13d3edd1fca0048bed45549667f3ffce3
+> git show --textconv :resources/views/layouts/appspa.blade.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/resources/views/layouts/appspa.blade.php
+> git cat-file -s 14622530c9d24dfefbe90bedabf06809d6507c78
+> git status -z -u
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/resources/views/layouts/appspa.blade.php
+> git symbolic-ref --short HEAD
+> git cat-file -s 15217ef851daee366c621dc14811fa3766ec9d35
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git show --textconv :resources/views/layouts/appspa.blade.php
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :phpunit.xml
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/phpunit.xml
+> git cat-file -s 964ff0c5717e3cc3a6467661c8d4fe1fba9eb83e
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :tests/Unit/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Unit/ExampleTest.php
+> git cat-file -s 358cfc8834abf47c2467b90ad79771edd7eda517
+> git check-ignore -v -z --stdin
+> git show --textconv :tests/Feature/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Feature/ExampleTest.php
+> git cat-file -s cdb5111934c530977ccae72ac0c405c4582cfb2f
+> git show --textconv :app/Room.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Room.php
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :vendor/bin/phpunit
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/vendor/bin/phpunit
+> git show --textconv :app/Room.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Room.php
+> git show --textconv :vendor/bin/phpunit
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/vendor/bin/phpunit
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :tests/Feature/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Feature/ExampleTest.php
+> git cat-file -s cdb5111934c530977ccae72ac0c405c4582cfb2f
+> git show --textconv :phpunit.xml
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/phpunit.xml
+> git cat-file -s 964ff0c5717e3cc3a6467661c8d4fe1fba9eb83e
+> git check-ignore -v -z --stdin
+> git show --textconv :resources/views/layouts/appspa.blade.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/resources/views/layouts/appspa.blade.php
+> git cat-file -s 15217ef851daee366c621dc14811fa3766ec9d35
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /var/www/laravelknowlegdedepot/resources/views/layouts/appspa.blade.php
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/routes/web.php
+> git cat-file -s 678c81e3201e43e0fc2013244c193ff78ad0ee6c
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :app/Http/Middleware/CheckJwtToken.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Middleware/CheckJwtToken.php
+> git cat-file -s 152bc0c61627fdeadf592bcb046e342d0315c32e
+> git show --textconv :app/Http/Middleware/VerifyCsrfToken.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Middleware/VerifyCsrfToken.php
+> git cat-file -s b5a5add65d2309708f81b3386913bbe28f5fb677
+> git show --textconv :app/Http/Middleware/CheckJwtToken.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Middleware/CheckJwtToken.php
+> git cat-file -s 152bc0c61627fdeadf592bcb046e342d0315c32e
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/routes/web.php
+> git cat-file -s 678c81e3201e43e0fc2013244c193ff78ad0ee6c
+> git show --textconv :app/Http/Kernel.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Kernel.php
+> git cat-file -s 5dc55748d29d1e8d49989bc87e7b63c282e2a62c
+> git show --textconv :app/Http/Middleware/CheckJwtToken.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Middleware/CheckJwtToken.php
+> git cat-file -s 152bc0c61627fdeadf592bcb046e342d0315c32e
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/routes/web.php
+> git cat-file -s 678c81e3201e43e0fc2013244c193ff78ad0ee6c
+> git show --textconv :app/Http/Middleware/CheckJwtToken.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Middleware/CheckJwtToken.php
+> git cat-file -s 152bc0c61627fdeadf592bcb046e342d0315c32e
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/routes/web.php
+> git cat-file -s 678c81e3201e43e0fc2013244c193ff78ad0ee6c
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /var/www/laravelknowlegdedepot/routes/web.php
+> git show --textconv :tests/Feature/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Feature/ExampleTest.php
+> git cat-file -s cdb5111934c530977ccae72ac0c405c4582cfb2f
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/routes/web.php
+> git cat-file -s 678c81e3201e43e0fc2013244c193ff78ad0ee6c
+> git show --textconv :tests/Feature/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Feature/ExampleTest.php
+> git cat-file -s cdb5111934c530977ccae72ac0c405c4582cfb2f
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /var/www/laravelknowlegdedepot/tests/Feature/ExampleTest.php
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n41 -- /var/www/laravelknowlegdedepot/tests/Feature/ExampleTest.php
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /var/www/laravelknowlegdedepot/routes/web.php
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/routes/web.php
+> git cat-file -s 678c81e3201e43e0fc2013244c193ff78ad0ee6c
+> git check-ignore -v -z --stdin
+> git show --textconv :toDoList.txt
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/toDoList.txt
+> git cat-file -s 3c85475e5145652aae1ef245619f00d26b332ef1
+> git check-ignore -v -z --stdin
+> git show --textconv :app/Http/Controllers/ReactController.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git cat-file -s 93a1c43e3fa6399a6a2cb541970436213d9cc2a7
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/routes/web.php
+> git cat-file -s 678c81e3201e43e0fc2013244c193ff78ad0ee6c
+> git show --textconv :app/Http/Controllers/ReactController.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git cat-file -s 93a1c43e3fa6399a6a2cb541970436213d9cc2a7
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/routes/web.php
+> git cat-file -s 678c81e3201e43e0fc2013244c193ff78ad0ee6c
+> git show --textconv :app/Http/Controllers/ReactController.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git cat-file -s 93a1c43e3fa6399a6a2cb541970436213d9cc2a7
+> git show --textconv :app/Http/Kernel.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Kernel.php
+> git cat-file -s 5dc55748d29d1e8d49989bc87e7b63c282e2a62c
+> git show --textconv :app/Http/Controllers/ReactController.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git cat-file -s 93a1c43e3fa6399a6a2cb541970436213d9cc2a7
+> git show --textconv :app/Http/Middleware/CheckJwtToken.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Middleware/CheckJwtToken.php
+> git cat-file -s 152bc0c61627fdeadf592bcb046e342d0315c32e
+> git show --textconv :phpunit.xml
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/phpunit.xml
+> git cat-file -s 964ff0c5717e3cc3a6467661c8d4fe1fba9eb83e
+> git show --textconv :app/Http/Controllers/ReactController.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git cat-file -s 93a1c43e3fa6399a6a2cb541970436213d9cc2a7
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n41 -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/routes/web.php
+> git cat-file -s 678c81e3201e43e0fc2013244c193ff78ad0ee6c
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git show --textconv :toDoList.txt
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/toDoList.txt
+> git cat-file -s 3c85475e5145652aae1ef245619f00d26b332ef1
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/toDoList.txt
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git cat-file -s 5893076b3cbd0046a325a9e00377dc889d5d4822
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git show --textconv :toDoList.txt
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :app/Box.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Box.php
+> git check-ignore -v -z --stdin
+> git show --textconv :tests/Feature/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Feature/ExampleTest.php
+> git cat-file -s dcd87ed02ab6e26f79b3734f06aba16ca07844ab
+> git show --textconv :app/Http/Middleware/CheckJwtToken.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Middleware/CheckJwtToken.php
+> git cat-file -s 152bc0c61627fdeadf592bcb046e342d0315c32e
+> git show --textconv :tests/Feature/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Feature/ExampleTest.php
+> git cat-file -s dcd87ed02ab6e26f79b3734f06aba16ca07844ab
+> git show --textconv :resources/views/layouts/appspa.blade.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/resources/views/layouts/appspa.blade.php
+> git cat-file -s 15217ef851daee366c621dc14811fa3766ec9d35
+> git show --textconv :tests/Feature/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Feature/ExampleTest.php
+> git cat-file -s dcd87ed02ab6e26f79b3734f06aba16ca07844ab
+> git show --textconv :tests/Unit/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Unit/ExampleTest.php
+> git cat-file -s 358cfc8834abf47c2467b90ad79771edd7eda517
+> git show --textconv :app/Box.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Box.php
+> git show --textconv :tests/Unit/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Unit/ExampleTest.php
+> git cat-file -s 358cfc8834abf47c2467b90ad79771edd7eda517
+> git show --textconv :tests/Feature/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Feature/ExampleTest.php
+> git cat-file -s dcd87ed02ab6e26f79b3734f06aba16ca07844ab
+> git show --textconv :tests/Unit/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Unit/ExampleTest.php
+> git cat-file -s 358cfc8834abf47c2467b90ad79771edd7eda517
+> git show --textconv :app/Http/Controllers/ReactController.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git cat-file -s 4390e900f91e5cb14b756b539e568df376c8d137
+> git show --textconv :tests/Unit/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Unit/ExampleTest.php
+> git cat-file -s 358cfc8834abf47c2467b90ad79771edd7eda517
+> git show --textconv :app/Box.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Box.php
+> git show --textconv :tests/Unit/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Unit/ExampleTest.php
+> git cat-file -s 358cfc8834abf47c2467b90ad79771edd7eda517
+> git show --textconv :app/Box.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Box.php
+> git show --textconv :tests/Unit/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Unit/ExampleTest.php
+> git cat-file -s 358cfc8834abf47c2467b90ad79771edd7eda517
+> git show --textconv :phpunit.xml
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/phpunit.xml
+> git cat-file -s 964ff0c5717e3cc3a6467661c8d4fe1fba9eb83e

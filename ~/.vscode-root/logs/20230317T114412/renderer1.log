@@ -1,0 +1,9 @@
+[2023-03-17 12:44:22.779] [renderer1] [error] Error: [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2023-03-17 12:44:22.799] [renderer1] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2023-03-18 16:21:19.190] [renderer1] [error] Error: [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2023-03-18 16:21:19.211] [renderer1] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2023-03-18 18:34:33.263] [renderer1] [error] Error: file:///home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone/src/app/common/services/auth-guard.service.ts has changed in the meantime
+    at u.apply (file:///usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:825:16659)
+    at async r._performTextEdits (file:///usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2169:12257)
+    at async r.perform (file:///usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2169:11714)
+    at async s.apply (file:///usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2169:14071)

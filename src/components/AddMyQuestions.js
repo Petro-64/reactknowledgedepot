@@ -76,7 +76,13 @@ class AddMyQuestions extends React.Component {
             <br />
             <FormattedMessage id="youCanAddQuestions" />
             <br />
-            <MuiDropDownMenu options={this.props.subjectsUser} onMuiDropdownChange={this.onMuiDropdownChange} language={this.props.language} messages={messages}/>
+            <MuiDropDownMenu 
+            options={this.props.subjectsUser} 
+            onMuiDropdownChange={this.onMuiDropdownChange} 
+            language={this.props.language} 
+            messages={messages}
+            selectedSubj = {this.props.contributionSubjectId}
+            />
             {/*
             <select className="form-control" onChange={this.onDropdownChange}>
                 <FormattedMessage id="select">{(formattedValue)=>(<option key="0" value="">{formattedValue}</option>)}</FormattedMessage> ugly way to get just translated string, but this works 

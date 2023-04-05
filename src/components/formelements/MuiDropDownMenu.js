@@ -19,7 +19,6 @@ function MuiDropDownMenu(props) {
   }
 
   const myOptions = props.options;
-
   
   let toShow
   if((typeof myOptions[selectedIndex] === 'undefined') || ( myOptions[selectedIndex] === null)) {
@@ -28,7 +27,7 @@ function MuiDropDownMenu(props) {
     toShow =  myOptions[selectedIndex].name;
   }
 
-  let name = props.selectedSubj == "" ? translations.select : toShow;
+  let name = props.selectedSubj == "" ? translations.clickToSelect : toShow;
 
   const handleMenuItemClick = (event, index, id, name) => {
     props.onMuiDropdownChange(id, name, event); 
@@ -54,7 +53,7 @@ function MuiDropDownMenu(props) {
           aria-expanded={open ? 'true' : undefined}
           onClick={handleClickListItem}
         >
-          <ListItemText primary={translations.clickToSelect} secondary={name}/>
+          <ListItemText secondary={name}/>
         </ListItem>
       </List>
       <Menu

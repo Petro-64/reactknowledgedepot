@@ -4,15 +4,19 @@ const messages = {
       subjName: "Subject name",
       numbMistakes: "N-r of mistakes",
       question: "Question",
-      select: "Click To Select subject"
-
+      select: "Click To Select subject",
+      questionId: "Id",
+      clickToSelect: "Click To Select subject"
     },
     ru: {
       mistakes: "Мои ошибки",
       subjName: "Имя предмета",
       numbMistakes: "К-во ошибок",
       question: "Вопрос",
-      select: "Нажмите, чтобы выбрать предмет"
+      select: "Нажмите, чтобы выбрать предмет",
+      questionId: "Id",
+      clickToSelect: "Нажмите, чтобы выбрать предмет"
+
     }
   };
 

@@ -1,0 +1,229 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --git-dir
+Open repository: /home/petro/Desktop/reactKnowlegde/reactknowledgedepot
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show --textconv :src/components/AdminSettings.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSettings.js
+> git cat-file -s f78accf62b32d4d2a3e3e462b68d3fd1c3f2b927
+> git show --textconv :src/components/AdmineditQuestions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdmineditQuestions.js
+> git cat-file -s 3ce8f84b6e6fd3f08d2646eaba2c91328be4e372
+> git show --textconv :src/components/AdminSettings.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSettings.js
+> git cat-file -s f78accf62b32d4d2a3e3e462b68d3fd1c3f2b927
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s f02ee83a1c81ce2ce87e0cf6ac2aa32027c6da2b
+> git check-ignore -v -z --stdin
+> git show --textconv :src/components/formelements/Pagination.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/formelements/Pagination.js
+> git cat-file -s 740a5452580dd370d8f0767f2c597b830b470a67
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s f02ee83a1c81ce2ce87e0cf6ac2aa32027c6da2b
+> git show --textconv :src/components/formelements/MuiDropDownMenu.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/formelements/MuiDropDownMenu.js
+> git cat-file -s 69809e30d73a4ee5c6d4811f410d07ab7073ba66
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s f02ee83a1c81ce2ce87e0cf6ac2aa32027c6da2b
+> git check-ignore -v -z --stdin
+> git show --textconv :src/translations/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/Mistakes.js
+> git cat-file -s ec6a109e82e3e32a6e9c44e01c4b0b1072d00e9b
+> git check-ignore -v -z --stdin
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s f02ee83a1c81ce2ce87e0cf6ac2aa32027c6da2b
+> git show --textconv :src/components/formelements/MuiDropDownMenu.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/formelements/MuiDropDownMenu.js
+> git cat-file -s 69809e30d73a4ee5c6d4811f410d07ab7073ba66
+> git show --textconv :src/translations/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/Mistakes.js
+> git cat-file -s ec6a109e82e3e32a6e9c44e01c4b0b1072d00e9b
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/components/formelements/MuiDropDownMenu.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/formelements/MuiDropDownMenu.js
+> git cat-file -s 69809e30d73a4ee5c6d4811f410d07ab7073ba66
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/components/formelements/Pagination.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/formelements/Pagination.js
+> git cat-file -s 740a5452580dd370d8f0767f2c597b830b470a67
+> git show --textconv :src/components/formelements/MuiDropDownMenu.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/formelements/MuiDropDownMenu.js
+> git cat-file -s 69809e30d73a4ee5c6d4811f410d07ab7073ba66
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s f02ee83a1c81ce2ce87e0cf6ac2aa32027c6da2b
+> git show --textconv :src/translations/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/Mistakes.js
+> git cat-file -s ec6a109e82e3e32a6e9c44e01c4b0b1072d00e9b
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s f02ee83a1c81ce2ce87e0cf6ac2aa32027c6da2b
+> git show --textconv :src/components/formelements/MuiDropDownMenu.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/formelements/MuiDropDownMenu.js
+> git cat-file -s 69809e30d73a4ee5c6d4811f410d07ab7073ba66
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s f02ee83a1c81ce2ce87e0cf6ac2aa32027c6da2b
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/components/AddMyQuestions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AddMyQuestions.js
+> git cat-file -s c9a356863c9ba0533974664f45895ae01af14263
+> git show --textconv :src/translations/Contribution.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/Contribution.js
+> git cat-file -s dad1ee4182a3175fc6b2401b9d8c1375454b69c6
+> git show --textconv :src/components/AddMyQuestions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AddMyQuestions.js
+> git cat-file -s c9a356863c9ba0533974664f45895ae01af14263
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s f02ee83a1c81ce2ce87e0cf6ac2aa32027c6da2b
+> git show --textconv :src/components/AdminSettings.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSettings.js
+> git cat-file -s f78accf62b32d4d2a3e3e462b68d3fd1c3f2b927
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s f02ee83a1c81ce2ce87e0cf6ac2aa32027c6da2b
+> git show --textconv :src/translations/Contribution.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/Contribution.js
+> git cat-file -s dad1ee4182a3175fc6b2401b9d8c1375454b69c6
+> git show --textconv :src/components/AddMyQuestions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AddMyQuestions.js
+> git cat-file -s c9a356863c9ba0533974664f45895ae01af14263
+> git show --textconv :src/translations/Contribution.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/Contribution.js
+> git cat-file -s dad1ee4182a3175fc6b2401b9d8c1375454b69c6
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s f02ee83a1c81ce2ce87e0cf6ac2aa32027c6da2b
+> git show --textconv :src/translations/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/Mistakes.js
+> git cat-file -s ec6a109e82e3e32a6e9c44e01c4b0b1072d00e9b
+> git show --textconv :src/translations/Contribution.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/Contribution.js
+> git cat-file -s dad1ee4182a3175fc6b2401b9d8c1375454b69c6
+> git show --textconv :src/components/AddMyQuestions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AddMyQuestions.js
+> git cat-file -s c9a356863c9ba0533974664f45895ae01af14263
+> git show --textconv :src/components/formelements/MuiDropDownMenu.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/formelements/MuiDropDownMenu.js
+> git cat-file -s 69809e30d73a4ee5c6d4811f410d07ab7073ba66
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/formelements/MuiDropDownMenu.js
+> git cat-file -s 69809e30d73a4ee5c6d4811f410d07ab7073ba66
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/translations/Contribution.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/Contribution.js
+> git cat-file -s dad1ee4182a3175fc6b2401b9d8c1375454b69c6
+> git show --textconv :src/components/formelements/MuiDropDownMenu.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/formelements/MuiDropDownMenu.js
+> git cat-file -s 69809e30d73a4ee5c6d4811f410d07ab7073ba66
+> git show --textconv :src/translations/Contribution.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/Contribution.js
+> git cat-file -s dad1ee4182a3175fc6b2401b9d8c1375454b69c6
+> git show --textconv :src/translations/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/Mistakes.js
+> git cat-file -s ec6a109e82e3e32a6e9c44e01c4b0b1072d00e9b
+> git show --textconv :src/components/AddMyQuestions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AddMyQuestions.js
+> git cat-file -s c9a356863c9ba0533974664f45895ae01af14263
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s f02ee83a1c81ce2ce87e0cf6ac2aa32027c6da2b
+> git show --textconv :src/components/formelements/MuiDropDownMenu.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/formelements/MuiDropDownMenu.js
+> git cat-file -s 69809e30d73a4ee5c6d4811f410d07ab7073ba66
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s f02ee83a1c81ce2ce87e0cf6ac2aa32027c6da2b
+> git show --textconv :src/components/AddMyQuestions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AddMyQuestions.js
+> git cat-file -s c9a356863c9ba0533974664f45895ae01af14263
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/translations/Contribution.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/Contribution.js
+> git cat-file -s dad1ee4182a3175fc6b2401b9d8c1375454b69c6
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/components/AddMyQuestions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AddMyQuestions.js
+> git cat-file -s c9a356863c9ba0533974664f45895ae01af14263
