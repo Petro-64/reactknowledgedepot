@@ -6,3 +6,8 @@
 [2023-04-04 16:29:01.416] [renderer3] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
 [2023-04-04 16:29:05.567] [renderer3] [error] Error: [File Watcher (node.js)] Failed to watch /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/User/snippets for changes using fs.watch() (Error: ENOSPC: System limit for number of file watchers reached, watch '/home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/User/snippets')
 [2023-04-04 16:29:05.595] [renderer3] [error] [File Watcher (node.js)] Failed to watch /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/User/snippets for changes using fs.watch() (Error: ENOSPC: System limit for number of file watchers reached, watch '/home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/User/snippets')
+[2023-04-06 17:22:40.251] [renderer3] [error] Unable to read file '/var/www/laravelknowlegdedepot/resources/views/layouts/appspa.blade.php' (Error: File not modified since): Error: Unable to read file '/var/www/laravelknowlegdedepot/resources/views/layouts/appspa.blade.php' (Error: File not modified since)
+    at o.doReadFileStream (file:///usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:626:48867)
+    at async E.doRead (file:///usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2163:80864)
+    at async E.readStream (file:///usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2163:80510)
+    at async kr.loadFromFile (file:///usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2161:49103)

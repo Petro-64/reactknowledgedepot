@@ -4,6 +4,20 @@ export function searchQuestionByKeyWord({questionsearchkeyword}){
     };
 }
 
+export function searchQuestionByTypeAhead(questionsearchtypeahead){
+    return (dispatch) => {
+        dispatch(searchQuestionByTypeAheadDispatch(questionsearchtypeahead))
+    };
+}
+
+function searchQuestionByTypeAheadDispatch(questionsearchtypeahead){
+    return{
+        type: 'SEARCH_QUESTION_BY_TYPEAHEAD',
+        questionsearchtypeahead: questionsearchtypeahead,
+    }
+}
+
+
 function searchQuestionByKeyWordDispatch({questionsearchkeyword}){
     return{
         type: 'SEARCH_QUESTION_BY_KEYWORD',

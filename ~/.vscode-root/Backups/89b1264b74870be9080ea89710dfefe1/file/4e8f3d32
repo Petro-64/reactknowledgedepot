@@ -1,4 +1,4 @@
-file:///var/www/laravelknowlegdedepot/toDoList.txt {"mtime":1680642112277,"ctime":1678310087449,"size":12627,"etag":"3accsc04cd4a","orphaned":false}
+file:///var/www/laravelknowlegdedepot/toDoList.txt {"mtime":1680715422359,"ctime":1678310087449,"size":12709,"etag":"3acgg1p88d6u","orphaned":false}
 3) Check if "Quizz" is more proper word than "Test"
 5) When footer link clicked, need to scroll page to the top
 6) ///Edit questions in Laravel no way to add question # 4 if we have only 3 or 2  ////fixed for React part, Laravel part will retire
@@ -112,7 +112,7 @@ file:///var/www/laravelknowlegdedepot/toDoList.txt {"mtime":1680642112277,"ctime
 114) Admmin - question reports viewer
 115) Admin - results per user viewer
 116) ////Admin - search question by word(s)
-117) To add some unit tests
+117) ///To add some unit tests
 118) ////React Admin Add Question Page to fix....
 119) ////Can't delete question from Edit Question page
 120) ////Need to separate Subj_id for editing questions and subj_id for adding questions, because there is a bad influence. when leave addQuestion page, subj_id and questions set now is being reset
@@ -124,5 +124,7 @@ file:///var/www/laravelknowlegdedepot/toDoList.txt {"mtime":1680642112277,"ctime
 126) ///fixed/// 23/03/23 when only one question exists for given subject, and this question deleted successfully, subjects table still shows one question and it's impossible to delete it
 127) //// On mistakes page need to have question id to be able to check and fix it
 128) /// Label "Нажмите, чтобы выбрать предмет" invisible on mistakes filter dropdown on "Mistakes" page, fixed by resetting subject to none for mistakes page
-129) Label "Нажмите, чтобы выбрать предмет" invisible on contribution filter dropdown on "Contribution" page, fixed by resetting subject to none for mistakes page
-130) Admin contribution page broken functionality, no way to approve / decline
+129) ///Label "Нажмите, чтобы выбрать предмет" invisible on contribution filter dropdown on "Contribution" page, fixed by resetting subject to none for mistakes page
+130) ///Admin contribution page broken functionality, no way to approve / decline
+131) ///Type ahead functionality to add on admin - search for question page
+132) In admin contriibution add functinality to hide all questions but pending

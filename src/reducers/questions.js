@@ -19,6 +19,7 @@ let questionsState={
     recentlyEditedQuestionsarray: [],
     foundQuestionsByWord: [],
     foundQuestionsById: [],
+    foundQuestionsByTypeAhead: [],
 }
 
 const questionsReducer = (state=questionsState, action)=>{
@@ -113,6 +114,12 @@ const questionsReducer = (state=questionsState, action)=>{
             ...state,
             foundQuestionsByWord: action.questions
         }
+
+    case 'SET_SEARCH_QUESTIONS_BY_TYPEAHEAD_RESULT':
+        return {
+            ...state,
+            foundQuestionsByTypeAhead: action.questions
+        }    
 ///
 
     default: 

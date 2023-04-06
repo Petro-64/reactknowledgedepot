@@ -2,7 +2,6 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../../translations/SearchForQuestions';
-import * as actionCreators from '../../actions/index';
 
 
 const SearchQuestionByKeyWord = props => {

@@ -47,8 +47,7 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -1490,14 +1489,14 @@
     "themeBackground": "#1e1e1e",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/petro/Desktop/reactKnowlegde/reactknowledgedepot",
-            "backupPath": "/home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/Backups/645d17e661835b45e71e68c44fa4afa0",
+            "folder": "file:///var/www/laravelknowlegdedepot",
+            "backupPath": "/home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/Backups/89b1264b74870be9080ea89710dfefe1",
             "uiState": {
                 "mode": 1,
-                "x": 342,
-                "y": 84,
-                "width": 1834,
-                "height": 1178
+                "x": 1099,
+                "y": 939,
+                "width": 1783,
+                "height": 1026
             }
         },
         "openedWindows": [
@@ -1506,10 +1505,10 @@
                 "backupPath": "/home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/Backups/645d17e661835b45e71e68c44fa4afa0",
                 "uiState": {
                     "mode": 1,
-                    "x": 342,
-                    "y": 84,
-                    "width": 1834,
-                    "height": 1178
+                    "x": 63,
+                    "y": 70,
+                    "width": 2110,
+                    "height": 856
                 }
             },
             {
@@ -1517,10 +1516,10 @@
                 "backupPath": "/home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/Backups/89b1264b74870be9080ea89710dfefe1",
                 "uiState": {
                     "mode": 1,
-                    "x": 65,
-                    "y": 615,
+                    "x": 1099,
+                    "y": 939,
                     "width": 1783,
-                    "height": 737
+                    "height": 1026
                 }
             }
         ]

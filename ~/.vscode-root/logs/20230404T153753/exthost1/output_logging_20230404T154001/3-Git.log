@@ -227,3 +227,782 @@ Open repository: /home/petro/Desktop/reactKnowlegde/reactknowledgedepot
 > git show --textconv :src/components/AddMyQuestions.js
 > git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AddMyQuestions.js
 > git cat-file -s c9a356863c9ba0533974664f45895ae01af14263
+> git status -z -u
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AddMyQuestions.js
+> git symbolic-ref --short HEAD
+> git cat-file -s d833ac4b521fb46d9a21bdb53eb62e63aa1279e7
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git show --textconv :src/components/AddMyQuestions.js
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/translations/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/Mistakes.js
+> git cat-file -s 2251f0f94610e6099c4eadec2fc1c9254fa8b8c5
+> git show --textconv :src/components/AddMyQuestions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AddMyQuestions.js
+> git cat-file -s d833ac4b521fb46d9a21bdb53eb62e63aa1279e7
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/translations/Contribution.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/Contribution.js
+> git cat-file -s 957071470046229aed7fd532ea764ae73b5ba461
+> git show --textconv :src/components/AddMyQuestions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AddMyQuestions.js
+> git cat-file -s d833ac4b521fb46d9a21bdb53eb62e63aa1279e7
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s 468c2bf87b1742f454c3059de6b89ef10e70bc48
+> git show --textconv :src/components/formelements/MuiDropDownMenu.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/formelements/MuiDropDownMenu.js
+> git cat-file -s 009e2390902895da77d7858affab6827fafc30c7
+> git show --textconv :src/reducers/loginsignup.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/loginsignup.js
+> git cat-file -s 38231ef254d628e7cc77891aa59678f613eb54d0
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/translations/SearchForQuestions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/SearchForQuestions.js
+> git cat-file -s 57f282991b5206ce6da0d45b1ed15516f2710a21
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/translations/SearchForQuestions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/translations/SearchForQuestions.js
+> git cat-file -s 57f282991b5206ce6da0d45b1ed15516f2710a21
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git check-ignore -v -z --stdin
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git check-ignore -v -z --stdin
+> git show --textconv :src/reducers/questions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/questions.js
+> git cat-file -s 117e0c9a0c3fdb1670e7af4ebc916229d7ac43b5
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git check-ignore -v -z --stdin
+> git show --textconv :src/reducers/questions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/questions.js
+> git cat-file -s 117e0c9a0c3fdb1670e7af4ebc916229d7ac43b5
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git check-ignore -v -z --stdin
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/EditContributionForm.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/EditContributionForm.js
+> git cat-file -s 4abfb9542e5a31d597acc4d05fcdbcecf9f05456
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git check-ignore -v -z --stdin
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/components/formelements/Countdown.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/formelements/Countdown.js
+> git cat-file -s 6f389187ef4694e8dd6177b8cbd70ea9abbcb666
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/resultsFilterForm.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/resultsFilterForm.js
+> git cat-file -s 9017f177d35385d5f3d16663962f943a81d91210
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/passwordresetform.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/passwordresetform.js
+> git cat-file -s b83e39325c93a04feae68769a3f1488ba54ef47c
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/EditQuestionTable.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/EditQuestionTable.js
+> git cat-file -s 3a3abb01b9dfcd8f55b4bada224c704870cece29
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :package.json
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/package.json
+> git cat-file -s 3df519be05d42b2a9a1b444cfa5c5509554c84cc
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/reducers/loginsignup.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/loginsignup.js
+> git cat-file -s 38231ef254d628e7cc77891aa59678f613eb54d0
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :src/sagas/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/search.js
+> git cat-file -s 553458ee099f5f82d4767d837c08a0038c50aa72
+> git check-ignore -v -z --stdin
+> git show --textconv :src/api/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/search.js
+> git cat-file -s 8dfcadf0f6008f287dc9f9d4f2d4f24ca1393439
+> git check-ignore -v -z --stdin
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/reducers/questions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/questions.js
+> git cat-file -s 117e0c9a0c3fdb1670e7af4ebc916229d7ac43b5
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/reducers/questions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/questions.js
+> git cat-file -s 117e0c9a0c3fdb1670e7af4ebc916229d7ac43b5
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/sagas/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/search.js
+> git cat-file -s 553458ee099f5f82d4767d837c08a0038c50aa72
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/urls/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/urls/index.js
+> git cat-file -s c068172b59eb953994abf9d56bf07e6e30cf99a9
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/sagas/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/search.js
+> git cat-file -s 553458ee099f5f82d4767d837c08a0038c50aa72
+> git show --textconv :src/api/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/search.js
+> git cat-file -s 8dfcadf0f6008f287dc9f9d4f2d4f24ca1393439
+> git show --textconv :src/sagas/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/search.js
+> git cat-file -s 553458ee099f5f82d4767d837c08a0038c50aa72
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/sagas/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/search.js
+> git cat-file -s 553458ee099f5f82d4767d837c08a0038c50aa72
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/sagas/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/search.js
+> git cat-file -s 553458ee099f5f82d4767d837c08a0038c50aa72
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git check-ignore -v -z --stdin
+> git show --textconv :src/sagas/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/search.js
+> git cat-file -s 553458ee099f5f82d4767d837c08a0038c50aa72
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/sagas/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/search.js
+> git cat-file -s 553458ee099f5f82d4767d837c08a0038c50aa72
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/api/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/search.js
+> git cat-file -s 8dfcadf0f6008f287dc9f9d4f2d4f24ca1393439
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/api/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/search.js
+> git cat-file -s 8dfcadf0f6008f287dc9f9d4f2d4f24ca1393439
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/api/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/search.js
+> git cat-file -s 8dfcadf0f6008f287dc9f9d4f2d4f24ca1393439
+> git check-ignore -v -z --stdin
+> git show --textconv :src/api/searchByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/searchByTypeAhead.js
+> git show --textconv :src/api/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/search.js
+> git cat-file -s 8dfcadf0f6008f287dc9f9d4f2d4f24ca1393439
+> git show --textconv :src/api/searchByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/searchByTypeAhead.js
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/api/searchByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/searchByTypeAhead.js
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/api/searchByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/searchByTypeAhead.js
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/api/searchByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/searchByTypeAhead.js
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/api/searchByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/searchByTypeAhead.js
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/api/searchByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/searchByTypeAhead.js
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/api/searchByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/searchByTypeAhead.js
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/api/searchByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/searchByTypeAhead.js
+> git show --textconv :src/api/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/search.js
+> git cat-file -s 8dfcadf0f6008f287dc9f9d4f2d4f24ca1393439
+> git show --textconv :src/api/searchByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/searchByTypeAhead.js
+> git show --textconv :src/reducers/questions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/questions.js
+> git cat-file -s 117e0c9a0c3fdb1670e7af4ebc916229d7ac43b5
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/reducers/loginsignup.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/loginsignup.js
+> git cat-file -s 38231ef254d628e7cc77891aa59678f613eb54d0
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/api/searchByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/searchByTypeAhead.js
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/reducers/questions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/questions.js
+> git cat-file -s 117e0c9a0c3fdb1670e7af4ebc916229d7ac43b5
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/reducers/questions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/questions.js
+> git cat-file -s 117e0c9a0c3fdb1670e7af4ebc916229d7ac43b5
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/reducers/loginsignup.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/loginsignup.js
+> git cat-file -s 38231ef254d628e7cc77891aa59678f613eb54d0
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+Opening repository for path='/home/petro/.cache/typescript/4.2/node_modules/@types/redux-form/lib' failed; ex=Failed to execute git {
+  "exitCode": 128,
+  "gitErrorCode": "NotAGitRepository",
+  "gitCommand": "rev-parse",
+  "stdout": "",
+  "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+}
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/reducers/loginsignup.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/loginsignup.js
+> git cat-file -s 38231ef254d628e7cc77891aa59678f613eb54d0
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/Resultsn.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Resultsn.js
+> git cat-file -s c686bb9092237bac726294d8255d9cf2f712a9c3
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/AdmineditQuestions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdmineditQuestions.js
+> git cat-file -s 3ce8f84b6e6fd3f08d2646eaba2c91328be4e372
+> git show --textconv :src/components/AdminAddQuestions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminAddQuestions.js
+> git cat-file -s 2fae1368ff89093931e856e3dd0aa02d8fc95539
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git show --textconv :src/reducers/subjects.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/subjects.js
+> git cat-file -s e3e766e94a52ac544fcd58686f449221a1e16728
+> git show --textconv :src/reducers/questions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/questions.js
+> git cat-file -s 117e0c9a0c3fdb1670e7af4ebc916229d7ac43b5
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/reducers/subjects.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/subjects.js
+> git cat-file -s e3e766e94a52ac544fcd58686f449221a1e16728
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/sagas/searchQuestionsByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/searchQuestionsByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git show --textconv :src/reducers/questions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/questions.js
+> git cat-file -s 117e0c9a0c3fdb1670e7af4ebc916229d7ac43b5
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s f59a44dc5a2ae034fe4931ee3d50034b66e08cba
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git show --textconv :src/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/index.js
+> git cat-file -s 53e314f7f73723f4517620d1cafdabfe40e1e9ab
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/actions/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/search.js
+> git cat-file -s f760511e0dd8dfd241dd15bd640326ca289a9916
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/sagas/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/search.js
+> git cat-file -s 553458ee099f5f82d4767d837c08a0038c50aa72
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/sagas/search.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/search.js
+> git cat-file -s 553458ee099f5f82d4767d837c08a0038c50aa72
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/AdminSearchQuestion.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminSearchQuestion.js
+> git cat-file -s 06134f90cdaef19bb3ad37af930b0b679e9d31a2
+> git show --textconv :src/components/forms/SearchQuestionByTypeAhead.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByTypeAhead.js
+> git show --textconv :src/components/forms/SearchQuestionByKeyWord.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/SearchQuestionByKeyWord.js
+> git cat-file -s 5921b80ce229a90e00b4c5ab77b84197911bbd27
+> git show --textconv :src/reducers/loginsignup.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/loginsignup.js
+> git cat-file -s 38231ef254d628e7cc77891aa59678f613eb54d0
+> git show --textconv :src/components/forms/AdminEditContributionForm.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/AdminEditContributionForm.js
+> git cat-file -s 8f6ff542741c1b8113247bbda81be75d6b51606b
+> git show --textconv :src/reducers/loginsignup.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/loginsignup.js
+> git cat-file -s 38231ef254d628e7cc77891aa59678f613eb54d0
+> git show --textconv :src/components/AdminContribution.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminContribution.js
+> git cat-file -s da24d172f7dc57d14859d61aa4bebb0ee78fc2ea
+> git show --textconv :src/components/forms/EditContributionForm.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/EditContributionForm.js
+> git cat-file -s 4abfb9542e5a31d597acc4d05fcdbcecf9f05456
+> git show --textconv :src/components/forms/EditContributionRow.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/EditContributionRow.js
+> git cat-file -s 35a33198ce0fb7eb6c9850287eb32ad8addb733f
+> git show --textconv :src/components/forms/EditContributionForm.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/EditContributionForm.js
+> git cat-file -s 4abfb9542e5a31d597acc4d05fcdbcecf9f05456
+> git show --textconv :src/components/AdminContribution.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/AdminContribution.js
+> git cat-file -s da24d172f7dc57d14859d61aa4bebb0ee78fc2ea
+> git show --textconv :src/components/forms/EditContributionForm.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/EditContributionForm.js
+> git cat-file -s 4abfb9542e5a31d597acc4d05fcdbcecf9f05456
+> git show --textconv :src/components/forms/EditContributionRow.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/EditContributionRow.js
+> git cat-file -s 35a33198ce0fb7eb6c9850287eb32ad8addb733f
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :build/static/css/main.0006455e.chunk.css.map
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/build/static/css/main.0006455e.chunk.css.map
+> git show --textconv :build/static/js/2.5d0bb8b2.chunk.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/build/static/js/2.5d0bb8b2.chunk.js
+> git show --textconv :src/components/forms/EditContributionRow.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/forms/EditContributionRow.js
+> git cat-file -s 35a33198ce0fb7eb6c9850287eb32ad8addb733f

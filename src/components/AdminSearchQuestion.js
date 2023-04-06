@@ -18,6 +18,7 @@ import {
     AccordionItemPanel,
 } from 'react-accessible-accordion';
 import SearchQuestionByKeyWord from './forms/SearchQuestionByKeyWord';
+import SearchQuestionByTypeAhead from './forms/SearchQuestionByTypeAhead';
 
 
 import StyledAccordeon from '../styled/StyledAccordeon';
@@ -52,6 +53,10 @@ class AdminSearchQuestion extends React.Component {
     //and in case of successfull new password establised, we swithch this flag to "2" and from reset form user will be redirected to login form
   }
 
+  componentWillUnmount() {
+
+  }
+
   resendEmailConfirmation(){
     this.props.resendEmailConfirmation();
   }
@@ -61,7 +66,7 @@ class AdminSearchQuestion extends React.Component {
   }
 
   render() {
-  const { questionsearchkeyword } = this.props;
+  const { questionsearchkeyword, questionsearchtypeahead } = this.props;
   return (
         <div>
           <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
@@ -102,17 +107,41 @@ class AdminSearchQuestion extends React.Component {
                             </table>
                             </div>
                         </AccordionItemPanel>
-                        <AccordionItem>
-                        <AccordionItemHeading>
-                            <AccordionItemButton>
-                              <FormattedMessage id="searchById" />
-                            </AccordionItemButton>
-                        </AccordionItemHeading>
-                        <AccordionItemPanel>
-                            hhhhhhhhhhhhhhhhhhh
-                        </AccordionItemPanel>
+                      </AccordionItem>
+
+                    <AccordionItem>
+                      <AccordionItemHeading>
+                          <AccordionItemButton>
+                            <FormattedMessage id="searchByTypeAhead" />
+                          </AccordionItemButton>
+                      </AccordionItemHeading>
+                      <AccordionItemPanel>
+                        <SearchQuestionByTypeAhead language={this.props.language}/>
+                        {this.props.foundQuestionsByTypeAhead.length > 0 && <table className="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>{/* <FormattedMessage id="name" /> */}
+                                        <th>Question</th>{/* <FormattedMessage id="email" /> */}
+                                        <th>Subject Id</th>{/*? <FormattedMessage id="createdAt" /> */}
+                                        <th>User Id</th>{/* <FormattedMessage id="status" /> */}
+                                        <th>Edit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {this.props.foundQuestionsByTypeAhead.map(question => <QuestionSearchResultRow 
+                                        question={question} 
+                                        key={question.id}
+                                        keyWord = {questionsearchtypeahead}
+                                        loadAnswers = {this.props.loadAnswers}
+                                        answersToShow={this.props.answers}
+                                    /> )}
+                                </tbody>
+                            </table>}
+                        
+
+                      </AccordionItemPanel>
                     </AccordionItem>
-                    </AccordionItem>
+                      
                 </Accordion>
               </StyledAccordeon>
             </div>
@@ -123,12 +152,17 @@ class AdminSearchQuestion extends React.Component {
 }
 
 const selector = formValueSelector('SearchQuestionByKeyWord');
+const selector1 = formValueSelector('SearchQuestionTypeAhead');
 
 AdminSearchQuestion = connect(
     state => {
         const questionsearchkeyword = selector(state, 'questionsearchkeyword')
+        const questionsearchtypeahead = selector1(state, 'questionsearchtypeahead')
+        ///questionsearchtypeahead
+        //questionsearchtypeahead
         return {
             questionsearchkeyword,
+            questionsearchtypeahead
         }
     }
     )(AdminSearchQuestion) 

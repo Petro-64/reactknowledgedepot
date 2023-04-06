@@ -7,6 +7,7 @@ import { addQuestReport } from './addquestionreport';
 import { searchQuestionsByKey } from './search';
 import { postEditSearchQuestions } from './searchQuestions';
 import { getMistakesSaga } from './mistakes';
+import { searchQuestionsByTypeAhead } from './searchQuestionsByTypeAhead';
 
 function* commentsActionWatcher() {
     yield takeLatest('POST_COMMENT', postComment)
@@ -32,6 +33,10 @@ function* searchQuestionsByKeyWordWatcher() {
     yield takeLatest('SEARCH_QUESTION_BY_KEYWORD', searchQuestionsByKey)
 }
 
+function* searchQuestionsByTypeAheadWatcher() {
+    yield takeLatest('SEARCH_QUESTION_BY_TYPEAHEAD', searchQuestionsByTypeAhead)
+}
+
 function* editFoundByKeyWordQuestionsActionWatcher() {
     yield takeLatest('POST_EDITED_SEARCH_QUESTIONS', postEditSearchQuestions)
 }
@@ -49,6 +54,7 @@ export default function* rootSaga() {
         addQuestionReportWatcher(),
         searchQuestionsByKeyWordWatcher(),
         editFoundByKeyWordQuestionsActionWatcher(),
-        getMistakesActionWatcher()
+        getMistakesActionWatcher(),
+        searchQuestionsByTypeAheadWatcher(),
     ]);
 }

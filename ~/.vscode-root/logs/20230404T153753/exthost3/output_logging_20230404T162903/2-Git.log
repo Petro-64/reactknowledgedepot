@@ -21,3 +21,71 @@ Open repository: /var/www/laravelknowlegdedepot
 > git ls-files --stage -- /var/www/laravelknowlegdedepot/toDoList.txt
 > git check-ignore -v -z --stdin
 > git cat-file -s 5893076b3cbd0046a325a9e00377dc889d5d4822
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/routes/web.php
+> git cat-file -s 678c81e3201e43e0fc2013244c193ff78ad0ee6c
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :app/Http/Controllers/ReactController.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git cat-file -s 4390e900f91e5cb14b756b539e568df376c8d137
+> git show --textconv :app/Box.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Box.php
+> git check-ignore -v -z --stdin
+> git show --textconv :tests/Unit/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Unit/ExampleTest.php
+> git cat-file -s 358cfc8834abf47c2467b90ad79771edd7eda517
+> git check-ignore -v -z --stdin
+> git show --textconv :app/Box.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Box.php
+> git show --textconv :toDoList.txt
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/toDoList.txt
+> git cat-file -s 5893076b3cbd0046a325a9e00377dc889d5d4822
+> git show --textconv :app/Http/Controllers/ReactController.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git cat-file -s 4390e900f91e5cb14b756b539e568df376c8d137
+> git show --textconv :routes/web.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/routes/web.php
+> git cat-file -s 678c81e3201e43e0fc2013244c193ff78ad0ee6c
+> git show --textconv :toDoList.txt
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/toDoList.txt
+> git cat-file -s 5893076b3cbd0046a325a9e00377dc889d5d4822
+> git show --textconv :app/Http/Controllers/ReactController.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git cat-file -s 4390e900f91e5cb14b756b539e568df376c8d137
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :resources/views/layouts/appspa.blade.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/resources/views/layouts/appspa.blade.php
+> git cat-file -s 15217ef851daee366c621dc14811fa3766ec9d35
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :public/static/css/main.0006455e.chunk.css.map
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/public/static/css/main.0006455e.chunk.css.map
+> git cat-file -s 1f43782c659ac5373818e0f5d919d936dbdaf327
+> git show --textconv :resources/views/layouts/appspa.blade.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/resources/views/layouts/appspa.blade.php
+> git cat-file -s 15217ef851daee366c621dc14811fa3766ec9d35
+> git show --textconv :public/static/js/2.4d2aec6a.chunk.js
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/public/static/js/2.4d2aec6a.chunk.js
+> git cat-file -s 99e52035c49266746f397d7196234b1ab2cbafe0
+> git show --textconv :resources/views/layouts/appspa.blade.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/resources/views/layouts/appspa.blade.php
+> git cat-file -s 15217ef851daee366c621dc14811fa3766ec9d35
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :public/static/js/2.5d0bb8b2.chunk.js
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/public/static/js/2.5d0bb8b2.chunk.js
+> git show --textconv :resources/views/layouts/appspa.blade.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/resources/views/layouts/appspa.blade.php
+> git cat-file -s 15217ef851daee366c621dc14811fa3766ec9d35
+> git show --textconv :app/Http/Controllers/ReactController.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git cat-file -s 4390e900f91e5cb14b756b539e568df376c8d137
