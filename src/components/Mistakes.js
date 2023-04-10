@@ -9,7 +9,8 @@ import messages from '../translations/Mistakes';
 import {withCookies} from 'react-cookie';
 import BootstrapTable from 'react-bootstrap-table-next';
 import MuiDropDownMenu from './formelements/MuiDropDownMenu';
-
+import InfiniteScroll  from '../components/formelements/InfiniteScroll';
+import InfiniteScrollHook  from '../components/formelements/InfiniteScrollHook';
 
 class Mistakes extends React.Component {
   constructor(props) {
@@ -35,6 +36,9 @@ class Mistakes extends React.Component {
     this.props.setMistakesFiltered(this.props.mistakes.filter(value => value.name == name));
   }
 
+  onScrollHandler(){
+    console.log("on scroll handler");
+  }
 
   componentDidMount(){
     this.props.getMistakes();
@@ -99,7 +103,9 @@ class Mistakes extends React.Component {
                 messages={messages} 
                 visibility={visibility}  
                 selectedSubj = {this.props.currentSubjectIdMistakes}/><br/><br/><br/>
-                <BootstrapTable keyField='id' data={ this.props.mistakesFiltered } columns={ columns }/>
+                <InfiniteScrollHook>
+                  <BootstrapTable keyField='id' data={ this.props.mistakesFiltered } columns={ columns } onscroll={this.onScrollHandler}/>
+                </InfiniteScrollHook>
             </div>
           </IntlProvider>
         </div>
