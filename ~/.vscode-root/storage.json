@@ -3,10 +3,10 @@
     "openedPathsList": {
         "entries": [
             {
-                "folderUri": "file:///var/www/laravelknowlegdedepot"
+                "folderUri": "file:///home/petro/Desktop/reactKnowlegde/reactknowledgedepot"
             },
             {
-                "folderUri": "file:///home/petro/Desktop/reactKnowlegde/reactknowledgedepot"
+                "folderUri": "file:///var/www/laravelknowlegdedepot"
             },
             {
                 "folderUri": "file:///home/petro/Desktop/angularKnowledge/knowledgedepot-angular-clone"
@@ -56,24 +56,24 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/var/www/laravelknowlegdedepot",
-                                        "external": "file:///var/www/laravelknowlegdedepot",
-                                        "path": "/var/www/laravelknowlegdedepot",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "/var/www/laravelknowlegdedepot"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
+                                        "fsPath": "/home/petro/Desktop/reactKnowlegde/reactknowledgedepot",
                                         "external": "file:///home/petro/Desktop/reactKnowlegde/reactknowledgedepot",
                                         "path": "/home/petro/Desktop/reactKnowlegde/reactknowledgedepot",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
                                     "label": "~/Desktop/reactKnowlegde/reactknowledgedepot"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///var/www/laravelknowlegdedepot",
+                                        "path": "/var/www/laravelknowlegdedepot",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/var/www/laravelknowlegdedepot"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -127,7 +127,8 @@
                     },
                     {
                         "id": "saveAll",
-                        "label": "Save A&&ll"
+                        "label": "Save A&&ll",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1489,40 +1490,17 @@
     "themeBackground": "#1e1e1e",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///var/www/laravelknowlegdedepot",
-            "backupPath": "/home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/Backups/89b1264b74870be9080ea89710dfefe1",
+            "folder": "file:///home/petro/Desktop/reactKnowlegde/reactknowledgedepot",
+            "backupPath": "/home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/Backups/645d17e661835b45e71e68c44fa4afa0",
             "uiState": {
                 "mode": 1,
-                "x": 1099,
-                "y": 939,
-                "width": 1783,
-                "height": 1026
+                "x": 77,
+                "y": 99,
+                "width": 1921,
+                "height": 1248
             }
         },
-        "openedWindows": [
-            {
-                "folder": "file:///home/petro/Desktop/reactKnowlegde/reactknowledgedepot",
-                "backupPath": "/home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/Backups/645d17e661835b45e71e68c44fa4afa0",
-                "uiState": {
-                    "mode": 1,
-                    "x": 63,
-                    "y": 70,
-                    "width": 2110,
-                    "height": 856
-                }
-            },
-            {
-                "folder": "file:///var/www/laravelknowlegdedepot",
-                "backupPath": "/home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/Backups/89b1264b74870be9080ea89710dfefe1",
-                "uiState": {
-                    "mode": 1,
-                    "x": 1099,
-                    "y": 939,
-                    "width": 1783,
-                    "height": 1026
-                }
-            }
-        ]
+        "openedWindows": []
     },
     "pickerWorkingDir": "/home/petro/Desktop/reactKnowlegde"
 }

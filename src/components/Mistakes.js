@@ -103,9 +103,7 @@ class Mistakes extends React.Component {
                 messages={messages} 
                 visibility={visibility}  
                 selectedSubj = {this.props.currentSubjectIdMistakes}/><br/><br/><br/>
-                <InfiniteScrollHook>
-                  <BootstrapTable keyField='id' data={ this.props.mistakesFiltered } columns={ columns } onscroll={this.onScrollHandler}/>
-                </InfiniteScrollHook>
+                <BootstrapTable keyField='id' data={ this.props.mistakesFiltered } columns={ columns } onscroll={this.onScrollHandler}/>
             </div>
           </IntlProvider>
         </div>

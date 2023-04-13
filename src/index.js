@@ -73,7 +73,9 @@ const rootReducer = combineReducers({
   form: formReducer
 })
 
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware, thunk)));
+//const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware, thunk)));
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware, thunk));
+
 sagaMiddleware.run(rootSaga);
 
 class App extends React.Component{
@@ -93,7 +95,8 @@ class App extends React.Component{
             <NonAuthorizedRoute exact path="/app/signup" component={Signup} />
             <NonAuthorizedRoute exact path="/app/forgotpassword" component={ForgotPassword} />
             <NonAuthorizedRoute exact path="/app/aboutcookie" component={AboutCookie}/>
- 
+
+
             <AuthorizedRouteUser exact path="/app/resultsn" component={Resultsn} />
             <AuthorizedRouteUser exact path="/app/mistakes" component={Mistakes} />
             <AuthorizedRouteUser exact path="/app/test" component={Test} />

@@ -22,7 +22,8 @@ const messages = {
       stopTesting: "Stop",
       backToTest: "Back to test",
       reportQuestion: "Complain about this question",
-      anotherTest: "Another test"
+      anotherTest: "Another test",
+      clickToSelect: "Click To Select subject"
     },
     ru: {
       tests: "Tесты",
@@ -47,7 +48,8 @@ const messages = {
       stopTesting: "Стоп",
       backToTest: "Назад к тесту",
       reportQuestion: "Пожаловаться на этот вопрос",
-      anotherTest: "Еще один тест"
+      anotherTest: "Еще один тест",
+      clickToSelect: "Нажмите, чтобы выбрать предмет"
     }
   };
 
