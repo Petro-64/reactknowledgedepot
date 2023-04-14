@@ -1,0 +1,5 @@
+[2023-04-13 15:27:37.359] [main] [info] update#setState idle
+[2023-04-13 15:28:07.375] [main] [info] update#setState checking for updates
+[2023-04-13 15:28:07.400] [main] [info] update#setState available for download
+[2023-04-14 13:55:52.540] [main] [error] [storage state.vscdb] prepare(): Error: SQLITE_READONLY_DBMOVED: attempt to write a readonly database (INSERT INTO ItemTable VALUES (?,?)). Details: Keys: memento/workbench.editors.files.textFileEditor Length: 14655
+[2023-04-14 13:59:52.554] [main] [error] [storage state.vscdb] prepare(): Error: SQLITE_READONLY_DBMOVED: attempt to write a readonly database (INSERT INTO ItemTable VALUES (?,?)). Details: Keys: memento/workbench.editors.files.textFileEditor Length: 14655

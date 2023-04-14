@@ -1,0 +1,71 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --git-dir
+Open repository: /var/www/laravelknowlegdedepot
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show --textconv :app/Http/Controllers/ReactController.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git cat-file -s 4390e900f91e5cb14b756b539e568df376c8d137
+> git show --textconv :tests/Unit/ExampleTest.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/tests/Unit/ExampleTest.php
+> git cat-file -s 3a6b181553a699aa01710137b45a3b9622ea9739
+> git check-ignore -v -z --stdin
+> git show --textconv :app/Http/Controllers/ReactController.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git cat-file -s 4390e900f91e5cb14b756b539e568df376c8d137
+> git show --textconv :app/Box.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Box.php
+> git cat-file -s aaca6c9a8fa097b3591365fba78b83adc60d53c1
+> git show --textconv :app/Http/Controllers/ReactController.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/app/Http/Controllers/ReactController.php
+> git cat-file -s 4390e900f91e5cb14b756b539e568df376c8d137
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :resources/views/layouts/appspa.blade.php
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/resources/views/layouts/appspa.blade.php
+> git cat-file -s c6d3ae70341f2b8eec903b767733f468575a6278
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git ls-files --stage -- /var/www/laravelknowlegdedepot/resources/views/layouts/appspa.blade.php
+> git symbolic-ref --short HEAD
+> git cat-file -s 6bf6e073fbf02cdc379bf157a1d6d08437f37f76
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git show --textconv :resources/views/layouts/appspa.blade.php
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template

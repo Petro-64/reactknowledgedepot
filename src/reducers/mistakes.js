@@ -1,9 +1,4 @@
-let mistakesState={
-    mistakes: [],
-    mistakesFiltered: [],
-    currentSubjectIdMistakes: '',
-    currentSubjectNameMistakes: ''
-}
+import mistakesState from '../states/mistakesState';
 
 const mistakesReducer = (state=mistakesState, action)=>{
     switch (action.type){
@@ -14,6 +9,14 @@ const mistakesReducer = (state=mistakesState, action)=>{
             mistakes: action.mistakes,
             mistakesFiltered: action.mistakes
         } 
+
+    case 'CLEAN_MISTAKES':
+        return{
+            ...state,
+            mistakes: [],
+            mistakesFiltered: [],
+        } 
+
 
     case 'SET_MISTAKES_FILTERED':
         return{

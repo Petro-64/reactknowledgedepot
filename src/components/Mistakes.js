@@ -36,10 +36,6 @@ class Mistakes extends React.Component {
     this.props.setMistakesFiltered(this.props.mistakes.filter(value => value.name == name));
   }
 
-  onScrollHandler(){
-    console.log("on scroll handler");
-  }
-
   componentDidMount(){
     this.props.getMistakes();
     this.props.setCurrentMistakesSubjectId('');
@@ -103,7 +99,7 @@ class Mistakes extends React.Component {
                 messages={messages} 
                 visibility={visibility}  
                 selectedSubj = {this.props.currentSubjectIdMistakes}/><br/><br/><br/>
-                <BootstrapTable keyField='id' data={ this.props.mistakesFiltered } columns={ columns } onscroll={this.onScrollHandler}/>
+                <BootstrapTable keyField='id' data={ this.props.mistakesFiltered } columns={ columns }/>
             </div>
           </IntlProvider>
         </div>
