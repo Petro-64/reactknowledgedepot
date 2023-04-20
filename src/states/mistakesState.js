@@ -1,6 +1,7 @@
 let mistakesState={
     mistakes: [],
     mistakesFiltered: [],
+    mistakesCut: [],
     currentSubjectIdMistakes: '',
     currentSubjectNameMistakes: ''
 }

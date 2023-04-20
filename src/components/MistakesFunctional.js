@@ -1,18 +1,18 @@
-import React, { useReducer, useState, memo , useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, {  useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import messages from '../translations/Mistakes';
 import { IntlProvider, FormattedMessage } from "react-intl";
 import {connect} from 'react-redux';
-import settingsReducer from '../reducers/settings';
 import MaterialUiNavigation from './MaterialUiNavigation';
 import MuiDropDownMenu from './formelements/MuiDropDownMenu';
 import BootstrapTable from 'react-bootstrap-table-next';
-import { CLEAR_SENSITIVE_INFO, SET_FLASH_MESSAGES_VISIBILITY, SET_FLASH_MESSAGES_MESSAGE, SET_FLASH_MESSAGES_TYPE, SET_LANGUAGE, SET_GLOBAL_SETTINGS, 
-  SET_COOKIE_CONSENT_VISIBILITY, SET_COOKIE_CONSENT_OBTAINED } from '../types';
+import { SET_LANGUAGE } from '../types';
 
 
 const MistakesFunctional = (props) => {
     const dispatch = useDispatch();
+    const [count, setCount] = useState(20);
+    const [mistakesCut, setMistakesCut] = useState([]);
     const toggleLanguage = (lang) =>{
       dispatch({ type: SET_LANGUAGE, lang: lang  })
     }
@@ -29,18 +29,35 @@ const MistakesFunctional = (props) => {
       dispatch({ type: 'SET_CURRENT_MISTAKES_SUBJECT_NAME', name: name })
     };
 
-    const onMuiDropdownChange = (id, name) => {
-      dispatch({ type: 'SET_CURRENT_MISTAKES_SUBJECT_ID',  id: id})
-      if(!!name){
-        dispatch({ type: 'SET_CURRENT_MISTAKES_SUBJECT_NAME', name: name })
-      } else {
-        dispatch({ type: 'SET_CURRENT_MISTAKES_SUBJECT_NAME', name: '' })
-      }
-  
-      dispatch({
-            type: 'SET_MISTAKES_FILTERED',
-            mistakesFiltered: props.mistakes.filter(value => value.name == name)})
+    const increment = () => {
+      setCount((count) => count + 10);
     }
+
+    const handleScroll = (event) =>{
+      let gapp = document.scrollingElement.offsetHeight - event.currentTarget.innerHeight - event.currentTarget.scrollY;
+      if(gapp < 40){
+        increment();
+      }
+    }
+
+    const onMuiDropdownChange = (id, name) => {
+        dispatch({ type: 'SET_CURRENT_MISTAKES_SUBJECT_ID',  id: id})
+        if(!!name){
+          dispatch({ type: 'SET_CURRENT_MISTAKES_SUBJECT_NAME', name: name })
+        } else {
+          dispatch({ type: 'SET_CURRENT_MISTAKES_SUBJECT_NAME', name: '' })
+        }
+    
+        dispatch({
+              type: 'SET_MISTAKES_FILTERED',
+              mistakesFiltered: props.mistakes.filter(value => value.name == name)})
+
+
+        dispatch({
+          type: 'SET_MISTAKES_CUT',
+          mistakesCut: props.mistakes.filter(value => value.name == name).slice(0, 20)})
+      }
+      
 
     const columns = props.currentSubjectIdMistakes == '' ? [{
       dataField: 'name',
@@ -81,9 +98,17 @@ const MistakesFunctional = (props) => {
       getMistakes();
       setCurrentMistakesSubjectIdDispatch('');
       setCurrentMistakesSubjectName('');
+      window.addEventListener('scroll', handleScroll);
     }, []);
 
-    console.log(props);
+    useEffect(() => {
+      dispatch({
+        type: 'SET_MISTAKES_CUT',
+        mistakesCut: props.mistakesFiltered.slice(0, count)})
+    }, [count]);
+
+
+    useEffect( () => () => window.removeEventListener('scroll', handleScroll), [] );
 
      return (
       <div>
@@ -99,7 +124,7 @@ const MistakesFunctional = (props) => {
                 messages={messages} 
                 visibility={true}  
                 selectedSubj = {props.currentSubjectIdMistakes}/><br/><br/><br/>
-                <BootstrapTable keyField='id' data={ props.mistakesFiltered } columns={ columns }/>
+                <BootstrapTable keyField='id' data={ props.mistakesCut } columns={ columns }/>
 
           </div>
         </IntlProvider>
