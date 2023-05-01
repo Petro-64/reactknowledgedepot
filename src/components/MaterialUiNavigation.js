@@ -84,6 +84,7 @@ function MaterialUiNavigation(props) {
                 </ListItemText>
             </ListItemButton>
           </Link>
+
           <ListItemButton onClick={() => { handleClick(2) }}>
               <ListItemText><FormattedMessage id="test" /></ListItemText>
               {2 === selectedIndex ? <ExpandLess /> : <ExpandMore />}
@@ -111,7 +112,7 @@ function MaterialUiNavigation(props) {
                     </ListItemText>
                   </ListItemButton>
                 </Link>
-                <Link to="/app/mistakes" color="#444" variant="p" underline="none" className="drawerNavigationLink">
+                <Link to="/app/mistakesfunctional" color="#444" variant="p" underline="none" className="drawerNavigationLink">
                   <ListItemButton onClick={toggleDrawer('left', false)}>
                     <ListItemIcon>
                       <ReportGmailerrorredIcon />

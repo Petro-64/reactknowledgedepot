@@ -81,7 +81,7 @@ class AdminSettings extends React.Component {
                       </AccordionItemHeading>
                       <AccordionItemPanel>
                         <div style={this.props.needToShowRecaptcha === 0 ? {} : {display: 'none'}}>
-                            Disabled &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" className="btn btn-success" onClick={this.toggleRecaptcha.bind(this)}>Click to enable</button>{/* onClick={this.clickYes.bind(this)} */}
+                            Disabled &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" className="btn btn-success" onClick={this.toggleRecaptcha.bind(this)}>Click to enable</button>{/* on{this.clickYes.bind(this)} */}
                         </div>
                         <div style={this.props.needToShowRecaptcha === 1 ? {} : {display: 'none'}}>
                             Enabled &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" className="btn btn-danger" onClick={this.toggleRecaptcha.bind(this)}>Click to disable</button>

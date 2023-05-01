@@ -1,0 +1,383 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --git-dir
+Open repository: /home/petro/Desktop/reactKnowlegde/reactknowledgedepot
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s 7713de7d80d061802c015b3bf5f632fec803692d
+> git check-ignore -v -z --stdin
+> git show --textconv :src/reducers/loginsignup.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/loginsignup.js
+> git cat-file -s c476a730dcf37d389a052cc73cd968b4cdd73bb4
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/components/MistakesFunctional.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MistakesFunctional.js
+> git cat-file -s b42d367cdd57ee714ea33ae825847b26a8203c7c
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s 7713de7d80d061802c015b3bf5f632fec803692d
+> git show --textconv :src/components/MistakesFunctional.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MistakesFunctional.js
+> git cat-file -s b42d367cdd57ee714ea33ae825847b26a8203c7c
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/actions/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/mistakes.js
+> git cat-file -s b001079ddcb3eee2e2db851d01567014044b1c0d
+> git show --textconv :src/reducers/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/mistakes.js
+> git cat-file -s 5869259d426430bd2b88cd190061d4a22dad6fe4
+> git check-ignore -v -z --stdin
+> git show --textconv :src/states/mistakesState.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/states/mistakesState.js
+> git cat-file -s d50f52a1c8e7dbdee4202332326ce0796c4ee61a
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/reducers/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/mistakes.js
+> git cat-file -s 5869259d426430bd2b88cd190061d4a22dad6fe4
+> git show --textconv :src/components/MistakesFunctional.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MistakesFunctional.js
+> git cat-file -s b42d367cdd57ee714ea33ae825847b26a8203c7c
+> git show --textconv :src/reducers/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/mistakes.js
+> git cat-file -s 5869259d426430bd2b88cd190061d4a22dad6fe4
+> git show --textconv :src/actions/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/mistakes.js
+> git cat-file -s b001079ddcb3eee2e2db851d01567014044b1c0d
+> git show --textconv :src/components/MistakesFunctional.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MistakesFunctional.js
+> git cat-file -s b42d367cdd57ee714ea33ae825847b26a8203c7c
+> git show --textconv :src/actions/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/mistakes.js
+> git cat-file -s b001079ddcb3eee2e2db851d01567014044b1c0d
+> git show --textconv :src/reducers/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/mistakes.js
+> git cat-file -s 5869259d426430bd2b88cd190061d4a22dad6fe4
+> git show --textconv :src/actions/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/mistakes.js
+> git cat-file -s b001079ddcb3eee2e2db851d01567014044b1c0d
+> git show --textconv :src/components/MistakesFunctional.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MistakesFunctional.js
+> git cat-file -s b42d367cdd57ee714ea33ae825847b26a8203c7c
+> git show --textconv :src/actions/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/mistakes.js
+> git cat-file -s b001079ddcb3eee2e2db851d01567014044b1c0d
+> git show --textconv :src/reducers/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/mistakes.js
+> git cat-file -s 5869259d426430bd2b88cd190061d4a22dad6fe4
+> git show --textconv :src/components/MistakesFunctional.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MistakesFunctional.js
+> git cat-file -s b42d367cdd57ee714ea33ae825847b26a8203c7c
+> git show --textconv :src/reducers/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/mistakes.js
+> git cat-file -s 5869259d426430bd2b88cd190061d4a22dad6fe4
+> git show --textconv :src/states/mistakesState.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/states/mistakesState.js
+> git cat-file -s d50f52a1c8e7dbdee4202332326ce0796c4ee61a
+> git show --textconv :src/actions/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/mistakes.js
+> git cat-file -s b001079ddcb3eee2e2db851d01567014044b1c0d
+> git show --textconv :src/reducers/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/mistakes.js
+> git cat-file -s 5869259d426430bd2b88cd190061d4a22dad6fe4
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/actions/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/mistakes.js
+> git cat-file -s b001079ddcb3eee2e2db851d01567014044b1c0d
+> git show --textconv :src/components/MistakesFunctional.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MistakesFunctional.js
+> git cat-file -s b42d367cdd57ee714ea33ae825847b26a8203c7c
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/reducers/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/mistakes.js
+> git cat-file -s 5869259d426430bd2b88cd190061d4a22dad6fe4
+> git show --textconv :src/components/MistakesFunctional.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MistakesFunctional.js
+> git cat-file -s b42d367cdd57ee714ea33ae825847b26a8203c7c
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MistakesFunctional.js
+> git cat-file -s 9d8a17349a6ba02571fcae329edabcff46d667f3
+> git show --textconv :src/components/MistakesFunctional.js
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
