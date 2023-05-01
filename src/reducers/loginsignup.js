@@ -10,12 +10,12 @@ let loginSignUpState={
     JWToken: '',
     userId: '',    
   
-  */  
+  */ 
     userName: 'Petro',   
     roleId: 2, //0 by default, 2 for admin
-    JWToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJsb2dpbl90aW1lc3RhbXAiOjE2ODIwMjM3MzZ9.IlC8P+rhrRGij5iC9FVyLBn1kilN0dTvIbEP+90mV3c=',
+    JWToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoyLCJsb2dpbl90aW1lc3RhbXAiOjE2ODI5Njg1ODd9.DTUz30R+uWb88HpGV2V95rhjkSXgJkTP81NomC9r8KU=',
     userId: '1',
- 
+  
     signupCaptchaText: '',
     suspensionReason: '',
     redirectFlagForPasswordresetFunctionality: 1, // when password reset succesfully, we need to redirect user to login page, so this redirect will be controlled by this flag

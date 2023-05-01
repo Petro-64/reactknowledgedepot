@@ -366,3 +366,18 @@ Open repository: /home/petro/Desktop/reactKnowlegde/reactknowledgedepot
 > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
 > git remote --verbose
 > git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MistakesFunctional.js
+> git cat-file -s 9d8a17349a6ba02571fcae329edabcff46d667f3
+> git show --textconv :src/components/MistakesFunctional.js
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/HOOK-MISTAKE-PAGE refs/remotes/HOOK-MISTAKE-PAGE
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
