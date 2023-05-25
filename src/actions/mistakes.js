@@ -1,9 +1,3 @@
-export function getMistakes(){
-    return (dispatch) => {
-        dispatch(getMistakesDispatch())
-    };
-}
-
 export function setCurrentMistakesSubjectId(id){
     return (dispatch) => {
         dispatch(setCurrentMistakesSubjectIdDispatch(id))
@@ -50,3 +44,4 @@ function setCurrentMistakesSubjectNameDispatch(name){
         name: name
     }
 }
+

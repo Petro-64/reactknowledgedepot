@@ -7,6 +7,8 @@ const urls = {
       searchQuestionByKey: 'react/searchquestionbykey',
       mistakes: 'react/mistakes',
       getSqlDump: 'angular/mysqldump',
+      deleteMistake: 'react/deletemistake/',
+      postDeleteMistake: 'react/postdeletemistake'
   };
 
 export default urls;

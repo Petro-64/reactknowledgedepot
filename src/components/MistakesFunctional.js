@@ -5,6 +5,7 @@ import { IntlProvider, FormattedMessage } from "react-intl";
 import {connect} from 'react-redux';
 import MaterialUiNavigation from './MaterialUiNavigation';
 import MuiDropDownMenu from './formelements/MuiDropDownMenu';
+import EditMistakeForm from '../components/forms/EditMistakesForm';
 import BootstrapTable from 'react-bootstrap-table-next';
 import { SET_LANGUAGE } from '../types';
 
@@ -40,6 +41,10 @@ const MistakesFunctional = (props) => {
       }
     }
 
+    const deleteMistake = (questionId)=> {
+      dispatch({ type: 'DELETE_MISTAKE',  questionId: questionId.id})
+    }
+
     const onMuiDropdownChange = (id, name) => {
         dispatch({ type: 'SET_CURRENT_MISTAKES_SUBJECT_ID',  id: id})
         if(!!name){
@@ -60,38 +65,35 @@ const MistakesFunctional = (props) => {
       
 
     const columns = props.currentSubjectIdMistakes == '' ? [{
-      dataField: 'name',
-      text:  props.language === 'en' ? messages.en.subjName : messages.ru.subjName,
-      sort: true,
-    }, {
-      dataField: 'questionId',
-      text:  props.language === 'en' ? messages.en.questionId : messages.ru.questionId,
-      sort: true,
-    }, {
-      dataField: 'question',
-      text: props.language === 'en' ? messages.en.question : messages.ru.question,
-      sort: false
-    }, {
-      dataField: 'countt',
-      text: props.language === 'en' ? messages.en.numbMistakes : messages.ru.numbMistakes,
-      sort: true
-    }
-
-   ] : [{
-    dataField: 'questionId',
-    text:  props.language === 'en' ? messages.en.questionId : messages.ru.questionId,
-    sort: true,
-  }, {
-    dataField: 'question',
-    text: props.language === 'en' ? messages.en.question : messages.ru.question,
-    sort: false
-  }, {
-    dataField: 'countt',
-    text: props.language === 'en' ? messages.en.numbMistakes : messages.ru.numbMistakes,
-    sort: true
-  }
-
- ];
+        dataField: 'name',
+        text:  props.language === 'en' ? messages.en.subjName : messages.ru.subjName,
+        sort: true,
+      }, {
+        dataField: 'questionId',
+        text:  props.language === 'en' ? messages.en.questionId : messages.ru.questionId,
+        sort: true,
+      }, {
+        dataField: 'question',
+        text: props.language === 'en' ? messages.en.question : messages.ru.question,
+        sort: false
+      }, {
+        dataField: 'countt',
+        text: props.language === 'en' ? messages.en.numbMistakes : messages.ru.numbMistakes,
+        sort: true
+      }] : [{
+        dataField: 'questionId',
+        text:  props.language === 'en' ? messages.en.questionId : messages.ru.questionId,
+        sort: true,
+      }, {
+        dataField: 'question',
+        text: props.language === 'en' ? messages.en.question : messages.ru.question,
+        sort: false
+      }, {
+        dataField: 'countt',
+        text: props.language === 'en' ? messages.en.numbMistakes : messages.ru.numbMistakes,
+        sort: true
+      }
+    ];
 
 
     useEffect(() => {
@@ -124,8 +126,12 @@ const MistakesFunctional = (props) => {
                 messages={messages} 
                 visibility={true}  
                 selectedSubj = {props.currentSubjectIdMistakes}/><br/><br/><br/>
-                <BootstrapTable keyField='id' data={ props.mistakesCut } columns={ columns }/>
-
+                {/* <BootstrapTable keyField='id' data={ props.mistakesCut } columns={ columns }/> */}
+                <EditMistakeForm 
+                language={ props.language }
+                mistakesCut = { props.mistakesCut }
+                deleteMistake = {deleteMistake}
+                />
           </div>
         </IntlProvider>
       </div>

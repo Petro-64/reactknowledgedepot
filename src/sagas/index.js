@@ -8,6 +8,8 @@ import { searchQuestionsByKey } from './search';
 import { postEditSearchQuestions } from './searchQuestions';
 import { getMistakesSaga } from './mistakes';
 import { searchQuestionsByTypeAhead } from './searchQuestionsByTypeAhead';
+import { deleteMistakeSaga } from './deleteMistake';
+import { postdeleteMistakeSaga } from './postdeleteMistake';
 
 function* commentsActionWatcher() {
     yield takeLatest('POST_COMMENT', postComment)
@@ -45,6 +47,12 @@ function* getMistakesActionWatcher() {
     yield takeLatest('GET_MISTAKES', getMistakesSaga)
 }
 
+function* deleteMistakeActionWatcher() {
+    yield takeLatest('DELETE_MISTAKE', postdeleteMistakeSaga)
+    //yield takeLatest('DELETE_MISTAKE', deleteMistakeSaga)
+}
+
+
 export default function* rootSaga() {
     yield all([
         commentsActionWatcher(),
@@ -56,5 +64,6 @@ export default function* rootSaga() {
         editFoundByKeyWordQuestionsActionWatcher(),
         getMistakesActionWatcher(),
         searchQuestionsByTypeAheadWatcher(),
+        deleteMistakeActionWatcher()
     ]);
 }
