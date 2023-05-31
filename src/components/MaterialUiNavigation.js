@@ -112,7 +112,7 @@ function MaterialUiNavigation(props) {
                     </ListItemText>
                   </ListItemButton>
                 </Link>
-                <Link to="/app/mistakesfunctional" color="#444" variant="p" underline="none" className="drawerNavigationLink">
+                <Link to="/app/mistakes" color="#444" variant="p" underline="none" className="drawerNavigationLink">
                   <ListItemButton onClick={toggleDrawer('left', false)}>
                     <ListItemIcon>
                       <ReportGmailerrorredIcon />

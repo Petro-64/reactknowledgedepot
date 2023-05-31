@@ -95,10 +95,10 @@ class App extends React.Component{
             <NonAuthorizedRoute exact path="/app/signup" component={Signup} />
             <NonAuthorizedRoute exact path="/app/forgotpassword" component={ForgotPassword} />
             <NonAuthorizedRoute exact path="/app/aboutcookie" component={AboutCookie}/>
-            <Route exact path="/app/mistakesfunctional" component={MistakesFunctional} />
 
+
+            <AuthorizedRouteUser exact path="/app/mistakes" component={MistakesFunctional} />
             <AuthorizedRouteUser exact path="/app/resultsn" component={Resultsn} />
-            <AuthorizedRouteUser exact path="/app/mistakes" component={Mistakes} />
             <AuthorizedRouteUser exact path="/app/test" component={Test} />
             <AuthorizedRouteUser exact path="/app/aboutcookie" component={AboutCookie}/>
             <AuthorizedRouteUser exact path="/app/addmyquestion" component={AddMyQuestions} />

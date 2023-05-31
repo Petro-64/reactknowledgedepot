@@ -52,3 +52,76 @@ Open repository: /home/petro/Desktop/reactKnowlegde/reactknowledgedepot
 > git show --textconv :.gitignore
 > git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/.gitignore
 > git cat-file -s 927d17bb9c5b470bcd9d57344db0523d2adadbd9
+> git status -z -u
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/.gitignore
+> git cat-file -s 927d17bb9c5b470bcd9d57344db0523d2adadbd9
+> git show --textconv :.gitignore
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/try-to-cancel-axios refs/remotes/try-to-cancel-axios
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/reducers/loginsignup.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/loginsignup.js
+> git cat-file -s 82aeca78a79b9010205607d01ebbbcd1172397a5
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/try-to-cancel-axios refs/remotes/try-to-cancel-axios
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/components/Home.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Home.js
+> git cat-file -s ca604936459069f816eaf3a604c78f9580194f28
+> git show --textconv :src/components/Subjects.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Subjects.js
+> git cat-file -s 6e39943f906e7144ebc4f3e02ed10220ae4e9973
+> git show --textconv :src/actions/subjects.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/subjects.js
+> git cat-file -s f0588dee38a377d9135d07e8bf6864ecf0b73ad7
+> git show --textconv :src/reducers/loginsignup.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/loginsignup.js
+> git cat-file -s 82aeca78a79b9010205607d01ebbbcd1172397a5
+> git show --textconv :src/actions/subjects.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/subjects.js
+> git cat-file -s f0588dee38a377d9135d07e8bf6864ecf0b73ad7
+> git show --textconv :src/components/MistakesFunctional.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MistakesFunctional.js
+> git cat-file -s 2c7a1f6e5d959c341bd5ce54c76bad8182b95419
+> git show --textconv :src/actions/subjects.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/subjects.js
+> git cat-file -s f0588dee38a377d9135d07e8bf6864ecf0b73ad7
+> git show --textconv :src/components/Subjects.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Subjects.js
+> git cat-file -s 6e39943f906e7144ebc4f3e02ed10220ae4e9973
+> git show --textconv :src/actions/subjects.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/subjects.js
+> git cat-file -s f0588dee38a377d9135d07e8bf6864ecf0b73ad7
+> git check-ignore -v -z --stdin
+> git show --textconv :src/sagas/comment.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/comment.js
+> git cat-file -s fb8cee6ff6d20fe8f8d6bc2dce58a61dccd0dc35
+> git show --textconv :src/actions/subjects.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/subjects.js
+> git cat-file -s f0588dee38a377d9135d07e8bf6864ecf0b73ad7
+> git show --textconv :src/sagas/questions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/questions.js
+> git cat-file -s daa22ba0d93aae442f723543a0064ebeb136348b
+> git show --textconv :src/App.test.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/App.test.js
+> git cat-file -s b84af98d72031dc70085f2120c967b58adfcef6b
+> git show --textconv :src/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/index.js
+> git cat-file -s 2028fde1d9e070881f74ea2110fd086e37dda7a8
+> git show --textconv :src/App.test.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/App.test.js
+> git cat-file -s b84af98d72031dc70085f2120c967b58adfcef6b
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/try-to-cancel-axios refs/remotes/try-to-cancel-axios
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/index.js
+> git cat-file -s 2028fde1d9e070881f74ea2110fd086e37dda7a8
