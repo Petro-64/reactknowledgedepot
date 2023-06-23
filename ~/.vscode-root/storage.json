@@ -127,8 +127,7 @@
                     },
                     {
                         "id": "saveAll",
-                        "label": "Save A&&ll",
-                        "enabled": false
+                        "label": "Save A&&ll"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1494,10 +1493,10 @@
             "backupPath": "/home/petro/Desktop/reactKnowlegde/reactknowledgedepot/~/.vscode-root/Backups/645d17e661835b45e71e68c44fa4afa0",
             "uiState": {
                 "mode": 1,
-                "x": 379,
-                "y": 291,
-                "width": 2067,
-                "height": 1081
+                "x": 113,
+                "y": 112,
+                "width": 2183,
+                "height": 1142
             }
         },
         "openedWindows": []

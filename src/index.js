@@ -78,7 +78,7 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaM
 
 sagaMiddleware.run(rootSaga);
 
-class App extends React.Component{
+export class App extends React.Component{
   render(){
     return(
         <Router>

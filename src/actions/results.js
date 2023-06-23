@@ -20,9 +20,9 @@ export function loadResults(){
                 dispatch(setNumberOfPaginationAction(Math.ceil(resultsFilterBySubjectsAndSort.length/itemsPerPage)));
                 dispatch(setResultsFiltered(helpers.PaginatedResults(resultsFilterBySubjectsAndSort, itemsPerPage, store.getState().resultsReducer.resultsFilterPaginationNumber)))
                 dispatch(changeResults(responce.data.payload.results))
-                dispatch(setOverlayVisibilityDispatch(false))
+                dispatch(setOverlayVisibilityDispatch1(false))
             } else {
-                dispatch(setOverlayVisibilityDispatch(false))
+                dispatch(setOverlayVisibilityDispatch1(false))
                 dispatch(clearSensitiveinfo([]))
             };
         })
@@ -44,13 +44,13 @@ export function setNumberOfPaginationAction(number){
     }
 }
 
-export const setOverlayVisibility = (bool) => {
-    return (dispatch) => {
-        dispatch(setOverlayVisibilityDispatch(bool))
-    };
-}
+// export const setOverlayVisibility = (bool) => {
+//     return (dispatch) => {
+//         dispatch(setOverlayVisibilityDispatch1(bool))
+//     };
+// }
 
-export function setOverlayVisibilityDispatch(bool){
+export function setOverlayVisibilityDispatch1(bool){
     return{
         type: SET_OVERLAY_VISIBILITY,
         visibility: bool

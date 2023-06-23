@@ -1,0 +1,68 @@
+[2023-06-23 15:53:54.127] [exthost] [info] extension host started
+[2023-06-23 15:53:54.667] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication {"startup":false,"extensionId":{"value":"vscode.microsoft-authentication","_lower":"vscode.microsoft-authentication"},"activationEvent":"onAuthenticationRequest:microsoft"}
+[2023-06-23 15:53:54.668] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/microsoft-authentication/dist/extension.js
+[2023-06-23 15:53:54.693] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"extensionId":{"value":"vscode.typescript-language-features","_lower":"vscode.typescript-language-features"},"activationEvent":"onLanguage:javascript"}
+[2023-06-23 15:53:54.706] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2023-06-23 15:53:54.730] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2023-06-23 15:53:54.749] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2023-06-23 15:53:54.755] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2023-06-23 15:53:54.755] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/git/dist/main
+[2023-06-23 15:53:54.792] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm {"startup":true,"extensionId":{"value":"vscode.npm","_lower":"vscode.npm"},"activationEvent":"workspaceContains:package.json"}
+[2023-06-23 15:53:54.814] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/npm/dist/npmMain
+[2023-06-23 15:53:54.841] [exthost] [info] ExtensionService#_doActivateExtension planbcoding.vscode-react-refactor {"startup":true,"extensionId":{"value":"planbcoding.vscode-react-refactor","_lower":"planbcoding.vscode-react-refactor"},"activationEvent":"workspaceContains:package.json"}
+[2023-06-23 15:53:54.842] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/petro/.vscode/extensions/planbcoding.vscode-react-refactor-1.1.3/dist/extension
+[2023-06-23 15:53:59.147] [exthost] [info] ExtensionService#_doActivateExtension vscode.github {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2023-06-23 15:53:59.150] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/github/dist/extension.js
+[2023-06-23 15:53:59.631] [exthost] [info] eager extensions activated
+[2023-06-23 15:54:00.680] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.js-debug {"startup":false,"extensionId":{"value":"ms-vscode.js-debug","_lower":"ms-vscode.js-debug"},"activationEvent":"onCommand:extension.js-debug.clearAutoAttachVariables"}
+[2023-06-23 15:54:00.685] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/ms-vscode.js-debug/src/extension.js
+[2023-06-23 15:54:01.641] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":false,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"onStartupFinished"}
+[2023-06-23 15:54:01.670] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/emmet/dist/node/emmetNodeMain
+[2023-06-23 15:54:01.697] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":false,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"onStartupFinished"}
+[2023-06-23 15:54:01.705] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/merge-conflict/dist/mergeConflictMain
+[2023-06-23 15:54:01.708] [exthost] [info] ExtensionService#_doActivateExtension vscode.testing-editor-contributions {"startup":false,"extensionId":{"value":"vscode.testing-editor-contributions","_lower":"vscode.testing-editor-contributions"},"activationEvent":"onStartupFinished"}
+[2023-06-23 15:54:01.713] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/testing-editor-contributions/dist/extension.js
+[2023-06-23 15:54:02.239] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":false,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"onAuthenticationRequest:github"}
+[2023-06-23 15:54:02.241] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/github-authentication/dist/extension.js
+[2023-06-23 16:16:37.287] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"extensionId":{"value":"vscode.extension-editing","_lower":"vscode.extension-editing"},"activationEvent":"onLanguage:typescript"}
+[2023-06-23 16:16:37.287] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/extension-editing/dist/extensionEditingMain
+[2023-06-23 16:16:37.304] [exthost] [info] ExtensionService#_doActivateExtension Angular.ng-template {"startup":false,"extensionId":{"value":"Angular.ng-template","_lower":"angular.ng-template"},"activationEvent":"onLanguage:typescript"}
+[2023-06-23 16:16:37.305] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/petro/.vscode/extensions/angular.ng-template-11.2.14/index
+[2023-06-23 16:22:51.598] [exthost] [error] [vscode.typescript-language-features] provider FAILED
+[2023-06-23 16:22:51.598] [exthost] [error] Error: <semantic> TypeScript Server Error (4.2.3)
+No Project.
+Error: No Project.
+    at Object.ThrowNoProject (/usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js:152133:23)
+    at ScriptInfo.getDefaultProject (/usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js:152957:46)
+    at ProjectService.doEnsureDefaultProjectForFile (/usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js:155912:48)
+    at ProjectService.ensureDefaultProjectForFile (/usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js:155907:75)
+    at IOSession.Session.getFileAndProjectWorker (/usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js:160166:87)
+    at IOSession.Session.getFileAndProject (/usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js:160149:29)
+    at IOSession.Session.getEncodedSemanticClassifications (/usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js:159763:31)
+    at Session.handlers.ts.Map.ts.getEntries._a.<computed> (/usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js:159241:61)
+    at /usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js:160963:88
+    at IOSession.Session.executeWithRequestId (/usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js:160954:28)
+    at IOSession.Session.executeCommand (/usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js:160963:33)
+    at IOSession.Session.onMessage (/usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js:160989:35)
+    at Interface.<anonymous> (/usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js:163650:31)
+    at Interface.emit (events.js:315:20)
+    at Interface._onLine (readline.js:329:10)
+    at Interface._normalWrite (readline.js:474:12)
+    at Socket.ondata (readline.js:186:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)
+	at Function.create (/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension.js:1:70135)
+	at dispatchResponse (/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension.js:1:64010)
+	at dispatchMessage (/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension.js:1:62869)
+	at /usr/share/code/resources/app/extensions/typescript-language-features/dist/extension.js:1:62379
+	at _.fire (/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:57:1836)
+	at g.onLengthData (/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension.js:1:431342)
+	at Socket.<anonymous> (/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension.js:1:430990)
+	at Socket.emit (events.js:315:20)
+	at addChunk (_stream_readable.js:295:12)
+	at readableAddChunk (_stream_readable.js:271:9)
+	at Socket.Readable.push (_stream_readable.js:212:10)
+	at Pipe.onStreamRead (internal/stream_base_commons.js:186:23)

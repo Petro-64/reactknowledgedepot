@@ -1,0 +1,153 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --git-dir
+Open repository: /home/petro/Desktop/reactKnowlegde/reactknowledgedepot
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/reducers/loginsignup.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/loginsignup.js
+> git check-ignore -v -z --stdin
+> git cat-file -s 0d29c613895caedeb50f0b8dfa737f82b53367bf
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/reducers/loginsignup.js
+> git symbolic-ref --short HEAD
+> git cat-file -s 0d29c613895caedeb50f0b8dfa737f82b53367bf
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git show --textconv :src/reducers/loginsignup.js
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :src/actions/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/mistakes.js
+> git cat-file -s ca0d60505e55b61be99f20eab30ff4293d43fd8f
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :src/api/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/mistakes.js
+> git cat-file -s 889b9dad3a6ce324a9437c0828887c0a56be7162
+> git show --textconv :src/actions/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/mistakes.js
+> git cat-file -s ca0d60505e55b61be99f20eab30ff4293d43fd8f
+> git show --textconv :src/api/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/mistakes.js
+> git cat-file -s 889b9dad3a6ce324a9437c0828887c0a56be7162
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/mistakes.js
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n41 -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/mistakes.js
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :src/sagas/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/mistakes.js
+> git cat-file -s e61924a1ad82978f4aadd953918667537348fb10
+> git show --textconv :src/App.test.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/App.test.js
+> git cat-file -s ba444eb1b7b6c00e8380b5af03279eec67f28927
+> git show --textconv :src/sagas/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/mistakes.js
+> git cat-file -s e61924a1ad82978f4aadd953918667537348fb10
+> git show --textconv :src/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/index.js
+> git cat-file -s 093beef707af13f0bf713c63aa7515c48db3f453
+> git show --textconv :src/sagas/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/mistakes.js
+> git cat-file -s e61924a1ad82978f4aadd953918667537348fb10
+> git show --textconv :src/components/MaterialUiNavigation.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MaterialUiNavigation.js
+> git cat-file -s abd56f76e8abe30ec2d7122cf00978f015ba0d0b
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s 7713de7d80d061802c015b3bf5f632fec803692d
+> git show --textconv :src/components/MistakesFunctional.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MistakesFunctional.js
+> git cat-file -s 2c7a1f6e5d959c341bd5ce54c76bad8182b95419
+> git show --textconv :src/sagas/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/index.js
+> git cat-file -s c1f501d2d12f55ef2175022a2845e6c5ab126093
+> git show --textconv :src/sagas/postdeleteMistake.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/postdeleteMistake.js
+> git cat-file -s 82d819253a55275c8f6eb690c009b87338744d23
+> git show --textconv :src/components/MistakesFunctional.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MistakesFunctional.js
+> git cat-file -s 2c7a1f6e5d959c341bd5ce54c76bad8182b95419
+> git show --textconv :src/components/Mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/Mistakes.js
+> git cat-file -s 7713de7d80d061802c015b3bf5f632fec803692d
+> git show --textconv :src/components/MistakesFunctional.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/components/MistakesFunctional.js
+> git cat-file -s 2c7a1f6e5d959c341bd5ce54c76bad8182b95419
+> git show --textconv :src/sagas/postdeleteMistake.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/postdeleteMistake.js
+> git cat-file -s 82d819253a55275c8f6eb690c009b87338744d23
+> git show --textconv :src/actions/results.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/actions/results.js
+> git cat-file -s 0e139a1940fed4bdaf39bb764375e0af94fbd900
+> git show --textconv :src/sagas/postdeleteMistake.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/postdeleteMistake.js
+> git cat-file -s 82d819253a55275c8f6eb690c009b87338744d23
+> git show --textconv :src/sagas/questions.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/questions.js
+> git cat-file -s daa22ba0d93aae442f723543a0064ebeb136348b
+> git show --textconv :src/types/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/types/index.js
+> git check-ignore -v -z --stdin
+> git cat-file -s 8e86c388855f1f3e44810f586fb4e70a904b6a69
+> git show --textconv :src/api/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/api/mistakes.js
+> git cat-file -s 889b9dad3a6ce324a9437c0828887c0a56be7162
+> git show --textconv :src/types/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/types/index.js
+> git cat-file -s 8e86c388855f1f3e44810f586fb4e70a904b6a69
+> git show --textconv :src/sagas/mistakes.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/mistakes.js
+> git cat-file -s e61924a1ad82978f4aadd953918667537348fb10
+> git show --textconv :src/types/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/types/index.js
+> git cat-file -s 8e86c388855f1f3e44810f586fb4e70a904b6a69
+> git show --textconv :src/sagas/postdeleteMistake.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/postdeleteMistake.js
+> git cat-file -s 82d819253a55275c8f6eb690c009b87338744d23
+> git show --textconv :src/types/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/types/index.js
+> git cat-file -s 8e86c388855f1f3e44810f586fb4e70a904b6a69
+> git show --textconv :src/sagas/postdeleteMistake.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/postdeleteMistake.js
+> git cat-file -s 82d819253a55275c8f6eb690c009b87338744d23
+> git show --textconv :src/types/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/types/index.js
+> git cat-file -s 8e86c388855f1f3e44810f586fb4e70a904b6a69
+> git show --textconv :src/sagas/addquestionreport.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/addquestionreport.js
+> git cat-file -s b1e578da278b23b717e25b6562272f90989099d9
+> git show --textconv :src/sagas/sagaUtilities.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/sagaUtilities.js
+> git cat-file -s f0d62a25202a690002a350cff8f0381f83ef72bd
+> git show --textconv :src/sagas/addquestionreport.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/addquestionreport.js
+> git cat-file -s b1e578da278b23b717e25b6562272f90989099d9
+> git show --textconv :src/types/index.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/types/index.js
+> git cat-file -s 8e86c388855f1f3e44810f586fb4e70a904b6a69
+> git show --textconv :src/sagas/postdeleteMistake.js
+> git ls-files --stage -- /home/petro/Desktop/reactKnowlegde/reactknowledgedepot/src/sagas/postdeleteMistake.js
+> git cat-file -s 82d819253a55275c8f6eb690c009b87338744d23
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/master refs/remotes/master
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
